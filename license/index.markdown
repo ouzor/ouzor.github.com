@@ -1,6 +1,5 @@
 ---
-layout: default
-
+layout: name
 title: Colophon
 top: Juuso Parkkinen
 
