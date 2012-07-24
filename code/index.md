@@ -1,6 +1,7 @@
 ---
 layout: name
-title: Home
+title: Code
+section: Code
 ---
 
 To be updated.
