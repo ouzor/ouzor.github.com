@@ -6,7 +6,7 @@ top: Juuso Parkkinen
 
 ---
 
-Licence
+License
 -------
 
 The design of this site is based on the original code by [Mark
@@ -22,6 +22,9 @@ href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
 Attribution 3.0 Unported License</a>. In particular, the publications
 and other material by commercial publishing houses may have more
 restrictive licenses.
+
+Thanks also to [Leo Lahti](http://antagomir.github.com) for providing
+a simplier version of Mark Reid's code.
 
 If you find some of the material useful or for any queries, you can [drop
 a line](mailto:juuso.parkkinen@gmail.com).
