@@ -1,0 +1,12 @@
+http://www.monperrus.net/martin/bibtexbrowser/
+
+
+You can simply fill the comment field of the bib entry with an HTML
+link:
+@inproceedings{foo,
+author="Jean Dupont",
+title="Bibtexbrowser",
+year=2009,
+booktitle="Proceedings of the BIB conference",
+comment={<a href="myslides.pdf">[slides]</a>}
+}
