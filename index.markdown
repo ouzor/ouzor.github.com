@@ -7,8 +7,8 @@ top: Juuso Parkkinen
 
 <img class='inset right' src='images/juuso.jpg' title='Juuso Parkkinen' alt='Photo' width='120px' />
 
-NOTE! SITE UNDER CONSTRUCTION!!!
-================================
+Site under construction!!!
+==========================
 
 I am a doctoral student at Aalto University. 
 
@@ -18,8 +18,9 @@ I am a doctoral student at Aalto University.
 Interests
 =========
 
-Computation science  
+Data mining  
 Machine learning  
+Information visualization  
 Open data  
 
 =--
