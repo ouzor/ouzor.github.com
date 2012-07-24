@@ -1,5 +1,5 @@
 ---
-layout: name
+layout: default
 title: Projects
 section: Projects
 ---
