@@ -2,8 +2,12 @@
 layout: name
 title: Publications
 section: Work
-top: Leo Lahti
+top: Juuso Parkkinen
 ---
+
+To be updated.
+
+
 
 <!--Order [RSS feed](http://www.citeulike.org/rss/user/antagomir).-->
 <!-- [RSS feed 2](http://roihu.info/bib/bibtexbrowser.php?frameset&bib=my.bib) -->
@@ -18,6 +22,7 @@ top: Leo Lahti
 
 <!-- PUBLICATION MATSKUT: ks. /files/pubs/-->
 
+<!-- 
 [iki]: http://www.iki.fi/Leo.Lahti
 
 Publications
@@ -171,4 +176,4 @@ The material is presented to ensure timely dissemination of scholarly and techni
 <!--<a href="http://www.plos.org"><img src="http://www.plos.org/images/support_plos_100x157.jpg" alt="I Support the Public Library of Science" width="100" height="157" border="0"/></a>-->
 
 
-
+-->

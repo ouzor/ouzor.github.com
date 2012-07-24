@@ -4,8 +4,11 @@ title: Contact
 section: Contact
 ---
 
-<img class='inset right' src='../images/meitsi2006.jpg' title='Leo Lahti' alt='Photo' width='120px' />
+<img class='inset right' src='../images/juuso.jpg' title='Juuso Parkkinen' alt='Photo' width='120px' />
 
+To be updated.
+
+<!--
 Contact
 -------
 
@@ -70,4 +73,4 @@ on computational science and the Finnish _[Louhos](http://louhos.wordpress.com)_
 <p></p>
 
 <center><a title="Leo Lahti" href="http://www.researchgate.net/profile/Leo_Lahti/"><img src="http://www.researchgate.net/images/public/profile_share_badge.png" alt="Leo Lahti" /></a></center>
-
+-->
