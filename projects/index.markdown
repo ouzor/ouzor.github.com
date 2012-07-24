@@ -1,7 +1,6 @@
 ---
-layout: default
-title: Projects
-section: Projects
+layout: name
+title: Home
 ---
 
 
