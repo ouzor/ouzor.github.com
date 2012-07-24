@@ -1,6 +1,6 @@
 ---
 layout: name
-title: Colophon
+title: License
 top: Juuso Parkkinen
 
 ---
@@ -15,12 +15,14 @@ href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative
 Commons Attribution-Noncommercial-Share Alike 3.0 Unported
 License</a>. 
 
+<!--
 Unless specified otherwise, the site contents are licensed under the
 <a rel="license"
 href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
 Attribution 3.0 Unported License</a>. In particular, the publications
 and other material by commercial publishing houses may have more
 restrictive licenses.
+-->
 
 Thanks also to [Leo Lahti](http://antagomir.github.com) for providing
 a simplier version of Mark Reid's code.
