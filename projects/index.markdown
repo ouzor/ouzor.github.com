@@ -6,7 +6,7 @@ title: Home
 Projects
 ========
 
-[http://http://users.ics.aalto.fi/japarkki/](Homepage at Aalto University)
+[Homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)
 
 More to be updated...
 
