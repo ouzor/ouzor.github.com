@@ -12,7 +12,7 @@ Contact
 Juuso Parkkinen (M.Sc.)
 
 +--	{.section}
-email
+Email
 ========
 juuso.parkkinen - at - gmail.com
 =--
@@ -24,7 +24,7 @@ Mobile
 =--
 
 +--	{.section}
-www
+WWW
 ========
 [http://ouzor.github.com](http://ouzor.github.com])
 =--
@@ -42,7 +42,7 @@ ouzo @ IRCnet / FreeNode
 =--
 
 +--	{.section}
-Blogs
+Blog
 ========
 
 I co-author the _[Louhos](http://louhos.wordpress.com)_ blog on mining and visualizing Finnish open data
