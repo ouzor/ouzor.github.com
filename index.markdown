@@ -20,7 +20,7 @@ Interests
 
 Machine learning  
 Bioinformatics  
-Data mining 
+Data mining  
 Information visualization  
 Open data  
 =--

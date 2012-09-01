@@ -26,8 +26,21 @@ Mobile
 +--	{.section}
 WWW
 ========
-[Personal homepage](http://ouzor.github.com/])  
+[Personal homepage](http://ouzor.github.com/)  
 [Homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)  
+=--
+
++--  {.section}
+Blog
+========
+I co-author the _[Louhos](http://louhos.wordpress.com)_ blog on mining and visualizing Finnish open data
+=--
+
++--  {.section}
+Code
+========
+[Github/ouzor](https://github.com/ouzor)  
+[Github/louhos](https://github.com/louhos)  
 =--
 
 +--	{.section}
@@ -42,10 +55,8 @@ IRC
 ouzo @ IRCnet / FreeNode
 =--
 
-+--	{.section}
-Blog
++--  {.section}
+Photography
 ========
-
-I co-author the _[Louhos](http://louhos.wordpress.com)_ blog on mining and visualizing Finnish open data
-
+[My photos at kuvat.fi](http://ouzo.kuvat.fi/)  
 =--

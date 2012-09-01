@@ -6,7 +6,7 @@ title: Home
 Projects
 ========
 
-[Homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)  
+Information about my doctoral research can be found ad my [homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)  
 
 More to be updated...
 
