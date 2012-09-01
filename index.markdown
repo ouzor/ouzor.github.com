@@ -10,14 +10,17 @@ top: Juuso Parkkinen
 Welcome
 =======
 
-I am a data scientist, currently working as a doctoral student at Aalto University. More about my research in the projects-page. 
+I am a data scientist, freeskier, photographer, and dad. I am currently working as a doctoral student at Aalto University. More about my research in the projects-page. 
 
++-- {.section}
+Contact
+============
+[Contact information](/contact)
+=--
 
 +--	{.section}
-
 Interests
 =========
-
 Machine learning  
 Bioinformatics  
 Data mining  
@@ -25,8 +28,15 @@ Information visualization
 Open data  
 =--
 
-+-- {.section}
-Contact
-============
-[Contact information](/contact)
++--  {.section}
+Hobbies
+=========
+[Ultimate frisbee](http://www.euc.fi/)  
+[Photography](http://ouzo.kuvat.fi/)  
+Freeskiing  
+Longboarding  
+Daddy-stuff  
+and data science, of course    
 =--
+
+

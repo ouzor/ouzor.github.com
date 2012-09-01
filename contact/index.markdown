@@ -39,14 +39,14 @@ I co-author the _[Louhos](http://louhos.wordpress.com)_ blog on mining and visua
 +--  {.section}
 Code
 ========
-[Github/ouzor](https://github.com/ouzor)  
-[Github/louhos](https://github.com/louhos)  
+[github/ouzor](https://github.com/ouzor)  
+[github/louhos](https://github.com/louhos)  
 =--
 
 +--	{.section}
 Twitter
 =======
-[ouzor](http://twitter.com/ouzor)
+[@ouzor](http://twitter.com/ouzor)
 =--
 
 +--	{.section}
