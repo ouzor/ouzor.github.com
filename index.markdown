@@ -23,12 +23,10 @@ Bioinformatics
 Data mining  
 Information visualization  
 Open data  
+=--
 
 +-- {.section}
 Contact
 ============
 [Contact information](/contact)
-=--
-
-
 =--

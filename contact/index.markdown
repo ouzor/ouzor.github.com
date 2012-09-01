@@ -4,7 +4,7 @@ title: Contact
 section: Contact
 ---
 
-<img class='inset right' src='images/juuso.jpg' title='Juuso Parkkinen' alt='Photo' width='120px' />
+<img class='inset right' src='../images/juuso.jpg' title='Juuso Parkkinen' alt='Photo' width='120px' />
 
 Contact
 =======
