@@ -3,5 +3,10 @@ layout: name
 title: Home
 ---
 
+Projects
+========
 
-To be updated.
+[http://http://users.ics.aalto.fi/japarkki/](Homepage at Aalto University)
+
+More to be updated...
+
