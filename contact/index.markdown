@@ -26,8 +26,8 @@ Mobile
 +--	{.section}
 WWW
 ========
--[Personal homepage](http://ouzor.github.com/])
--[Homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)
+[Personal homepage](http://ouzor.github.com/])  
+[Homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)  
 =--
 
 +--	{.section}

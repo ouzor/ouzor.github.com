@@ -18,9 +18,9 @@ I am a data scientist, currently working as a doctoral student at Aalto Universi
 Interests
 =========
 
-Machine learning
-Bioinformatics
-Data mining  
+Machine learning  
+Bioinformatics  
+Data mining 
 Information visualization  
 Open data  
 =--
