@@ -26,8 +26,8 @@ Mobile
 +--	{.section}
 WWW
 ========
-[Personal homepage](http://ouzor.github.com/)  
 [Homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)  
+[Personal homepage](http://ouzor.github.com/)  
 =--
 
 +--  {.section}
@@ -41,6 +41,13 @@ Code
 ========
 [github/ouzor](https://github.com/ouzor)  
 [github/louhos](https://github.com/louhos)  
+=--
+
+
++--  {.section}
+Kippt
+========
+[My reading lists in Kippt](https://kippt.com/ouzor)  
 =--
 
 +--	{.section}
