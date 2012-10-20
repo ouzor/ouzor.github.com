@@ -68,7 +68,7 @@ Twitter
 +--	{.section}
 IRC
 ========
-ouzo @ IRCnet / FreeNode
+ouzor @ IRCnet / FreeNode
 =--
 
 +--  {.section}
