@@ -23,7 +23,6 @@ Interests
 =========
 Machine learning  
 Bioinformatics  
-Data mining  
 Information visualization  
 Open data  
 =--
@@ -35,7 +34,6 @@ Hobbies
 [Photography](http://ouzo.kuvat.fi/)  
 Freeskiing  
 Longboarding  
-Daddy-stuff  
 =--
 
 +--  {.section}
