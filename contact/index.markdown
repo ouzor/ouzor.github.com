@@ -15,12 +15,21 @@ Juuso Parkkinen (M.Sc.)
 Email
 ========
 juuso.parkkinen - at - gmail.com
+juuso.parkkinen - at - aalto.fi
 =--
 
+<!--
 +--	{.section}
 Mobile 
 ========
 +358503563916
+=--
+-->
+
++--  {.section}
+Twitter
+=======
+[@ouzor](http://twitter.com/ouzor)
 =--
 
 +--	{.section}
@@ -49,27 +58,20 @@ Code
 [github/louhos](https://github.com/louhos)  
 =--
 
-
 +--  {.section}
 Kippt
 ========
 [My reading lists in Kippt](https://kippt.com/ouzor)  
 =--
 
-+--	{.section}
-Twitter
-=======
-[@ouzor](http://twitter.com/ouzor)
-=--
-
-+--	{.section}
-IRC
-========
-ouzor @ IRCnet / FreeNode
-=--
-
 +--  {.section}
 Photography
 ========
 [My photos at kuvat.fi](http://ouzo.kuvat.fi/)  
+=--
+
++--  {.section}
+IRC
+========
+ouzor @ IRCnet / FreeNode
 =--
