@@ -36,7 +36,6 @@ Hobbies
 Freeskiing  
 Longboarding  
 Daddy-stuff  
-and data science, of course    
 =--
 
 
