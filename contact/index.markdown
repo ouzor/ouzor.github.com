@@ -31,6 +31,12 @@ WWW
 =--
 
 +--  {.section}
+Linkedin
+========
+[Linkedin profile](http://www.linkedin.com/in/juusoparkkinen)  
+=--
+
++--  {.section}
 Blog
 ========
 I co-author the _[Louhos](http://louhos.wordpress.com)_ blog on mining and visualizing Finnish open data
