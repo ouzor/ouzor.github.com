@@ -9,7 +9,7 @@ Projects
 
 +--  {.section}
 Computational Systems Biology and Medicine
-------------------------------------------
+========
 
 [Project home page](http://research.ics.aalto.fi/mi/bio.shtml)
 
@@ -22,7 +22,7 @@ Information about my doctoral research can be found at my [homepage at Aalto Uni
 
 +--  {.section}
 Louhos: Open source code for open data analysis
------------------------------------------------
+========
 
 [Project home page](http://louhos.github.io/en/index.html)
 
