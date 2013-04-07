@@ -1,6 +1,6 @@
 ---
 layout: name
-title: Home
+title: Projects
 ---
 
 Projects
