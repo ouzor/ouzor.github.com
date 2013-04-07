@@ -7,7 +7,7 @@ section: Projects
 Projects
 ========
 
-
++--  {.section}
 Computational Systems Biology and Medicine
 ------------------------------------------
 
@@ -18,11 +18,13 @@ Developing advanced machine learning methods to biomedical data analysis with ap
 This is main project as a doctroal student at Helsinki Institute for Information Technology HIIT, Aalto University. 
 
 Information about my doctoral research can be found at my [homepage at Aalto University](http://users.ics.aalto.fi/japarkki/)  
+=--
 
-
++--  {.section}
 Louhos: Open source code for open data analysis
 -----------------------------------------------
 
 [Project home page](http://louhos.github.io/en/index.html)
 
 Developing open source tools code for analysing and visualising open data in Finland.
+=--
