@@ -14,8 +14,8 @@ Juuso Parkkinen (M.Sc.)
 +--	{.section}
 Email
 ========
-juuso.parkkinen - at - gmail.com
-juuso.parkkinen - at - aalto.fi
+juuso.parkkinen - at - gmail.com  
+juuso.parkkinen - at - aalto.fi  
 =--
 
 <!--
