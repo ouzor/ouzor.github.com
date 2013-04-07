@@ -1,6 +1,7 @@
 ---
 layout: name
 title: Projects
+section: Projects
 ---
 
 Projects
