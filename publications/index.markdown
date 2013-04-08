@@ -5,8 +5,6 @@ section: Publications
 top: Juuso Parkkinen
 ---
 
-<script type="text/javascript" src="http://impactstory.org/embed/v1/impactstory.js"></script>
-
 Publications
 ============
 
