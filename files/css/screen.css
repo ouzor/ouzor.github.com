@@ -271,7 +271,7 @@ body#Past #header a.past
 	line-height: 1.43em; 
 	margin-bottom: 1.43em;
 	margin-top: 1.43em;
-	margin-left: 7.5em; /* testing: was 7.5 */
+	margin-left: 8.5em; /* changed, was: 7.5 */
 	padding-right: 3em;
 }
 
@@ -289,9 +289,9 @@ body#Past #header a.past
 	font-size: 100%;
 	line-height: 1.43em;
 	position: absolute;
-	width: 6em;
-	max-width: 6em;
-	margin-left: -7.5em;
+	width: 8em; /* changed, was: 6 */
+	max-width: 8em; /* changed, was: 6 */
+	margin-left: -8.5em; /* changed, was: 7.5 */
 	font-weight: bold;
 	font-variant: small-caps;
 }
