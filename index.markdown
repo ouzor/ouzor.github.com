@@ -22,12 +22,10 @@ I am also finishing my PhD thesis in machine learning and bioinformatics in Aalt
 =--
 
 +--  {.section}
-Twitter2
+Twitter
 =========
-<div class="section">
 <a class="twitter-timeline" href="https://twitter.com/ouzor" height="2em" data-widget-id="320845632002723840" data-chrome="nofooter noborders noheader noscrollbar transparent" data-tweet-limit="1" data-show-replies="false">Tweets by <span class="citation">@ouzor</span></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
 =--
 
 
