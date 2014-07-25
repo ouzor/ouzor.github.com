@@ -25,7 +25,7 @@ I am also finishing my PhD thesis in machine learning and bioinformatics in Aalt
 +--  {.section}
 Twitter
 =========
-<a class="twitter-timeline"  href="https://twitter.com/ouzor"  data-widget-id="320845632002723840">Tweets by @ouzor</a>
+<a class="twitter-timeline"  href="https://twitter.com/ouzor"  data-widget-id="492593828574928896">Tweets by @ouzor</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 =--
 
