@@ -1,5 +1,5 @@
 ---
-destination : /Users/antagomir/Sites/antagomir
+destination : ./site/
 auto        : false
 lsi         : false
 pygments    : true

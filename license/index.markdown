@@ -29,5 +29,3 @@ a simpler version of Mark Reid's code.
 
 If you find some of the material useful or for any queries, you can [drop
 a line](mailto:juuso.parkkinen@gmail.com).
-
-=--

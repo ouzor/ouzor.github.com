@@ -10,31 +10,26 @@ top: Juuso Parkkinen
 Welcome
 =======
 
-I am a data scientist, freeskier, photographer, and dad. I am currently working as a doctoral student at Aalto University. More about my research in the projects-page. 
+I'm Juuso Parkkinen, a Finnish dude interested in programming, statistics, machine learning, information visualization and open data. I am also a father, photographer, ultimate frisbee player, freeskier and longboarder.
 
-+-- {.section}
-Contact
-============
-[Contact information](/contact)
-=--
 
 +--	{.section}
-Interests
+Data science
 =========
-Machine learning  
-Bioinformatics  
-Information visualization  
-Open data  
+I will be starting as a data scientist in a Finnish company soon.
+
+I am also finishing my PhD thesis in machine learning and bioinformatics in Aalto University in Helsinki, Finland very soon.
 =--
 
 +--  {.section}
-Hobbies
+Twitter2
 =========
-[Ultimate frisbee](http://www.euc.fi/)  
-[Photography](http://ouzo.kuvat.fi/)  
-Freeskiing  
-Longboarding  
+<div class="section">
+<a class="twitter-timeline" href="https://twitter.com/ouzor" height="2em" data-widget-id="320845632002723840" data-chrome="nofooter noborders noheader noscrollbar transparent" data-tweet-limit="1" data-show-replies="false">Tweets by <span class="citation">@ouzor</span></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
 =--
+
 
 +--  {.section}
 Twitter
@@ -44,3 +39,11 @@ Twitter
 =--
 
 
+
+
+
++-- {.section}
+Contact
+============
+[Contact information](/contact)
+=--
