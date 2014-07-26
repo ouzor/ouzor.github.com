@@ -1,7 +1,7 @@
 ---
 layout: name
-title: Publications
-section: Publications
+title: Research
+section: Research
 top: Juuso Parkkinen
 ---
 <!-- This is for the Sections to work with kramdown -->
