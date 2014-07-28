@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Juuso's blog</title>
+ <link href="http://ouzor.github.io/blog/atom.xml" rel="self"/>
+ <link href="http://ouzor.github.io/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://ouzor.github.io/blog</id>
+ <author>
+   <name>Juuso Parkkinen</name>
+   <email>juuso.parkkinen@iki.fi</email>
+ </author>
+ 
+ {% for post in site.categories.blog limit:5 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://ouzor.github.io{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>id:{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>

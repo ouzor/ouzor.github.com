@@ -1,0 +1,12 @@
+---
+layout:   blog-post
+title:    Test1
+location: Helsinki, Finland
+excerpt:  A test post 1.
+commnts:  true
+---
+
+
+Test post 1
+
+
