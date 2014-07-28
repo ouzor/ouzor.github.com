@@ -16,11 +16,18 @@ I'm Juuso Parkkinen, a Finnish dude interested in programming, statistics, machi
 
 
 <div class="section">
-Data science
+Work
 ============
-I am about to finish my PhD thesis in machine learning and bioinformatics in Aalto University. I will start as a data scientist in a Finnish company soon.
+I am about to finish my PhD thesis in machine learning and bioinformatics in [Aalto University](http://users.ics.aalto.fi/japarkki/).
+
+<!--
+I will start as a data scientist in a Finnish company soon.
+-->
+
+Check also what's going on with the [rOpenGov](http://ropengov.github.io/) and [Louhos](http://louhos.github.io/) projects!
 </div>
 
+<!-- add blog -->
 
 <div class="section">
 [Twitter](http://twitter.com/ouzor)
@@ -31,7 +38,7 @@ I am about to finish my PhD thesis in machine learning and bioinformatics in Aal
 
 
 <div class="section">
-[Reading on Kippt](https://kippt.com/ouzor/)
+[Reading](https://kippt.com/ouzor/)
 ==================
 <!-- Made with http://feed.mikle.com/ in July 2014-->
 <!-- start feedwind code -->

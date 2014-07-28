@@ -8,11 +8,11 @@ top: Juuso Parkkinen
 {::options parse_block_html="true" /}
 
 Research
-============
+========
 
-I am currently finishing my PhD studies in Aalto University. In my thesis I have been developing machine learning methods for molecular biology and medicine applications. Here you can find my publications and other related material.
+I am currently finishing my PhD studies in Aalto University. In my thesis I have been developing machine learning methods for molecular biology and medicine applications. Below you can find my publications and other related material.
 
-See my all of my publications in [Google Scholar](http://scholar.google.com/citations?user=4d5VBfkAAAAJ)
+See all of my publications in [Google Scholar](http://scholar.google.com/citations?user=4d5VBfkAAAAJ).
 
 ## Research stuff
 * [Aalto homepage](http://users.ics.aalto.fi/japarkki/)
@@ -36,12 +36,12 @@ See my all of my publications in [Google Scholar](http://scholar.google.com/cita
 **Cross-organism toxicogenomics with group factor analysis**  
 Tommi Suvitaival, Juuso A Parkkinen, Seppo Virtanen, and Samuel Kaski  
 Systems Biomedicine 2014; 2:e29291  
-[DOI](http://dx.doi.org/10.4161/sysb.29291), [code](http://research.ics.tkk.fi/mi/software/GFAtoxgen)
+[DOI](http://dx.doi.org/10.4161/sysb.29291) | [code](http://research.ics.tkk.fi/mi/software/GFAtoxgen)
 
 **Probabilistic drug connectivity mapping**  
 Juuso A Parkkinen and Samuel Kaski  
 BMC Bioinformatics 2014, 15:113  
-[DOI](http://dx.doi.org/10.1186/1471-2105-15-113), [code](http://research.ics.aalto.fi/mi/software/ProbCMap/)
+[DOI](http://dx.doi.org/10.1186/1471-2105-15-113) | [code](http://research.ics.aalto.fi/mi/software/ProbCMap/)
 
 **Comprehensive data-driven analysis of the impact of chemoinformatic structure on the genome-wide biological response profiles of cancer cells to 1159 drugs**  
 Suleiman A Khan, Ali Faisal, John P Mpindi, Juuso A Parkkinen, Tuomo Kalliokoski, Antti Poso, Olli P Kallioniemi, Krister Wennerberg and Samuel Kaski  
@@ -58,9 +58,18 @@ In MLG '10: Proceedings of the Eighth Workshop on Mining and Learning with Graph
 **Searching for functional gene modules with interaction component models**  
 Juuso A Parkkinen and Samuel Kaski  
 BMC Systems Biology 2010, 4:4  
-[DOI](http://dx.doi.org/10.1186/1752-0509-4-4), [code](http://www.cis.hut.fi/projects/mi/software/ICMg)
+[DOI](http://dx.doi.org/10.1186/1752-0509-4-4) | [code](http://www.cis.hut.fi/projects/mi/software/ICMg)
 
+## Theses
 
+**Generative probabilistic models of biological and social network data**  
+Master's thesis  
+Helsinki University of Technology, Department of Information and Computer Science, September 2009  
+[online](https://aaltodoc.aalto.fi/handle/123456789/3104) | [PDF](http://users.ics.aalto.fi/japarkki/MSc_thesis_Parkkinen.pdf)
 
+**Äänenkorkeuden havaitsemisen hermostollinen perusta**  
+Bachelor's thesis (in Finnish)  
+Helsinki University of Technology, Department of Electrical and Communications Engineering  
+[online](https://aaltodoc.aalto.fi/handle/123456789/3371)
 
 

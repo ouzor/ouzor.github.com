@@ -50,12 +50,7 @@ Code
 ========
 [github/ouzor](https://github.com/ouzor)  
 [github/louhos](https://github.com/louhos)  
-</div>
-
-<div class="section">
-Kippt
-========
-[My reading lists in Kippt](https://kippt.com/ouzor)  
+[github/rOpenGov](https://github.com/ropengov)  
 </div>
 
 <div class="section">
