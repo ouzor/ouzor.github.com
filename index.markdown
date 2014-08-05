@@ -7,24 +7,20 @@ top: Juuso Parkkinen
 <!-- This is for the Sections to work with kramdown -->
 {::options parse_block_html="true" /}
 
-<img class='inset right' src='images/juuso.jpg' title='Juuso Parkkinen' alt='Photo' width='120px' />
+<img class='inset right' src='images/juuso.png' title='Juuso Parkkinen' alt='Photo' width='150px' />
 
 Welcome
 =======
 
-I'm Juuso Parkkinen, a Finnish dude interested in programming, statistics, machine learning, information visualization and open data. I am also a father, photographer, ultimate frisbee player and freeskier.
+I'm Juuso Parkkinen, a Finnish dude interested in machine learning, statistics, information visualization and open knowledge. I am also a father, photographer, ultimate frisbee player and freeskier.
 
 
 <div class="section">
 Work
 ============
-I am about to finish my PhD thesis in machine learning and bioinformatics in [Aalto University](http://users.ics.aalto.fi/japarkki/).
+I work as a data scientist at [Avaus](http://www.avaus.fi/). I am also about to finish my PhD thesis in machine learning and bioinformatics in [Aalto University](http://users.ics.aalto.fi/japarkki/).
 
-<!--
-I will start as a data scientist in a Finnish company soon.
--->
-
-Check also what's going on with the [rOpenGov](http://ropengov.github.io/) and [Louhos](http://louhos.github.io/) projects!
+I am also a co-founder and developer in the [rOpenGov](http://ropengov.github.io/) and [Louhos](http://louhos.github.io/) open source projects!
 </div>
 
 <!-- add blog -->
@@ -43,7 +39,7 @@ Check also what's going on with the [rOpenGov](http://ropengov.github.io/) and [
 <!-- Made with http://feed.mikle.com/ in July 2014-->
 <!-- start feedwind code -->
 <script type="text/javascript" src="//feed.mikle.com/js/rssmikle.js"></script>
-<script type="text/javascript">(function() {var params = {rssmikle_url: "https://kippt.com/ouzor/inbox/feed/f142b94a5b3e09e6dc944f61c3756762",rssmikle_frame_width: "450",rssmikle_frame_height: "100",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "off",autoscroll: "off",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "off",rssmikle_title_sentence: "My Kippt feed",rssmikle_title_link: "https://kippt.com/ouzor/",rssmikle_title_bgcolor: "#D4D4D4",rssmikle_title_color: "#000000",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#000000",rssmikle_item_border_bottom: "on",rssmikle_item_description: "title_only",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "off",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",rssmikle_item_description_tag: "off",rssmikle_item_description_image_scaling: "off",article_num: "3",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script>
+<script type="text/javascript">(function() {var params = {rssmikle_url: "https://kippt.com/ouzor/feed/9fbaea75546a1113865c5cccf3fc64b1/",rssmikle_frame_width: "450",rssmikle_frame_height: "100",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "off",autoscroll: "off",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "off",rssmikle_title_sentence: "My Kippt feed",rssmikle_title_link: "https://kippt.com/ouzor/",rssmikle_title_bgcolor: "#D4D4D4",rssmikle_title_color: "#000000",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "70",rssmikle_item_title_color: "#000000",rssmikle_item_border_bottom: "on",rssmikle_item_description: "title_only",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "off",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",rssmikle_item_description_tag: "off",rssmikle_item_description_image_scaling: "off",article_num: "3",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script>
 <div style="font-size:10px; text-align:center; width:450;">
 <a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a>
 </div>

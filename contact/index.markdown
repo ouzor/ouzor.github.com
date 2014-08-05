@@ -6,7 +6,7 @@ section: Contact
 <!-- This is for the Sections to work with kramdown -->
 {::options parse_block_html="true" /}
 
-<img class='inset right' src='../images/juuso.jpg' title='Juuso Parkkinen' alt='Photo' width='120px' />
+<img class='inset right' src='../images/juuso.png' title='Juuso Parkkinen' alt='Photo' width='150px' />
 
 Contact
 =======
@@ -17,7 +17,6 @@ Juuso Parkkinen (M.Sc.)
 Email
 ========
 juuso.parkkinen - at - iki.fi  
-juuso.parkkinen - at - gmail.com  
 </div>
 
 <div class="section">
