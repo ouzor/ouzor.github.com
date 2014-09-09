@@ -19,7 +19,7 @@ Currently we are actively developing [rOpenGov](http://ropengov.github.io/) - R 
 
 **Selected achievements**
 
-* [Datademo](http://datademo.fi/) funding for the [helsinki](https://github.com/rOpenGov/helsinki) and [gisfin](https://github.com/rOpenGov/gisfin) packages. Details (in Finnish) [here](http://datademo.fi/ensimmaisen-kierroksen-tulokset/) and [here](http://datademo.fi/kevatkierroksen-tulokset/). I was also interviewed in [Citiscope](http://www.citiscope.org/story/2014/how-helsinki-mashed-open-data-regionalism).
+* [Datademo](http://datademo.fi/) funding for the [helsinki](https://github.com/rOpenGov/helsinki) and [gisfin](https://github.com/rOpenGov/gisfin) packages. Details (in Finnish) [here](http://datademo.fi/ensimmaisen-kierroksen-tulokset/) and [here](http://datademo.fi/kevatkierroksen-tulokset/). I was also interviewed in [Citiscope](http://www.citiscope.org/story/2014/how-helsinki-mashed-open-data-regionalism) and filmed for a [video](https://www.youtube.com/watch?v=p733z0bUlnw).
 * Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization](http://spark.rstudio.com/ouzor/Sotkanet/) that was [developed together](http://www.demoshelsinki.fi/kasi-ylos-jos-yhteiskunta-ja-data-kiinnostavat/) with Juha Leppänen and Satu Korhonen from Demos Helsinki. [Details (in Finnish)](http://www.apps4finland.fi/kilpailutyo/alueellinen-hyvinvointi/).
 * Apps4Finland 2011: Victory in the data opening category (both official and audience votes): sorvi - R toolbox for open data. [Details (in Finnish)](http://apps4finland.fi/2011/10/24/datan-avaus-sorvi-avoimen-datan-tyokalupakki-r-kielelle/).
 

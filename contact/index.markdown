@@ -11,7 +11,7 @@ section: Contact
 Contact
 =======
 
-Juuso Parkkinen (M.Sc.)
+Juuso Parkkinen, D.Sc. (Tech.)
 
 <div class="section">
 Email
@@ -42,6 +42,7 @@ Linkedin
 Blog
 ========
 I co-author the _[Louhos](http://louhos.wordpress.com)_ blog on mining and visualizing Finnish open data
+<!-- To be added: rOpenGov blog, Avaus blog, personal blog, data science white blog? -->
 </div>
 
 <div class="section">

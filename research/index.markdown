@@ -62,10 +62,16 @@ BMC Systems Biology 2010, 4:4
 
 ## Theses
 
+**Probabilistic components of molecular interactions and drug responses**  
+Doctoral thesis  
+Aalto University School of Science, Department of Information and Computer Science, September 2014  
+[online](https://aaltodoc.aalto.fi/handle/123456789/13631) | [PDF](https://aaltodoc.aalto.fi/bitstream/handle/123456789/13631/isbn9789526057743.pdf?sequence=1)
+
+
 **Generative probabilistic models of biological and social network data**  
 Master's thesis  
 Helsinki University of Technology, Department of Information and Computer Science, September 2009  
-[online](https://aaltodoc.aalto.fi/handle/123456789/3104) | [PDF](http://users.ics.aalto.fi/japarkki/MSc_thesis_Parkkinen.pdf)
+[online](https://aaltodoc.aalto.fi/handle/123456789/3104) | [PDF](https://aaltodoc.aalto.fi/bitstream/handle/123456789/3104/urn100068.pdf?sequence=1)
 
 **Äänenkorkeuden havaitsemisen hermostollinen perusta**  
 Bachelor's thesis (in Finnish)  
