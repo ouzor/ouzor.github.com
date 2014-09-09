@@ -51,12 +51,14 @@ Code
 [github/ouzor](https://github.com/ouzor)  
 [github/louhos](https://github.com/louhos)  
 [github/rOpenGov](https://github.com/ropengov)  
+[github/Avaus](https://github.com/avaus)  
+
 </div>
 
 <div class="section">
 Photography
 ========
-[My photos at kuvat.fi](http://ouzo.kuvat.fi/)  
+[My photos at ouzo.kuvat.fi](http://ouzo.kuvat.fi/)  
 </div>
 
 <div class="section">

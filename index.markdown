@@ -12,7 +12,7 @@ top: Juuso Parkkinen
 Welcome
 =======
 
-I'm Juuso Parkkinen, a Finnish dude interested in machine learning, statistics, information visualization and open knowledge. I am also a father, photographer, ultimate frisbee player and freeskier.
+I'm Juuso Parkkinen, a Finnish hacker interested in machine learning, statistics, information visualization and open knowledge. I am also a father, photographer, ultimate frisbee player and freeskier.
 
 
 <div class="section">

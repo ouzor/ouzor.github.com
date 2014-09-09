@@ -33,6 +33,8 @@ See all of my publications in [Google Scholar](http://scholar.google.com/citatio
 
 ## Probabilistic models for molecular biology and medicine
 
+<!-- ADD toxgen -->
+
 **Cross-organism toxicogenomics with group factor analysis**  
 Tommi Suvitaival, Juuso A Parkkinen, Seppo Virtanen, and Samuel Kaski  
 Systems Biomedicine 2014; 2:e29291  
