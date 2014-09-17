@@ -10,7 +10,7 @@ top: Juuso Parkkinen
 Research
 ========
 
-I am currently finishing my PhD studies in Aalto University. In my thesis I have been developing machine learning methods for molecular biology and medicine applications. Below you can find my publications and other related material.
+I finished my PhD studies in Aalto University recently. In my thesis I developed machine learning methods for molecular biology and medicine applications. Below you can find my publications and other related material.
 
 See all of my publications in [Google Scholar](http://scholar.google.com/citations?user=4d5VBfkAAAAJ).
 

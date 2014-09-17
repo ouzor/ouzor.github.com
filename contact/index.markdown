@@ -45,6 +45,7 @@ I co-author the _[Louhos](http://louhos.wordpress.com)_ blog on mining and visua
 <!-- To be added: rOpenGov blog, Avaus blog, personal blog, data science white blog? -->
 </div>
 
+<!--
 <div class="section">
 Code
 ========
@@ -54,6 +55,7 @@ Code
 [github/Avaus](https://github.com/avaus)  
 
 </div>
+-->
 
 <div class="section">
 Photography
