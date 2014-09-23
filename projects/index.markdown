@@ -33,8 +33,9 @@ Currently we are actively developing [rOpenGov](http://ropengov.github.io/) - R 
 My data
 -------
 
-My data has emerged as an important topic beside open data. I have been actively involved in the [OKFI My Data working group](http://fi.okfn.org/wg/my-data/) and also developing some [code](https://github.com/ouzor/mydata) for analyzing my data from various sources.
+My data has emerged as an important topic on the side of open data. I have been actively involved in the [OKFI My Data working group](http://fi.okfn.org/wg/my-data/) and also developing some [code](https://github.com/ouzor/mydata) for analyzing my data from various sources.
 
+Check out the recent [My data survey](http://www.lvm.fi/julkaisu/4420389/my-data-johdatus-ihmiskeskeiseen-henkilotiedon-hyodyntamiseen) by the OKFI people, where I also contributed by commenting (English version coming).  
 
 Open science
 ------------
