@@ -4,13 +4,12 @@ title: Home
 section: Home
 ---
 
-Juuso's blog
+Thoughts on Open Sata Science
 ==========================================
 
-This is [Juuso](/)'s blog under construction.
+This is [Juuso](/)'s blog on data science and open knowledge. 
 
-More [information](info.html) about this blog and a complete archive of [past](past.html) posts, are 
-available via links at the top of the page.
+More [information](info.html) about this blog and a complete archive of [past](past.html) posts, are available via links at the top of the page.
 
 You can also subscribe to an [atom feed][] of the most recent posts.
 
