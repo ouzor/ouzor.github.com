@@ -3,45 +3,58 @@ layout: default
 top: Open Data Science
 feed: atom.xml
 ---
+<!-- Twitter script -->
+<script type="text/javascript">
+  window.twttr = (function (d, s, id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src= "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+  </script>
 
 <div id="header">
 	{% include nav-blog.html %}
 </div>
 
 <div id="page">
-	
+
   <h1 class="emphnext">{{ page.title }}</h1>
 
 {{ content }}
 
+  <!-- Show signature, date, location, tags -->
   <address class="signature">
     <a class="author" href="http://ouzor.github.io">Juuso Parkkinen</a>
+    Tags:
+    {% for tag in page.tags %}
+      {{ tag }}
+      {% if forloop.last != true %}, {% endif %}
+    {% endfor %}
     <span class="date">{{ page.date | date_to_long_string }}</span>
     <span class="location">{{ page.location }}</span>
   </address>
   
   <!-- FIXME: put buttons in the same row! --> 
-    <!-- Twitter button, based on https://dev.twitter.com/web/tweet-button -->
-    <a class="twitter-share-button" href="https://twitter.com/share"> Tweet </a>
-    <script type="text/javascript">
-    window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];
-    if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;
-    js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
-    return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-    </script>
-  
-    <!-- Facebook button, based on https://developers.facebook.com/docs/plugins/like-button -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+  <!-- Twitter buttons, based on https://dev.twitter.com/web/follow-button
+  and https://dev.twitter.com/web/tweet-button-->
+  <a class="twitter-follow-button" href="https://twitter.com/ouzor"
+  data-show-count="false" data-lang="en">Follow @ouzor </a>
+  <a class="twitter-share-button" href="https://twitter.com/share"> Tweet </a>
 
-    </script>
-    <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+  <!-- Facebook button, based on https://developers.facebook.com/docs/plugins/like-button -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
   
 </div>
 <!-- End Page -->

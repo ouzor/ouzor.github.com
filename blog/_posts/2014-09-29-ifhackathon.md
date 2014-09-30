@@ -2,7 +2,7 @@
 layout:   blog-post
 title:    Open car accident claims data from IF?
 location: Espoo, Finland
-tags :    [open data, hackathon]
+tags :    [opendata, hackathon]
 excerpt:  Thoughts and experiences from the Aaltoes Open Data Hackathon with IF
 comments: true
 ---

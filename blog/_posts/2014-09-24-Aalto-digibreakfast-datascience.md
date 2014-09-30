@@ -2,7 +2,7 @@
 layout:   blog-post
 title:    Aalto Digi Breakfast on Data Science
 location: Espoo, Finland
-tags:     [data science]
+tags:     [datascience]
 excerpt:  My notes from the Aalto University Digi Breakfast on Data Science
 comments: true
 ---
