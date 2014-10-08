@@ -22,7 +22,7 @@ I work as a data scientist at [Avaus](http://www.avaus.fi/).
 <!--
 I finished my PhD thesis in machine learning and bioinformatics in [Aalto University](http://users.ics.aalto.fi/japarkki/) in September 2014.
 -->
-I am also a co-founder and developer in the [rOpenGov](http://ropengov.github.io/) and [Louhos](http://louhos.github.io/) open source projects.
+I am also a co-founder and developer in the [rOpenGov](http://ropengov.github.io/) and [Louhos](http://louhos.github.io/) open source projects. See more information and contact details [here](/info/).
 </div>
 
 <!-- add blog -->
