@@ -1,12 +1,12 @@
 ---
 layout: blog
-title: Archives
+title: Past
 section: Past
 ---
 
-# Archives
+# Past
 
-All blog posts in reverse chronological order.
+All blog posts in reverse chronological order:
 
 {% for post in site.categories.blog %}
 <div class="section list">
@@ -22,7 +22,7 @@ All blog posts in reverse chronological order.
 
 <!-- Tags, following http://stackoverflow.com/questions/1408824/an-easy-way-to-support-tags-in-a-jekyll-blog -->
 
-All blog posts by tags.
+All blog posts by tags:
 
 {% capture tags %}
   {% for tag in site.tags %}

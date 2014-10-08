@@ -7,14 +7,13 @@ section: Home
 Thoughts on Open Sata Science
 ==========================================
 
-This is [Juuso](/)'s blog on data science and open knowledge. 
+This is my personal blog on data science and open knowledge. You can find more information about me [here](../info).
 
+Topics of the blog include data science, open data, machine learning, statistics, mydata and open science. 
+
+<!--
 More [information](info.html) about this blog and a complete archive of [past](past.html) posts, are available via links at the top of the page.
-
-You can also subscribe to an [atom feed][] of the most recent posts.
-
-[atom feed]: /blog/atom.xml
-
+-->
 <a href="/blog/atom.xml"><img src="/images/rss.png" alt="Atom Feed" style="height: 2em; margin-right:2.5em;" class="right"/></a>
 
 Recent Posts
@@ -28,11 +27,19 @@ Recent Posts
   <a class="comments" href="{{ post.url }}#disqus_thread">View Comments</a>
   </p>
   <p class="excerpt">{{ post.excerpt }}</p>
+
 </div>
 {% endfor %}
 
 <p>
 <a href="past.html">Older Posts &rarr;</a>
 </p>
+
+
+You can also subscribe to an [RSS feed][] of the most recent posts.
+
+[RSS feed]: /blog/atom.xml
+
+
 
 <!-- Add DISQUS stuff from mark/iem/index.markdown -->

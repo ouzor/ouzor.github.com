@@ -36,7 +36,7 @@ html>body { font-size:16px; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
 
 a { text-decoration: none; color: #339; }
-//a:hover { text-decoration: underline; color: #33f; }
+a:hover { text-decoration: underline; color: #33f; }
 a.pdf:before { 
 	margin-right: 1em;
 	content: url(/files/css/icon_pdf.gif); }
@@ -251,6 +251,7 @@ ul.compact li a {
 body#Work #header a.work, 
 body#Home #header a.home, 
 body#Info #header a.info,
+body#Projects #header a.projects,
 body#Code #header a.code,
 body#Contact #header a.contact,
 body#Past #header a.past
