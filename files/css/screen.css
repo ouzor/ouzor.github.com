@@ -36,7 +36,7 @@ html>body { font-size:16px; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
 
 a { text-decoration: none; color: #339; }
-a:hover { text-decoration: underline; color: #33f; }
+//a:hover { text-decoration: underline; color: #33f; }
 a.pdf:before { 
 	margin-right: 1em;
 	content: url(/files/css/icon_pdf.gif); }
@@ -107,7 +107,9 @@ sup { line-height: 1ex; }
 .inset { 
 	border: 1px solid silver; 
 	padding: 2px;
-	margin: 0em 0.8em 0.8em 0.8em;
+/*	margin: 0em 0.8em 0.8em 0.8em;
+Juuso 8.10.2014 */
+  margin: 1.5em 0.8em 0.8em 0.8em; 
 }
 .right.inset { margin-right: 0 !important; }
 .left.inset { margin-left: 0 !important; }
@@ -185,11 +187,14 @@ ul.compact li a {
 /* @end */
 
 /* @group Header */
+#header, #header a { color: black; }
+/* Juuso 8.10.2014
 #header, #header a { color: silver; }
 #header .hover { color: transparent; }
 #header:hover a { color: black; text-shadow: #aaa 2px 2px 3px;}
 #header:hover a:hover { text-decoration: none; }
 #header a:hover .hover { color: silver; }
+*/
 #header {
 	position: relative;
 	font-variant: small-caps;
@@ -213,7 +218,7 @@ ul.compact li a {
 	line-height: 1.6em;
 	display: block;
 	margin: 0;
-	width: 70%; /* LL: modify this to fit the header selection line */
+	width: 55%; /* JP: Had to increase a bit. LL: modify this to fit the header selection line */
 	text-align: right;
 }
 #header ul li { display: inline; }
@@ -221,18 +226,21 @@ ul.compact li a {
 	padding: 0.4em 0.3em 0 0.3em;
 	display: inline;
 }
+/* Juuso 8.10.2014
 #header ul li a:hover {
 	color: blue;
 	border-bottom: 2px solid blue;
 }
+*/
 #header .byline {
-	color: silver;
+	color: black;
 	font-size: 10pt;
 	line-height: 75%
 }
+/* Juuso 8.10.2014
 #header:hover .byline a { color: silver; text-shadow: none; }
 #header:hover .byline a:hover { color: black; text-shadow: #aaa 1px 1px 2px;}
-
+*/
 /* @group Twitter */
 #twitter_update_list { display: inline; margin: 0; }
 #twitter_update_list li { display: inline; margin: 0;}
@@ -267,7 +275,7 @@ body#Past #header a.past
 /* @group Sections */
 
 .section { 
-	font-size: 87.5%; 
+	font-size: 95%; // Juuso 8.10.2014 
 	line-height: 1.43em; 
 	margin-bottom: 1.43em;
 	margin-top: 1.43em;
