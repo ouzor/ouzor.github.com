@@ -44,12 +44,10 @@ juuso.parkkinen - at - iki.fi
 ouzor @ IRCnet / FreeNode
 </div>
 
-<!--
 <div class="section">
 # CV
-To be added! Think where... boring and not boring?
+[PDF](/files/CV_JuusoParkkinen.pdf)
 </div>
--->
 
 ## Background
 
