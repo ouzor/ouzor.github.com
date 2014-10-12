@@ -5,37 +5,65 @@ section: Projects
 top: Juuso Parkkinen
 ---
 
-# Stuff I am doing or have done
+# Stuff I have done
 
-* [Open source tools for open data](#open-tools)
-* [My data](#my-data)
-* [Open science](#open science)
+## Recent highlights
+
+* [Using H2O big data platform to analyze CO2 emissions of cars][trafi] - a blog post and related [documentation] written at Avaus.
+* [Datademo] funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here][ddres1] and [here][ddres2]. I was also interviewed in [Citiscope] a [video][ddvideo].
+* Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization][sotkanet-shiny] that was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank. [Details (in Finnish)][a4f-sotkanet].
+
+
+
+
+## More stuff by themes
+
+* [Open data science](#opends)
+* [Open source tools for open data](#opentools)
+* [Other open knowledge stuff](#openknow)
 * [Research on machine learning and bioinformatics](#research) (past)
 
 
-# Open source tools for open data {#open-tools}
+# Open data science {#opends}
 
-**[Louhos][]:** Since 2011 I have been developing open source tools for processing, analyzing and visualizing open data with a few Finnish friends. It all started with the [Louhos][] project, and our [sorvi][] R package winning the Apps4Finland 2011 data opening category. Since then, our [blog][] (in Finnish; migrated from [Wordpress][] in June 2014) has received more than 30000 views. 
+At [Avaus] we try to share our data science experiences and tools.
+
+* We are developing a [big data cluster][bigdata] for automated deployment of open source big data tools locally or in the cloud.
+* We have also published some open data analysis examples in our blog, for example the [Trafi open data analysis][trafi] done by me.
+
+[Avaus]: http://www.avaus.fi/
+[bigdata]: https://github.com/avaus/bigdata-cluster
+[trafi]: http://www.avaus.fi/business/using-h2o-big-data-platform-to-analyze-co2-emissions-of-cars
+[documentation]: https://github.com/avaus/opendata/blob/master/trafi.md
 
 
+# Open source tools for open data {#opentools}
+
+**[Louhos][]:** Since 2011 I have been developing open source tools for processing, analyzing and visualizing open data with a few Finnish friends in the [Louhos][] project. It all started with our [sorvi][] R package winning the Apps4Finland 2011 data opening category. Since then, our [blog][] (in Finnish; migrated from [Wordpress][] in June 2014) has received more than 30000 views and we've won also other prices in Apps4Finland.
 
 **[rOpenGov][]:** Currently we are actively developing the rOpenGov R ecosystem for open goverment data. We already have a lot of [packages][] involved all around Europe and the US, and even more are being [developed][]. In Finland, the original [sorvi] package has been [split][] to several more focused packages. Personally I am most actively developing the [helsinki][] and [gisfin][] packages.
 
-<!--, supported by the Finnish [Datademo funding](http://datademo.fi/english/).-->
+
+**Achievements**
+
+* [Datademo] funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here][ddres1] and [here][ddres2]. I was also interviewed in [Citiscope] a [video][ddvideo].
+* Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization][sotkanet-shiny] that was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank. [Details (in Finnish)][a4f-sotkanet].
+* Apps4Finland 2012: Victory in the data opening category (official and audience votes): Data elections ([Datavaalit][]). [Details (in Finnish)][a4f-datavaalit].
+* Apps4Finland 2012: Victory in the data guide category (audience votes): Finnish [data wiki][]. [Details (in Finnish)][a4f-datawiki].
+* Apps4Finland 2011: Victory in the data opening category (both official and audience votes): [sorvi] - R toolbox for open data. [Details (in Finnish)][a4f-sorvi].
 
 
-**Selected achievements**
-
-* [Datademo](http://datademo.fi/) funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here](http://datademo.fi/ensimmaisen-kierroksen-tulokset/) and [here](http://datademo.fi/kevatkierroksen-tulokset/). I was also interviewed in [Citiscope](http://www.citiscope.org/story/2014/how-helsinki-mashed-open-data-regionalism) and filmed for a [video](https://www.youtube.com/watch?v=p733z0bUlnw).
-* Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization](http://spark.rstudio.com/ouzor/Sotkanet/) that was [developed together](http://www.demoshelsinki.fi/kasi-ylos-jos-yhteiskunta-ja-data-kiinnostavat/) with Juha Leppänen and Satu Korhonen from Demos Helsinki. [Details (in Finnish)](http://www.apps4finland.fi/kilpailutyo/alueellinen-hyvinvointi/).
-* Apps4Finland 2011: Victory in the data opening category (both official and audience votes): sorvi - R toolbox for open data. [Details (in Finnish)](http://apps4finland.fi/2011/10/24/datan-avaus-sorvi-avoimen-datan-tyokalupakki-r-kielelle/).
-
-**Other achievements**
-<!-- consider moving to info/cv -->
-
-* Apps4Finland 2012: Victory in the data opening category (official and audience votes): Data elections ([Datavaalit][]). [Details (in Finnish)](http://apps4finland.fi/2012/10/28/datan-avaus-datavaalit/).
-* Apps4Finland 2012: Victory in the data guide category (audience votes): Finnish [data wiki][]. [Details (in Finnish)](http://apps4finland.fi/2012/09/22/dataopas-suomalainen-datawiki/).
-
+[Datademo]: http://datademo.fi/
+[ddres1]: http://datademo.fi/ensimmaisen-kierroksen-tulokset/
+[ddres2]: http://datademo.fi/kevatkierroksen-tulokset/
+[Citiscope]: http://www.citiscope.org/story/2014/how-helsinki-mashed-open-data-regionalism
+[ddvideo]: https://www.youtube.com/watch?v=p733z0bUlnw
+[sotkanet-shiny]: https://ouzor.shinyapps.io/sotkanet/
+[demos-sotkanet]: http://www.demoshelsinki.fi/kasi-ylos-jos-yhteiskunta-ja-data-kiinnostavat/
+[a4f-sotkanet]: http://www.apps4finland.fi/kilpailutyo/alueellinen-hyvinvointi/
+[a4f-sorvi]: http://apps4finland.fi/2011/10/24/datan-avaus-sorvi-avoimen-datan-tyokalupakki-r-kielelle/
+[a4f-datavaalit]: http://apps4finland.fi/2012/10/28/datan-avaus-datavaalit/
+[a4f-datawiki]: http://apps4finland.fi/2012/09/22/dataopas-suomalainen-datawiki/
 
 [Louhos]: http://louhos.github.io/
 [sorvi]: http://louhos.github.io/sorvi/index.html
@@ -52,15 +80,22 @@ top: Juuso Parkkinen
 [data wiki]: http://louhos.github.io/datawiki/
 
 
-# My data
 
-My data has emerged as an important topic on the side of open data. I have been actively involved in the [OKFI My Data working group](http://fi.okfn.org/wg/my-data/) and also developing some [code](https://github.com/ouzor/mydata) for analyzing my data from various sources.
 
-Check out the recent [My data survey](http://www.lvm.fi/julkaisu/4420389/my-data-johdatus-ihmiskeskeiseen-henkilotiedon-hyodyntamiseen) by the OKFI people, where I also contributed by commenting (English version coming).  
+# Other open knowledge stuff {#openknow}
 
-# Open science
+Open knowledge cover a wide set of topics from open data and science to democracy. [Open Knowledge Finland][okfi] (OKFFI) was founded few years ago to represent the emerging Finnish openness community. It works through working groups, and I'm also actively involved in some of these as listed below.
 
-I have been somewhat actively involved in the [OKFI Open Science work group](http://fi.okfn.org/wg/openscience/). 
+**[My Data]** has emerged as an important topic on the side of open data. The working group recently produced a [My data survey][mydata-survey] that clarifies the related concepts nicely. An English version is coming in the future. I have also developed some [code] for analyzing personal data from various sources.
+
+**[Open science]** - the oppenness of research publications, data and code - is a really hot topic now. Problems in research reproducibility have raised the need for better and more open ways to conduct science. 
+
+[okfi]: http://fi.okfn.org/
+[My Data]: http://fi.okfn.org/wg/my-data/
+[mydata-survey]: http://www.lvm.fi/julkaisu/4420389/my-data-johdatus-ihmiskeskeiseen-henkilotiedon-hyodyntamiseen
+[code]: https://github.com/ouzor/mydata
+[Open Science]: http://fi.okfn.org/wg/openscience/
+
 
 # Research on machine learning and bioinformatics {#research}
 
@@ -103,7 +138,9 @@ Juuso A Parkkinen and Samuel Kaski
 BMC Systems Biology 2010, 4:4  
 [DOI](http://dx.doi.org/10.1186/1752-0509-4-4) | [code](http://www.cis.hut.fi/projects/mi/software/ICMg)
 
-See all of my publications in [Google Scholar](http://scholar.google.com/citations?user=4d5VBfkAAAAJ). Other research-related stuff:
+See all of my publications in [Google Scholar](http://scholar.google.com/citations?user=4d5VBfkAAAAJ).
+
+Other research-related stuff:
 
 * [Aalto homepage](http://users.ics.aalto.fi/japarkki/)
 * [Aalto People page](https://people.aalto.fi/index.html?language=english#juuso_parkkinen)

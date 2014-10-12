@@ -44,19 +44,27 @@ juuso.parkkinen - at - iki.fi
 ouzor @ IRCnet / FreeNode
 </div>
 
+<!--
 <div class="section">
 # CV
 To be added! Think where... boring and not boring?
 </div>
-
+-->
 
 ## Background
 
-I studied bioinformation technology in Helsinki University of Technology, with major in bioinformatics and minor in business strategy. I joined the research gorup of Prof. Samuel Kaski first as a research student and continued by doing my master's thesis about biological and social network analysis.
+I studied bioinformation technology in Helsinki University of Technology, with major in bioinformatics and minor in business strategy. I joined the [Statistical Machine Learning and Bioinformatics][smlb] research group first as a research student and then did my master's thesis on probabilistic models for biological and social network analysis.
 
-I also stayed in the group for a PhD, switching the research topic more towards molecular medicine. You can read more about my research in the [Projects](/projects/#research) page. Machine learning, bioinformatics and information visualization. Close collaboration with biological and medical experts. 
+I continued in the group for a PhD, focusing on molecular medicine and toxicology applications. My research included a lot of collaboration with biological and medical experts, and I also developed my information visualization skills at that time. You can read more about my research in the [Projects] page. I defended my thesis in August 2014.
 
-I have also been actively taking part in the Finnish open knowledge seen, creating open source tools for analyzing open data first in Finland with the sorvi package and now internationally, building the rOpenGov community. I am also interested in the open science movement, not least by my own experiences in conducting not-so-open science during my PhD. A recent interest is My Data, where I among other things took part in commenting a report that tried to define some concepts and write down what My Data is all about. More about that later, too.
+After my PhD I fealt that the current academic world is not for me and "switched to the industry", where there are currently a lot of exciting opportunities for data scientists. I now work as a senior data analyst at Avaus Consulting. Although much of what we do is confidential, there will also be plenty of experiences to share. 
 
-I have recently started as a senior data analyst at Avaus Consulting, and hence learning a lot of the business-related things that are essential in what we call data science (more about the definition of data science in a future post). Although much of what we do is confidential, I think there will also be plenty of experiences to share (see Avaus open stuff). Also big data will be a topic.
+I have also been actively taking part in the Finnish open knowledge scene, creating open source tools for handling open data in the [Louhos][] and [rOpenGov][] projects. I also got more and more interested in the open science stuff when making not-so-open PhD research. Another hot topic is My Data, where the idea is to bring personal data under the full control of the persons and not the companies that currently do whatever they want with the data. Again see more details in the [Projects] page.
 
+[smlb]: http://research.ics.aalto.fi/mi/
+[Projects]: /projects/
+[proj-resear]: /projects/#research
+[Louhos]: http://louhos.github.io/
+[rOpenGov]: http://ropengov.github.io/
+[proj-opentools]: /projects/#opentools
+[openknow]: /projects/#openknow
