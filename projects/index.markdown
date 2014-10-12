@@ -9,6 +9,7 @@ top: Juuso Parkkinen
 
 ## Recent highlihts
 
+* [Car accident data visualization][ifhackathon] (see my [blog post][ifhackathon-blog] about this)
 * [Using H2O big data platform to analyze CO2 emissions of cars][trafi] - a blog post and related [documentation] written at Avaus.
 * [helsinki][] and [gisfin][] R packages got [Datademo] funding. I was also interviewed in [Citiscope] and in a [video][ddvideo].
 * [Alueellinen hyvinvointi-visualization][sotkanet-shiny] won the third place in the visualization category of Apps4Finland 2013. This was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank.
@@ -23,11 +24,14 @@ top: Juuso Parkkinen
 
 ## Open data science {#opends}
 
-At [Avaus] we try to share our data science experiences and tools.
+At [Avaus] we try to share our data science experiences and tools. Here are some things where I have contributed:
 
-* We are developing a [big data cluster][bigdata] for automated deployment of open source big data tools locally or in the cloud.
-* We have also published some open data analysis examples in our blog, for example the [Trafi open data analysis][trafi] done by me.
-
+* [Car accident data visualization][ifhackathon] (see my [blog post][ifhackathon-blog] about this)
+* [Using H2O big data platform to analyze CO2 emissions of cars][trafi]
+* [Big data cluster][bigdata] for automated deployment of open source big data platform locally or in the cloud
+ 
+[ifhackathon]: https://ouzor.shinyapps.io/ifhackathon/
+[ifhackathon-blog]: http://ouzor.github.io/blog/ifhackathon.html
 [Avaus]: http://www.avaus.fi/
 [bigdata]: https://github.com/avaus/bigdata-cluster
 [trafi]: http://www.avaus.fi/business/using-h2o-big-data-platform-to-analyze-co2-emissions-of-cars
