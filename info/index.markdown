@@ -35,7 +35,7 @@ juuso.parkkinen - at - iki.fi
 <div class="section">
 # Blogs
 [Personal blog](/blog/) on data science and open knowledge  
-[Louhos blog](http://louhos.github.io/) on mining and visualizing Finnish open data  
+[Louhos blog](http://louhos.github.io/blog.html) on mining and visualizing Finnish open data  
 </div>
 <!-- To be added: rOpenGov blog, Avaus blog, data science white label blog? -->
 
