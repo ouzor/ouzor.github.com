@@ -7,7 +7,7 @@ top: Juuso Parkkinen
 <!-- This is for the Sections to work with kramdown -->
 {::options parse_block_html="true" /}
 
-<img class='inset right' src='../images/juuso.png' title='Juuso Parkkinen' alt='Photo' width='150px' />
+<img class='inset right' src='../images/juuso.png' title='Juuso Parkkinen' alt='Photo' width='130px' />
 
 # About me
 

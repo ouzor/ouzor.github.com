@@ -5,18 +5,15 @@ section: Projects
 top: Juuso Parkkinen
 ---
 
-# Stuff I have done
+# My projects
 
-## Recent highlights
+## Recent highlihts
 
 * [Using H2O big data platform to analyze CO2 emissions of cars][trafi] - a blog post and related [documentation] written at Avaus.
-* [Datademo] funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here][ddres1] and [here][ddres2]. I was also interviewed in [Citiscope] a [video][ddvideo].
-* Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization][sotkanet-shiny] that was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank. [Details (in Finnish)][a4f-sotkanet].
+* [helsinki][] and [gisfin][] R packages got [Datademo] funding. I was also interviewed in [Citiscope] and in a [video][ddvideo].
+* [Alueellinen hyvinvointi-visualization][sotkanet-shiny] won the third place in the visualization category of Apps4Finland 2013. This was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank.
 
-
-
-
-## More stuff by themes
+## Projects by themes
 
 * [Open data science](#opends)
 * [Open source tools for open data](#opentools)
@@ -24,7 +21,7 @@ top: Juuso Parkkinen
 * [Research on machine learning and bioinformatics](#research) (past)
 
 
-# Open data science {#opends}
+## Open data science {#opends}
 
 At [Avaus] we try to share our data science experiences and tools.
 
@@ -37,7 +34,7 @@ At [Avaus] we try to share our data science experiences and tools.
 [documentation]: https://github.com/avaus/opendata/blob/master/trafi.md
 
 
-# Open source tools for open data {#opentools}
+## Open source tools for open data {#opentools}
 
 **[Louhos][]:** Since 2011 I have been developing open source tools for processing, analyzing and visualizing open data with a few Finnish friends in the [Louhos][] project. It all started with our [sorvi][] R package winning the Apps4Finland 2011 data opening category. Since then, our [blog][] (in Finnish; migrated from [Wordpress][] in June 2014) has received more than 30000 views and we've won also other prices in Apps4Finland.
 
@@ -46,7 +43,7 @@ At [Avaus] we try to share our data science experiences and tools.
 
 **Achievements**
 
-* [Datademo] funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here][ddres1] and [here][ddres2]. I was also interviewed in [Citiscope] a [video][ddvideo].
+* [Datademo] funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here][ddres1] and [here][ddres2]. I was also interviewed in [Citiscope] and in a [video][ddvideo].
 * Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization][sotkanet-shiny] that was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank. [Details (in Finnish)][a4f-sotkanet].
 * Apps4Finland 2012: Victory in the data opening category (official and audience votes): Data elections ([Datavaalit][]). [Details (in Finnish)][a4f-datavaalit].
 * Apps4Finland 2012: Victory in the data guide category (audience votes): Finnish [data wiki][]. [Details (in Finnish)][a4f-datawiki].
@@ -82,7 +79,7 @@ At [Avaus] we try to share our data science experiences and tools.
 
 
 
-# Other open knowledge stuff {#openknow}
+## Other open knowledge stuff {#openknow}
 
 Open knowledge cover a wide set of topics from open data and science to democracy. [Open Knowledge Finland][okfi] (OKFFI) was founded few years ago to represent the emerging Finnish openness community. It works through working groups, and I'm also actively involved in some of these as listed below.
 
@@ -97,7 +94,7 @@ Open knowledge cover a wide set of topics from open data and science to democrac
 [Open Science]: http://fi.okfn.org/wg/openscience/
 
 
-# Research on machine learning and bioinformatics {#research}
+## Research on machine learning and bioinformatics {#research}
 
 I finished my PhD studies in Aalto University in 2014. In my [thesis](#theses) I developed machine learning methods for molecular biology and medicine applications. Below you can find selected publications and other related material.
 
@@ -107,7 +104,9 @@ I finished my PhD studies in Aalto University in 2014. In my [thesis](#theses) I
 <iframe src="https://impactstory.org/embed/JuusoParkkinen" width="600" height="600"></iframe>
 -->
 
-## Probabilistic models for molecular biology and medicine
+<!--
+**Probabilistic models for molecular biology and medicine**
+-->
 
 <!-- ADD toxgen -->
 
@@ -126,7 +125,9 @@ Suleiman A Khan, Ali Faisal, John P Mpindi, Juuso A Parkkinen, Tuomo Kalliokoski
 BMC Bioinformatics 2012, 13:112  
 [DOI](http://dx.doi.org/10.1186/1471-2105-13-112)
 
+<!--
 ## Probabilistic models for networks
+-->
 
 **Graph Visualization With Latent Variable Models**  
 Juuso A Parkkinen, Kristian Nybo, Jaakko Peltonen and Samuel Kaski  
@@ -150,7 +151,7 @@ Other research-related stuff:
 * [ResearcherID: I-8411-2014](http://www.researcherid.com/rid/I-8411-2014)
 * [CiteULike](http://www.citeulike.org/author/Parkkinen:Juuso)
 
-## Theses
+Theses:
 
 **Probabilistic components of molecular interactions and drug responses**  
 Doctoral thesis  

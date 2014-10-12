@@ -109,7 +109,7 @@ sup { line-height: 1ex; }
 	padding: 2px;
 /*	margin: 0em 0.8em 0.8em 0.8em;
 Juuso 8.10.2014 */
-  margin: 1.5em 0.8em 0.8em 0.8em; 
+  margin: 1.5em 0.8em 0.8em 2em; 
 }
 .right.inset { margin-right: 0 !important; }
 .left.inset { margin-left: 0 !important; }
