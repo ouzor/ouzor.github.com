@@ -218,7 +218,7 @@ ul.compact li a {
 	line-height: 1.6em;
 	display: block;
 	margin: 0;
-	width: 55%; /* JP: Had to increase a bit. LL: modify this to fit the header selection line */
+	width: 50%; /* JP: Had to decrease a bit. LL: modify this to fit the header selection line */
 	text-align: right;
 }
 #header ul li { display: inline; }
