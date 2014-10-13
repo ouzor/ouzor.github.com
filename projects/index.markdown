@@ -40,7 +40,15 @@ At [Avaus] we try to share our data science experiences and tools. Here are some
 
 ## Open source tools for open data {#opentools}
 
+<!--
+<a href='http://louhos.github.io/'><img class='inset2 right' src='https://avatars3.githubusercontent.com/u/1228310?v=2&s=200' title='Louhos' alt='Louhos' width='100px' />
+-->
+
 **[Louhos][]:** Since 2011 I have been developing open source tools for processing, analyzing and visualizing open data with a few Finnish friends in the [Louhos][] project. It all started with our [sorvi][] R package winning the Apps4Finland 2011 data opening category. Since then, our [blog][] (in Finnish; migrated from [Wordpress][] in June 2014) has received more than 30000 views and we've won also other prices in Apps4Finland.
+
+<!--
+<a href='http://ropengov.github.io/'><img class='inset2 right' src='http://ropengov.github.io/images/logo.png' title='rOpenGov' alt='rOpenGov' width='130px' />
+-->
 
 **[rOpenGov][]:** Currently we are actively developing the rOpenGov R ecosystem for open goverment data. We already have a lot of [packages][] involved all around Europe and the US, and even more are being [developed][]. In Finland, the original [sorvi] package has been [split][] to several more focused packages. Personally I am most actively developing the [helsinki][] and [gisfin][] packages.
 
