@@ -22,7 +22,17 @@ I work as a data scientist at [Avaus](http://www.avaus.fi/).
 I am also a co-founder and developer in the [rOpenGov](http://ropengov.github.io/) and [Louhos](http://louhos.github.io/) open source projects. See more information and contact details [here](/info/).
 </div>
 
-<!-- add blog -->
+<div class="section">
+# Blog
+Recent posts from my [Open Data Science](/blog/) blog:
+
+<ul>
+{% for post in site.categories.blog limit:3 %}
+    <li><a class="title" href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
+
 
 <div class="section">
 [Twitter](http://twitter.com/ouzor)
