@@ -46,7 +46,7 @@ ouzor @ IRCnet / FreeNode
 
 <div class="section">
 # CV
-[PDF](/files/CV_JuusoParkkinen.pdf)
+[PDF](/files/CV_JuusoParkkinen_WEB.pdf)
 </div>
 
 ## Background
