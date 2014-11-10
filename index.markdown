@@ -18,7 +18,7 @@ I'm Juuso Parkkinen, a Finnish hacker interested in machine learning, statistics
 <div class="section">
 Work
 ============
-I work as a data scientist at [Avaus](http://www.avaus.fi/).
+I work as a data scientist at [Reaktor](http://reaktor.fi/).
 I am also a co-founder and developer in the [rOpenGov](http://ropengov.github.io/) and [Louhos](http://louhos.github.io/) open source projects. See more information and contact details [here](/info/).
 </div>
 

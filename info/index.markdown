@@ -55,13 +55,14 @@ I studied bioinformation technology in Helsinki University of Technology, with m
 
 I continued in the group for a PhD, focusing on molecular medicine and toxicology applications. My research included a lot of collaboration with biological and medical experts, and I also developed my information visualization skills at that time. You can read more about my research in the [Projects] page. I defended my thesis in August 2014.
 
-After my PhD I fealt that the current academic world is not for me and "switched to the industry", where there are currently a lot of exciting opportunities for data scientists. I now work as a senior data analyst at Avaus Consulting. Although much of what we do is confidential, there will also be plenty of experiences to share. 
+After my PhD I fealt that the current academic world is not for me and "switched to the industry", where there are currently a lot of exciting opportunities for data scientists. I now work as a senior data scientist at [Reaktor], a Finnish software and consultancy company. Although much of what we do is confidential, there will also be plenty of experiences to share. 
 
 I have also been actively taking part in the Finnish open knowledge scene, creating open source tools for handling open data in the [Louhos][] and [rOpenGov][] projects. I also got more and more interested in the open science stuff when making not-so-open PhD research. Another hot topic is My Data, where the idea is to bring personal data under the full control of the persons and not the companies that currently do whatever they want with the data. Again see more details in the [Projects] page.
 
 [smlb]: http://research.ics.aalto.fi/mi/
 [Projects]: /projects/
 [proj-resear]: /projects/#research
+[Reaktor]: http://reaktor.fi/
 [Louhos]: http://louhos.github.io/
 [rOpenGov]: http://ropengov.github.io/
 [proj-opentools]: /projects/#opentools
