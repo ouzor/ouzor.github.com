@@ -4,7 +4,7 @@ title: Home
 section: Home
 ---
 
-Thoughts on Open Sata Science
+Thoughts on Open Data Science
 ==========================================
 
 This is my personal blog on data science and open knowledge. You can find more information about me [here](../info).
