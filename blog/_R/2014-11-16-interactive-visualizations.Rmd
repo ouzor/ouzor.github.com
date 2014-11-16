@@ -9,6 +9,17 @@ tags:
 comments: yes
 ---
 
+TODO
+  - one rChart and one ggvis not showing…
+	- list technical problems
+http://cran.r-project.org/web/packages/knitr/vignettes/knit_print.html
+check knit hooks
+
+	- try plotly in jekyll!
+	- add CC figure
+	- need three header levels in homepages
+	- switch to permalinks
+
 Interactive visualization allows deeper exploration of data than static plots. Javascript libraries such as [d3] have made possible wonderful new ways to show and explore data. Luckily the R community has been active in developing R interfaces to some popular javascript libraries to enable R users to create interactive visualizations without knowing any javascript. 
 
 In this post I have reviewed some of the most common interactive visualization packages in R with simple example plots along with some comments and experiences. Here are the packages included:
@@ -76,15 +87,17 @@ R markdown documents are very nice way of sharing reproducible analyses, using t
 
 I encountered several problems when preparing this blog post. Specifically, I had issues in embedding the plots into R markdown documents. This is made more complicated with the various available ways of turning .Rmd files into html: manual `knit()` and `knit2html()` functions, the `Knit HTML` button in RStudio, and a Jekyll-powered blog with its own requirements. Here I have listed the most important issues, with solutions when found. Some things are still unsolved, hope someone can help me with those! 
 
-* Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). FIXME: check that this works with jekyll too.
-* Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`. No idea why.
-* ggvis showed up nicely with `Knit HTML`, as it creates a standalone file with the necessary javascript libraries included. However, this was not the case with my blog setup. My solution was to inlude the set of scripts (taken from the [source of this page][ggvis-scripts]) into the header of all my blog posts (see [here][blog-scripts]). Not sure if this is an optimal solution.
+* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). FIXME: check that this works with jekyll too.
+* **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`. No idea why.
+* **ggvis** showed up nicely with `Knit HTML`, as it creates a standalone file with the necessary javascript libraries included. However, this was not the case with my blog setup. My solution was to inlude the set of scripts (taken from the [source of this page][ggvis-scripts]) into the header of all my blog posts (see [here][blog-scripts]). Not sure if this is an optimal solution.
 * There are still two missing plots in this post. FIXME: conflict?
 
-I also notived several minor issues with the packages
+The whole process of producing valid interactive html charts from R markdown is a respectable things, and I'm kind of amazed that I managed to implement it even this well.
+
+I also noticed several minor issues:
 
 * googleVis was missing axis labels by default
-* 
+* rCharts is missing legend titles, and behaves strangely on scatter plot: legend shows incorrect information, and the plot area is too tight 
 
 [plotly-rmd]: http://ropensci.org/blog/2014/04/17/plotly/
 [plotly-issue]: https://github.com/ropensci/plotly/issues/12#issuecomment-63134893
