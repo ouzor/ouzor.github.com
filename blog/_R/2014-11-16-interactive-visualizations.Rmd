@@ -1,0 +1,259 @@
+---
+title: "Review of interactive R visualizations"
+excerpt: "Review of ggvis, rCharts, plotly and googleVis for interactive visualizations"
+layout: blog-post
+location: Espoo, Finland
+tags:
+- R
+- visualization
+comments: yes
+---
+
+Interactive visualization allows deeper exploration of data than static plots. Javascript libraries such as [d3] have made possible wonderful new ways to show and explore data. Luckily the R community has been active in developing R interfaces to some popular javascript libraries to enable R users to create interactive visualizations without knowing any javascript. 
+
+In this post I have reviewed some of the most common interactive visualization packages in R with simple example plots along with some comments and experiences. Here are the packages included:
+
+* [ggplot2] - one of the best static visualization packages in R
+* [ggvis] - interactive pltos from the makers of ggplot2
+* [rCharts] - R interface to multiple javascript charting libraries, see also the [gallery] for nice examples
+* [plotly] - convert ggplot2 figures to interactive plots easily
+* [googleVis] - use Google Chart Tools from R
+
+Also other libraries for creating interactive visualizations from R do exist, such as [clickme], [RIGHT], [ggobi], [iplots], [gg2v], and [rVega]. Some of these are not under active development anymore. I might include some of those into the comparison here in the future. The [d3Network] package is also worth checking if you need cool interactive network visualizations.
+
+[d3]: http://d3js.org/
+[ggplot2]: http://ggplot2.org/
+[ggvis]: http://ggvis.rstudio.com/
+[rCharts]: http://rcharts.io/
+[gallery]: http://rcharts.io/gallery/
+[plotly]: https://plot.ly/r/
+[googleVis]: http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html
+
+[clickme]: https://github.com/nachocab/clickme
+[RIGHT]: https://code.google.com/p/r-interactive-graphics-via-html/
+[ggobi]: http://cran.r-project.org/web/packages/rggobi/index.html
+[iplots]: http://cran.r-project.org/web/packages/iplots/index.html
+[gg2v]: https://github.com/hadley/gg2v
+[rVega]: https://github.com/metagraf/rVega
+[d3Network]: http://christophergandrud.github.io/d3Network/
+
+You can either jump straight to the [example visualization](#examplevisus) or read my comments first. Note that I am a heavy ggplot2 user, and hence my comments may also be notably biased!
+
+## Technical features
+
+All four packages use javascript for the interactive visualizations, and are cabable of producing most of the standard plot types. The syntaxes vary somewhat, as ggvis uses the pipe operator (familiar for dplyr users) which has replaced the '+' from ggplot2. rCharts uses several javascript libraries and also the syntax used varies between different types of charts. 
+
+All other packages than googleVis are clearly in an early development phase, meaning that the features are somewhat limited. As an experienced ggplot2 user it was often hard to adapt to the much narrower range of features included in ggvis. Documentation-wise ggvis and googleVis seem to be the most advanced. rCharts especially suffers from the combination of multiple plot types (named rather uninformatively as `rPlot`, `nPlot` and so on) with practically no documentation. So producing anything else than what's provided in the existing examples was very hard. 
+
+googleVis sets itself apart by requiring the data in a different format than the other packages. In Hadley Wickham's [terms][tidy data], it assumes the data is in the *messy* format, in contrast to the other packages, tha assume *tidy* data. This makes it somewhat hard to use, at least when one is used to using tidy data frames. See the examples below for more details.
+
+
+
+[tidy data]: http://www.jstatsoft.org/v59/i10/
+## Issues
+
+missing plots
+ggvis 
+embedding into markdown + jekyll!
+documentation
+
+This works: http://stackoverflow.com/questions/17168464/2-knitr-r-markdown-rstudio-issues-highcharts-and-morris-js
+`hist.rcharts$print(include_assets=TRUE)`
+`hist.rcharts$show('inline', include_assets=TRUE, cdn=TRUE)`
+
+## Summary
+
+I love ggplot2, and hence I also like ggvis, as it pays attention to graphical details and showing things "right". However, the package is still missing a lot of important features, such as faceting. In some cases rCharts can do what ggvis can not (yet), and so it is a good alternative. However, the missing documentation makes it hard to create customized plots. Plotly has a really nice idea and implementation, but requirement for authentication and limited number of private plots reduce the usability a lot. Google's [Motion charts](https://code.google.com/p/google-motion-charts-with-r/) are cool and useful, but otherwise I wouldn't use googleVis.
+
+
+## Example visualizations {#examplevisus}
+
+Here I have made example plots with the interactive tools: [histograms](#histograms), [scatter plots](#scatter) and [line plots](#lineplots).
+
+```{r, eval=FALSE}
+## Install necessary packages
+install.packages("devtools")
+library("devtools")
+install.packages("ggvis")
+install.packages("googleVis")
+install_github("ramnathv/rCharts")
+install_github("ropensci/plotly")
+install.packages("dplyr")
+install.packages("tidyr")
+````
+ 
+```{r, results='hide', message=FALSE}
+# Load packages
+library("ggvis")
+library("googleVis")
+library("rCharts")
+library("plotly")
+library("dplyr")
+library("tidyr")
+# Define image sizes
+img.width <- 450
+img.height <- 300
+options(RCHART_HEIGHT = img.height, RCHART_WIDTH = img.width)
+opts_chunk$set(fig.width=6, fig.height=4)
+```
+
+```{r, results='hide'}
+# Plotly requires authentication
+pcred <- scan("../keys/plotly_credentials.txt", what="character")
+set_credentials_file("ouzor", pcred)
+py <- plotly()
+```
+
+```{r}
+# Use mtcars data
+data(mtcars)
+mtcars$cyl <- factor(mtcars$cyl)
+mtcars$am <- factor(mtcars$am)
+# Compute mean mpg per cyl and am
+mtcars.mean <- mtcars %>% group_by(cyl, am) %>% 
+  summarise(mpg_mean=mean(mpg)) %>% 
+  select(cyl, am, mpg_mean) %>% ungroup()
+```
+
+# Histograms {#histograms}
+
+## ggplot
+
+```{r hist_ggplot}
+hist.ggplot <- ggplot(mtcars, aes(x=mpg)) + geom_histogram(binwidth=1)
+hist.ggplot
+````
+
+##  ggvis
+
+``` {r}
+hist.ggvis <- mtcars %>% ggvis(x = ~mpg) %>% layer_histograms(width=1) %>% 
+  set_options(width = img.width, height = img.height)
+hist.ggvis
+```
+
+## rCharts
+
+```{r, results='asis'}
+# rCharts histogram needs manual binning and counting!
+hist.rcharts <- rPlot(x="bin(mpg,1)", y="count(id)", data=mtcars, type="bar")
+hist.rcharts$show('iframesrc', cdn=TRUE)
+```
+
+## plotly
+
+``` {r, plotly=TRUE, eval=FALSE}
+py$ggplotly(hist.ggplot, session="knitr")
+```
+
+<iframe height="400" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ouzor/33/count-vs-mpg/" width="450" frameBorder="0"></iframe>
+
+## googleVis
+
+```{r, results='asis'}
+# Number of bins chosen automatically, which is sometimes bad
+gvis.options <- list(hAxis="{title:'mpg'}",
+                     width=img.width, height=img.height)
+hist.gvis <- gvisHistogram(data=mtcars["mpg"], option=gvis.options)
+print(hist.gvis)
+```
+
+# Scatter plots {#scatter}
+
+## ggplot
+
+```{r scatter_ggplot}
+scatter.ggplot <- ggplot(mtcars, aes(x=wt, y=mpg, colour=cyl)) + geom_point()
+scatter.ggplot
+```
+
+##  ggvis
+
+``` {r}
+scatter.ggvis <- mtcars %>% ggvis(x = ~wt, y = ~mpg, fill = ~cyl) %>% 
+  layer_points() %>% set_options(width = img.width, height = img.height)
+scatter.ggvis
+```
+
+## rCharts
+
+```{r, results='asis'}
+scatter.rcharts <- rPlot(mpg ~ wt, data = mtcars, color = 'cyl', type = 'point')
+# WTF, legend shows 4-7, while the levels are 4,6,8???
+# very tight limits, parts of points missing on the edge
+scatter.rcharts$show('iframesrc', cdn=TRUE)
+```
+
+## plotly
+
+``` {r, plotly=TRUE, eval=FALSE}
+py$ggplotly(scatter.ggplot, session="knitr")
+```
+
+<iframe height="400" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ouzor/34/mpg-vs-wt/" width="450" frameBorder="0"></iframe>
+
+## googleVis
+
+```{r, eval=TRUE, results='asis'}
+# Spread data to show the wanted scatter plot (unique id required for unique rows)
+mtcars$id <- as.character(1:nrow(mtcars))
+mtcars.temp <- tidyr::spread(mtcars[c("wt", "mpg", "cyl", "id")], key=cyl, value=mpg)
+gvis.options <- list(hAxis="{title:'wt'}", vAxis="{title:'mpg'}",
+                     width=img.width, height=img.height)
+scatter.gvis <- gvisScatterChart(select(mtcars.temp, -id), options=gvis.options)
+print(scatter.gvis)
+```
+
+
+# Line plots {#lineplots}
+
+## ggplot
+
+```{r line_ggplot}
+line.ggplot <- ggplot(mtcars.mean, aes(x=cyl, y=mpg_mean, colour=am)) + 
+  geom_line(aes(group=am))
+line.ggplot
+```
+
+##  ggvis
+
+``` {r}
+line.ggvis <- mtcars.mean %>% ggvis(x = ~cyl, y = ~mpg_mean, stroke = ~am) %>% 
+  layer_lines() %>% set_options(width = img.width, height = img.height)
+line.ggvis
+```
+
+Does not show up for some reason!
+
+## rCharts
+
+```{r, results='asis'}
+line.rcharts <- hPlot(x="cyl", y="mpg_mean", group="am", data=mtcars.mean, type="line")
+line.rcharts$show('iframesrc', cdn=TRUE)
+```
+
+## plotly
+
+``` {r, plotly=TRUE, eval=FALSE}
+py$ggplotly(line.ggplot, session="knitr")
+```
+
+<iframe height="400" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ouzor/35/mpg-mean-vs-cyl/" width="450" frameBorder="0"></iframe>
+
+## googleVis
+
+```{r, results='asis'}
+# Spread data to show the wanted line plot
+mtcars.mean.temp <- tidyr::spread(mtcars.mean, key=am, value=mpg_mean)
+gvis.options <- list(hAxis="{title:'cyl'}", vAxis="{title:'mpg_mean'}",
+                     width=img.width, height=img.height)
+line.gvis <- gvisLineChart(mtcars.mean.temp, options=gvis.options)
+print(line.gvis)
+```
+
+## Session info
+
+```{r}
+sessionInfo()
+```
+
