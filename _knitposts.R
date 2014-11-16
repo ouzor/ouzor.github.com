@@ -12,13 +12,13 @@ KnitPost <- function(input, outfile, base.url="/") {
   opts_knit$set(base.url = base.url)
   fig.path <- paste0("blog/figs/", sub(".Rmd$", "", basename(input)), "/")
   opts_chunk$set(fig.path = fig.path)
-  opts_chunk$set(fig.cap = "center")
+  opts_chunk$set(fig.cap = "testing")
   render_jekyll()
   knit(input, outfile, envir = parent.frame())
 }
 
-for (infile in list.files("_R", pattern="*.Rmd", full.names=TRUE)) {
-  outfile = paste0("_posts/", sub(".Rmd$", ".md", basename(infile)))
+for (infile in list.files("blog/_R", pattern="*.Rmd", full.names=TRUE)) {
+  outfile = paste0("blog/_posts/", sub(".Rmd$", ".md", basename(infile)))
   
   # knit only if the input file is the last one modified
   if (!file.exists(outfile) |
