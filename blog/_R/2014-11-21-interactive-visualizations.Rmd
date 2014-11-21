@@ -1,6 +1,6 @@
 ---
 title: "Interactive visualizations with R - a minireview"
-excerpt: "A minireview of ggvis, rCharts, plotly and googleVis for interactive visualizations"
+excerpt: "A minireview of R packages ggvis, rCharts, plotly and googleVis for interactive visualizations"
 layout: blog-post
 location: Espoo, Finland
 tags:
@@ -9,10 +9,7 @@ tags:
 comments: yes
 ---
 
-TODO	- switch to permalinks
-- fix plotly, maybe add comment (plotly=TRUE does something even if eval=FALSE)
-
-Interactive visualization allows deeper exploration of data than static plots. Javascript libraries such as [d3] have made possible wonderful new ways to show and explore data. Luckily the R community has been active in developing R interfaces to some popular javascript libraries to enable R users to create interactive visualizations without knowing any javascript. 
+Interactive visualization allows deeper exploration of data than static plots. Javascript libraries such as [d3] have made possible wonderful new ways to show data. Luckily the R community has been active in developing R interfaces to some popular javascript libraries to enable R users to create interactive visualizations without knowing any javascript. 
 
 In this post I have reviewed some of the most common interactive visualization packages in R with simple example plots along with some comments and experiences. Here are the packages included:
 
@@ -22,12 +19,9 @@ In this post I have reviewed some of the most common interactive visualization p
 * [plotly] - convert ggplot2 figures to interactive plots easily
 * [googleVis] - use Google Chart Tools from R
 
+You can either jump straight to the [example visualization](#examplevisus) or read my comments first. The R markdown source code for this blog post with embedded visualizations can be found in [Github][source]. I have probably missed some important features and documentation, and also clear mistakes are possible. Please point those out in the comments, and I'll fix them. It is also important to note that I am a heavy ggplot2 user, and hence my comments may also be biased!
+
 Also other libraries for creating interactive visualizations from R do exist, such as [clickme], [RIGHT], [ggobi], [iplots], [gg2v], and [rVega]. Some of these are not under active development anymore. I might include some of those into the comparison here in the future. The [d3Network] package is also worth checking if you need cool interactive network visualizations.
-
-You can either jump straight to the [example visualization](#examplevisus) or read my comments first. The R markdown source code for this blog post with embedded visualizations can be found in [Github][source].
-
-Please note that this is far from a comprehensive review. I have probably missed some important features and documentation, and also clear mistakes are possible. Please point those out in the comments, and I'll fix them. It is also important to note that I am a heavy ggplot2 user, and hence my comments may also be biased!
-
 
 [d3]: http://d3js.org/
 [ggplot2]: http://ggplot2.org/
@@ -68,7 +62,7 @@ ggvis is currently the only one of these packages that can not produce map visua
 
 Interactive visualizations are typically meant to be shared for a larger audience. Common ways to share interactive visualizations from R are as standalone html files, embedded in [R markdown][rmd] documents, and embedded in [Shiny] applications. All the studied packages can produce standalone htmls, though possibly with some loss of interactivity. 
 
-R markdown documents are a very nice way of sharing reproducible analyses, using the [knitr] and [rmarkdown] packages. Outputs from all the studied visualization packages can be embedded in .Rmd documents, though I had some problems. Even more challenging was to make the plots show up in this jekyll-powered blog. More details on this in the Issues section below. All packages are also compatible with Shiny documents and applications, and have good tutorials for this available. 
+R markdown documents are a very nice way of sharing reproducible analyses, using the [knitr] and [rmarkdown] packages. Outputs from all the studied visualization packages can be embedded in .Rmd documents, though I had some problems (see the Issues section below). All packages are also compatible with Shiny documents and applications, and have good tutorials for this. 
 
 [rmd]: http://rmarkdown.rstudio.com/
 [Shiny]: http://shiny.rstudio.com/
@@ -80,8 +74,8 @@ R markdown documents are a very nice way of sharing reproducible analyses, using
 I encountered several problems when preparing this blog post. Specifically, I had issues in embedding the plots into R markdown documents. This is made more complicated with the various available ways of turning .Rmd files into html: manual `knit()` and `knit2html()` functions, the `Knit HTML` button in RStudio, and a Jekyll-powered blog with its own requirements. Here I have listed the most important issues, with solutions when found. Some things are still unsolved, hope someone can help me with those! 
 
 * **ggvis** showed up nicely with `Knit HTML`, as it creates a standalone file with the necessary javascript libraries included. However, this was not the case with my blog setup. My solution was to inlude the set of scripts (taken from the [source of this page][ggvis-scripts]) into the header of all my blog posts (see [here][blog-scripts]). Not sure if this is an optimal solution.
-* **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`. No idea why.
-* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I do not actually evaluate the plotly chunks, as it would create new plots.
+* **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`.
+* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I embedded existing plotly charts manually.
 * There are still two charts that do now show up in this post. I have quite limited understanding of how knitr, jekyll and the javascript tools work together, and could not get these to work. Perhaps the scripts somehow conflict with each other?
 
 I also noticed some minor issues:
@@ -97,12 +91,13 @@ I also noticed some minor issues:
 
 ## Summary
 
-In general, being able to produce valid interactive html charts from R markdown without knowing any javascript is great! All of the packages great sensible outputs, but there are also a lot of differences. I love ggplot2, and hence I also like ggvis, as it pays attention to graphical details following the grammar of graphics principles. However, the package is still missing a lot of important features, such as faceting. In many cases rCharts can do what ggvis can not (yet), and so it is a good alternative. However, the missing documentation makes it hard to create customized plots. Plotly has a really nice idea and implementation, but requirement for authentication and limited number of private plots reduce the usability a lot. Google's [Motion charts](https://code.google.com/p/google-motion-charts-with-r/) are cool and useful, but otherwise the input data format logic that differs from the packages makes using the package too hard in practice. 
+In general, being able to produce valid interactive html charts from R markdown without knowing any javascript is great! All of the packages great sensible outputs, but there are also a lot of differences. I love ggplot2, and hence I also like ggvis, as it pays attention to graphical details following the [grammar of graphics] principles. However, the package is still missing a lot of important features, such as faceting. In many cases rCharts can do what ggvis can not (yet), and so it is a good alternative. However, the missing documentation makes it hard to create customized plots. Plotly has a really nice idea and implementation, but requirement for authentication and limited number of private plots reduce the usability a lot. Google's [Motion charts](https://code.google.com/p/google-motion-charts-with-r/) are cool and useful, but otherwise the input data format logic that differs from the packages makes using the package too hard in practice. 
 
+[grammar of graphics]: http://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/GOG.html
 
 ## Example visualizations {#examplevisus}
 
-Here I have made example plots with the interactive tools: [histograms](#histograms), [scatter plots](#scatter) and [line plots](#lineplots). First we need to install and load the necessary R packages:
+Here I have made example plots with the interactive tools: [histograms](#histograms), [scatter plots](#scatter) and [line plots](#lineplots). Source code is available in [Github][source]. First we need to install and load the necessary R packages:
 
 ```{r, eval=FALSE}
 ## Install necessary packages
@@ -133,13 +128,11 @@ options(RCHART_HEIGHT = img.height, RCHART_WIDTH = img.width)
 opts_chunk$set(fig.width=6, fig.height=4)
 ```
 
-Plotly needs some setting up.
+Plotly needs some setting up (using the credentials from [here][plotly-rmd]).
 
 ```{r, results='hide'}
 # Plotly requires authentication
-pcred <- scan("../keys/plotly_credentials.txt", what="character")
-set_credentials_file("ouzor", pcred)
-py <- plotly()
+py <- plotly("RgraphingAPI", "ektgzomjbx")
 ```
 
 Prepare the mtcars data set a bit.
@@ -189,9 +182,10 @@ Does not show up...
 
 ``` {r, eval=FALSE, plotly=TRUE}
 # This works, but is not evaluated now. Instead the iframe is embedded manually.
-# py$ggplotly(hist.ggplot, session="knitr")
+py$ggplotly(hist.ggplot, session="knitr")
 ```
 
+<iframe height="400" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ouzor/33/count-vs-mpg/" width="450" frameBorder="0"></iframe>
 
 **googleVis**
 

@@ -1,6 +1,6 @@
 ---
 title: "Interactive visualizations with R - a minireview"
-excerpt: "A minireview of ggvis, rCharts, plotly and googleVis for interactive visualizations"
+excerpt: "A minireview of R packages ggvis, rCharts, plotly and googleVis for interactive visualizations"
 layout: blog-post
 location: Espoo, Finland
 tags:
@@ -9,9 +9,7 @@ tags:
 comments: yes
 ---
 
-TODO	- switch to permalinks
-
-Interactive visualization allows deeper exploration of data than static plots. Javascript libraries such as [d3] have made possible wonderful new ways to show and explore data. Luckily the R community has been active in developing R interfaces to some popular javascript libraries to enable R users to create interactive visualizations without knowing any javascript. 
+Interactive visualization allows deeper exploration of data than static plots. Javascript libraries such as [d3] have made possible wonderful new ways to show data. Luckily the R community has been active in developing R interfaces to some popular javascript libraries to enable R users to create interactive visualizations without knowing any javascript. 
 
 In this post I have reviewed some of the most common interactive visualization packages in R with simple example plots along with some comments and experiences. Here are the packages included:
 
@@ -21,12 +19,9 @@ In this post I have reviewed some of the most common interactive visualization p
 * [plotly] - convert ggplot2 figures to interactive plots easily
 * [googleVis] - use Google Chart Tools from R
 
+You can either jump straight to the [example visualization](#examplevisus) or read my comments first. The R markdown source code for this blog post with embedded visualizations can be found in [Github][source]. I have probably missed some important features and documentation, and also clear mistakes are possible. Please point those out in the comments, and I'll fix them. It is also important to note that I am a heavy ggplot2 user, and hence my comments may also be biased!
+
 Also other libraries for creating interactive visualizations from R do exist, such as [clickme], [RIGHT], [ggobi], [iplots], [gg2v], and [rVega]. Some of these are not under active development anymore. I might include some of those into the comparison here in the future. The [d3Network] package is also worth checking if you need cool interactive network visualizations.
-
-You can either jump straight to the [example visualization](#examplevisus) or read my comments first. The R markdown source code for this blog post with embedded visualizations can be found in [Github][source].
-
-Please note that this is far from a comprehensive review. I have probably missed some important features and documentation, and also clear mistakes are possible. Please point those out in the comments, and I'll fix them. It is also important to note that I am a heavy ggplot2 user, and hence my comments may also be biased!
-
 
 [d3]: http://d3js.org/
 [ggplot2]: http://ggplot2.org/
@@ -67,7 +62,7 @@ ggvis is currently the only one of these packages that can not produce map visua
 
 Interactive visualizations are typically meant to be shared for a larger audience. Common ways to share interactive visualizations from R are as standalone html files, embedded in [R markdown][rmd] documents, and embedded in [Shiny] applications. All the studied packages can produce standalone htmls, though possibly with some loss of interactivity. 
 
-R markdown documents are a very nice way of sharing reproducible analyses, using the [knitr] and [rmarkdown] packages. Outputs from all the studied visualization packages can be embedded in .Rmd documents, though I had some problems. Even more challenging was to make the plots show up in this jekyll-powered blog. More details on this in the Issues section below. All packages are also compatible with Shiny documents and applications, and have good tutorials for this available. 
+R markdown documents are a very nice way of sharing reproducible analyses, using the [knitr] and [rmarkdown] packages. Outputs from all the studied visualization packages can be embedded in .Rmd documents, though I had some problems (see the Issues section below). All packages are also compatible with Shiny documents and applications, and have good tutorials for this. 
 
 [rmd]: http://rmarkdown.rstudio.com/
 [Shiny]: http://shiny.rstudio.com/
@@ -79,8 +74,8 @@ R markdown documents are a very nice way of sharing reproducible analyses, using
 I encountered several problems when preparing this blog post. Specifically, I had issues in embedding the plots into R markdown documents. This is made more complicated with the various available ways of turning .Rmd files into html: manual `knit()` and `knit2html()` functions, the `Knit HTML` button in RStudio, and a Jekyll-powered blog with its own requirements. Here I have listed the most important issues, with solutions when found. Some things are still unsolved, hope someone can help me with those! 
 
 * **ggvis** showed up nicely with `Knit HTML`, as it creates a standalone file with the necessary javascript libraries included. However, this was not the case with my blog setup. My solution was to inlude the set of scripts (taken from the [source of this page][ggvis-scripts]) into the header of all my blog posts (see [here][blog-scripts]). Not sure if this is an optimal solution.
-* **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`. No idea why.
-* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I do not actually evaluate the plotly chunks, as it would create new plots.
+* **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`.
+* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I embedded existing plotly charts manually.
 * There are still two charts that do now show up in this post. I have quite limited understanding of how knitr, jekyll and the javascript tools work together, and could not get these to work. Perhaps the scripts somehow conflict with each other?
 
 I also noticed some minor issues:
@@ -96,12 +91,13 @@ I also noticed some minor issues:
 
 ## Summary
 
-In general, being able to produce valid interactive html charts from R markdown without knowing any javascript is great! All of the packages great sensible outputs, but there are also a lot of differences. I love ggplot2, and hence I also like ggvis, as it pays attention to graphical details following the grammar of graphics principles. However, the package is still missing a lot of important features, such as faceting. In many cases rCharts can do what ggvis can not (yet), and so it is a good alternative. However, the missing documentation makes it hard to create customized plots. Plotly has a really nice idea and implementation, but requirement for authentication and limited number of private plots reduce the usability a lot. Google's [Motion charts](https://code.google.com/p/google-motion-charts-with-r/) are cool and useful, but otherwise the input data format logic that differs from the packages makes using the package too hard in practice. 
+In general, being able to produce valid interactive html charts from R markdown without knowing any javascript is great! All of the packages great sensible outputs, but there are also a lot of differences. I love ggplot2, and hence I also like ggvis, as it pays attention to graphical details following the [grammar of graphics] principles. However, the package is still missing a lot of important features, such as faceting. In many cases rCharts can do what ggvis can not (yet), and so it is a good alternative. However, the missing documentation makes it hard to create customized plots. Plotly has a really nice idea and implementation, but requirement for authentication and limited number of private plots reduce the usability a lot. Google's [Motion charts](https://code.google.com/p/google-motion-charts-with-r/) are cool and useful, but otherwise the input data format logic that differs from the packages makes using the package too hard in practice. 
 
+[grammar of graphics]: http://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/GOG.html
 
 ## Example visualizations {#examplevisus}
 
-Here I have made example plots with the interactive tools: [histograms](#histograms), [scatter plots](#scatter) and [line plots](#lineplots). First we need to install and load the necessary R packages:
+Here I have made example plots with the interactive tools: [histograms](#histograms), [scatter plots](#scatter) and [line plots](#lineplots). Source code is available in [Github][source]. First we need to install and load the necessary R packages:
 
 
 {% highlight r %}
@@ -134,14 +130,12 @@ options(RCHART_HEIGHT = img.height, RCHART_WIDTH = img.width)
 opts_chunk$set(fig.width=6, fig.height=4)
 {% endhighlight %}
 
-Plotly needs some setting up.
+Plotly needs some setting up (using the credentials from [here][plotly-rmd]).
 
 
 {% highlight r %}
 # Plotly requires authentication
-pcred <- scan("../keys/plotly_credentials.txt", what="character")
-set_credentials_file("ouzor", pcred)
-py <- plotly()
+py <- plotly("RgraphingAPI", "ektgzomjbx")
 {% endhighlight %}
 
 Prepare the mtcars data set a bit.
@@ -179,27 +173,27 @@ hist.ggvis <- mtcars %>% ggvis(x = ~mpg) %>% layer_histograms(width=1) %>%
 hist.ggvis
 {% endhighlight %}
 
-<!--html_preserve--><div id="plot_id947121094-container" class="ggvis-output-container">
-<div id="plot_id947121094" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id219272377-container" class="ggvis-output-container">
+<div id="plot_id219272377" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id947121094_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id947121094" data-renderer="svg">SVG</a>
+<a id="plot_id219272377_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id219272377" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id947121094_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id947121094" data-renderer="canvas">Canvas</a>
+<a id="plot_id219272377_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id219272377" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id947121094_download" class="ggvis-download" data-plot-id="plot_id947121094">Download</a>
+<a id="plot_id219272377_download" class="ggvis-download" data-plot-id="plot_id219272377">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id947121094_spec = {
+var plot_id219272377_spec = {
     "data": [
         {
             "name": "mtcars0/bin1/stack2",
@@ -337,7 +331,7 @@ var plot_id947121094_spec = {
     "handlers": null
 }
 ;
-ggvis.getPlot("plot_id947121094").parseSpec(plot_id947121094_spec);
+ggvis.getPlot("plot_id219272377").parseSpec(plot_id219272377_spec);
 </script><!--/html_preserve-->
 
 **rCharts**
@@ -372,10 +366,10 @@ hist.rcharts$show('iframesrc', cdn=TRUE)
   &lt;/head&gt;
   &lt;body &gt;
     
-    &lt;div id = &#039;chart3b9f5deda311&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
+    &lt;div id = &#039;chart21ad1885bfd1&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
     &lt;script type=&#039;text/javascript&#039;&gt;
     var chartParams = {
- &quot;dom&quot;: &quot;chart3b9f5deda311&quot;,
+ &quot;dom&quot;: &quot;chart21ad1885bfd1&quot;,
 &quot;width&quot;:    450,
 &quot;height&quot;:    300,
 &quot;layers&quot;: [
@@ -402,17 +396,17 @@ hist.rcharts$show('iframesrc', cdn=TRUE)
 &quot;facet&quot;: [],
 &quot;guides&quot;: [],
 &quot;coord&quot;: [],
-&quot;id&quot;: &quot;chart3b9f5deda311&quot; 
+&quot;id&quot;: &quot;chart21ad1885bfd1&quot; 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart3b9f5deda311 = polyjs.chart(chartParams);
+    var graph_chart21ad1885bfd1 = polyjs.chart(chartParams);
 &lt;/script&gt;
     
     &lt;script&gt;&lt;/script&gt;    
   &lt;/body&gt;
-&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart3b9f5deda311'> </iframe>
+&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart21ad1885bfd1'> </iframe>
  <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 Does not show up...
@@ -422,12 +416,10 @@ Does not show up...
 
 {% highlight r %}
 # This works, but is not evaluated now. Instead the iframe is embedded manually.
-# py$ggplotly(hist.ggplot, session="knitr")
+py$ggplotly(hist.ggplot, session="knitr")
 {% endhighlight %}
 
-<iframe height="600" id="igraph" scrolling="no" seamless="seamless"
-				src="https://plot.ly/~ouzor/39" width="600" frameBorder="0"></iframe>
-
+<iframe height="400" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ouzor/33/count-vs-mpg/" width="450" frameBorder="0"></iframe>
 
 **googleVis**
 
@@ -444,7 +436,7 @@ print(hist.gvis)
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>HistogramID3b9f303945f0</title>
+<title>HistogramID21ad4f4eb0a2</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <style type="text/css">
 body {
@@ -460,14 +452,14 @@ body {
 </head>
 <body>
  <!-- Histogram generated in R 3.1.1 by googleVis 0.5.6 package -->
-<!-- Fri Nov 21 09:52:49 2014 -->
+<!-- Fri Nov 21 18:58:29 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataHistogramID3b9f303945f0 () {
+function gvisDataHistogramID21ad4f4eb0a2 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -574,8 +566,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartHistogramID3b9f303945f0() {
-var data = gvisDataHistogramID3b9f303945f0();
+function drawChartHistogramID21ad4f4eb0a2() {
+var data = gvisDataHistogramID21ad4f4eb0a2();
 var options = {};
 options["allowHtml"] = true;
 options["hAxis"] = {title:'mpg'};
@@ -583,7 +575,7 @@ options["width"] =    450;
 options["height"] =    300;
 
     var chart = new google.visualization.Histogram(
-    document.getElementById('HistogramID3b9f303945f0')
+    document.getElementById('HistogramID21ad4f4eb0a2')
     );
     chart.draw(data,options);
     
@@ -607,9 +599,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartHistogramID3b9f303945f0);
+callbacks.push(drawChartHistogramID21ad4f4eb0a2);
 })();
-function displayChartHistogramID3b9f303945f0() {
+function displayChartHistogramID21ad4f4eb0a2() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -633,14 +625,14 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID3b9f303945f0"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID21ad4f4eb0a2"></script>
  
 <!-- divChart -->
   
-<div id="HistogramID3b9f303945f0" 
+<div id="HistogramID21ad4f4eb0a2" 
   style="width: 450; height: 300;">
 </div>
- <div><span>Data: mtcars["mpg"] &#8226; Chart ID: <a href="Chart_HistogramID3b9f303945f0.html">HistogramID3b9f303945f0</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.6</a></span><br /> 
+ <div><span>Data: mtcars["mpg"] &#8226; Chart ID: <a href="Chart_HistogramID21ad4f4eb0a2.html">HistogramID21ad4f4eb0a2</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.6</a></span><br /> 
 <!-- htmlFooter -->
 <span> 
   R version 3.1.1 (2014-07-10) 
@@ -670,27 +662,27 @@ scatter.ggvis <- mtcars %>% ggvis(x = ~wt, y = ~mpg, fill = ~cyl) %>%
 scatter.ggvis
 {% endhighlight %}
 
-<!--html_preserve--><div id="plot_id182521419-container" class="ggvis-output-container">
-<div id="plot_id182521419" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id966234162-container" class="ggvis-output-container">
+<div id="plot_id966234162" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id182521419_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id182521419" data-renderer="svg">SVG</a>
+<a id="plot_id966234162_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id966234162" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id182521419_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id182521419" data-renderer="canvas">Canvas</a>
+<a id="plot_id966234162_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id966234162" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id182521419_download" class="ggvis-download" data-plot-id="plot_id182521419">Download</a>
+<a id="plot_id966234162_download" class="ggvis-download" data-plot-id="plot_id966234162">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id182521419_spec = {
+var plot_id966234162_spec = {
     "data": [
         {
             "name": "mtcars0",
@@ -844,7 +836,7 @@ var plot_id182521419_spec = {
     "handlers": null
 }
 ;
-ggvis.getPlot("plot_id182521419").parseSpec(plot_id182521419_spec);
+ggvis.getPlot("plot_id966234162").parseSpec(plot_id966234162_spec);
 </script><!--/html_preserve-->
 
 **rCharts**
@@ -880,10 +872,10 @@ scatter.rcharts$show('iframesrc', cdn=TRUE)
   &lt;/head&gt;
   &lt;body &gt;
     
-    &lt;div id = &#039;chart3b9f17ae2a3&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
+    &lt;div id = &#039;chart21ad6e1a676c&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
     &lt;script type=&#039;text/javascript&#039;&gt;
     var chartParams = {
- &quot;dom&quot;: &quot;chart3b9f17ae2a3&quot;,
+ &quot;dom&quot;: &quot;chart21ad6e1a676c&quot;,
 &quot;width&quot;:    450,
 &quot;height&quot;:    300,
 &quot;layers&quot;: [
@@ -911,17 +903,17 @@ scatter.rcharts$show('iframesrc', cdn=TRUE)
 &quot;facet&quot;: [],
 &quot;guides&quot;: [],
 &quot;coord&quot;: [],
-&quot;id&quot;: &quot;chart3b9f17ae2a3&quot; 
+&quot;id&quot;: &quot;chart21ad6e1a676c&quot; 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart3b9f17ae2a3 = polyjs.chart(chartParams);
+    var graph_chart21ad6e1a676c = polyjs.chart(chartParams);
 &lt;/script&gt;
     
     &lt;script&gt;&lt;/script&gt;    
   &lt;/body&gt;
-&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart3b9f17ae2a3'> </iframe>
+&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart21ad6e1a676c'> </iframe>
  <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 **plotly**
@@ -931,9 +923,6 @@ scatter.rcharts$show('iframesrc', cdn=TRUE)
 # This works, but is not evaluated now. Instead the iframe is embedded manually.
 py$ggplotly(scatter.ggplot, session="knitr")
 {% endhighlight %}
-
-<iframe height="600" id="igraph" scrolling="no" seamless="seamless"
-				src="https://plot.ly/~ouzor/39" width="600" frameBorder="0"></iframe>
 
 <iframe height="400" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ouzor/34/mpg-vs-wt/" width="450" frameBorder="0"></iframe>
 
@@ -954,7 +943,7 @@ print(scatter.gvis)
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>ScatterChartID3b9f607c1fe8</title>
+<title>ScatterChartID21ad650d6871</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <style type="text/css">
 body {
@@ -970,14 +959,14 @@ body {
 </head>
 <body>
  <!-- ScatterChart generated in R 3.1.1 by googleVis 0.5.6 package -->
-<!-- Fri Nov 21 09:52:50 2014 -->
+<!-- Fri Nov 21 18:58:30 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataScatterChartID3b9f607c1fe8 () {
+function gvisDataScatterChartID21ad650d6871 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1183,8 +1172,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartScatterChartID3b9f607c1fe8() {
-var data = gvisDataScatterChartID3b9f607c1fe8();
+function drawChartScatterChartID21ad650d6871() {
+var data = gvisDataScatterChartID21ad650d6871();
 var options = {};
 options["allowHtml"] = true;
 options["hAxis"] = {title:'wt'};
@@ -1193,7 +1182,7 @@ options["width"] =    450;
 options["height"] =    300;
 
     var chart = new google.visualization.ScatterChart(
-    document.getElementById('ScatterChartID3b9f607c1fe8')
+    document.getElementById('ScatterChartID21ad650d6871')
     );
     chart.draw(data,options);
     
@@ -1217,9 +1206,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartScatterChartID3b9f607c1fe8);
+callbacks.push(drawChartScatterChartID21ad650d6871);
 })();
-function displayChartScatterChartID3b9f607c1fe8() {
+function displayChartScatterChartID21ad650d6871() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1243,14 +1232,14 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID3b9f607c1fe8"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID21ad650d6871"></script>
  
 <!-- divChart -->
   
-<div id="ScatterChartID3b9f607c1fe8" 
+<div id="ScatterChartID21ad650d6871" 
   style="width: 450; height: 300;">
 </div>
- <div><span>Data: select(mtcars.temp, -id) &#8226; Chart ID: <a href="Chart_ScatterChartID3b9f607c1fe8.html">ScatterChartID3b9f607c1fe8</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.6</a></span><br /> 
+ <div><span>Data: select(mtcars.temp, -id) &#8226; Chart ID: <a href="Chart_ScatterChartID21ad650d6871.html">ScatterChartID21ad650d6871</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.6</a></span><br /> 
 <!-- htmlFooter -->
 <span> 
   R version 3.1.1 (2014-07-10) 
@@ -1282,27 +1271,27 @@ line.ggvis <- mtcars.mean %>% ggvis(x = ~cyl, y = ~mpg_mean, stroke = ~am) %>%
 line.ggvis
 {% endhighlight %}
 
-<!--html_preserve--><div id="plot_id366197838-container" class="ggvis-output-container">
-<div id="plot_id366197838" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id765273475-container" class="ggvis-output-container">
+<div id="plot_id765273475" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id366197838_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id366197838" data-renderer="svg">SVG</a>
+<a id="plot_id765273475_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id765273475" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id366197838_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id366197838" data-renderer="canvas">Canvas</a>
+<a id="plot_id765273475_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id765273475" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id366197838_download" class="ggvis-download" data-plot-id="plot_id366197838">Download</a>
+<a id="plot_id765273475_download" class="ggvis-download" data-plot-id="plot_id765273475">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id366197838_spec = {
+var plot_id765273475_spec = {
     "data": [
         {
             "name": "mtcars.mean0/group_by1/arrange2_flat",
@@ -1470,7 +1459,7 @@ var plot_id366197838_spec = {
     "handlers": null
 }
 ;
-ggvis.getPlot("plot_id366197838").parseSpec(plot_id366197838_spec);
+ggvis.getPlot("plot_id765273475").parseSpec(plot_id765273475_spec);
 </script><!--/html_preserve-->
 
 Does not show up...
@@ -1509,12 +1498,12 @@ line.rcharts$show('iframesrc', cdn=TRUE)
   &lt;/head&gt;
   &lt;body &gt;
     
-    &lt;div id = &#039;chart3b9f7124d335&#039; class = &#039;rChart highcharts&#039;&gt;&lt;/div&gt;    
+    &lt;div id = &#039;chart21ad5556706d&#039; class = &#039;rChart highcharts&#039;&gt;&lt;/div&gt;    
     &lt;script type=&#039;text/javascript&#039;&gt;
     (function($){
         $(function () {
             var chart = new Highcharts.Chart({
- &quot;dom&quot;: &quot;chart3b9f7124d335&quot;,
+ &quot;dom&quot;: &quot;chart21ad5556706d&quot;,
 &quot;width&quot;:            450,
 &quot;height&quot;:            300,
 &quot;credits&quot;: {
@@ -1589,9 +1578,9 @@ line.rcharts$show('iframesrc', cdn=TRUE)
 &quot;subtitle&quot;: {
  &quot;text&quot;: null 
 },
-&quot;id&quot;: &quot;chart3b9f7124d335&quot;,
+&quot;id&quot;: &quot;chart21ad5556706d&quot;,
 &quot;chart&quot;: {
- &quot;renderTo&quot;: &quot;chart3b9f7124d335&quot; 
+ &quot;renderTo&quot;: &quot;chart21ad5556706d&quot; 
 } 
 });
         });
@@ -1600,7 +1589,7 @@ line.rcharts$show('iframesrc', cdn=TRUE)
     
     &lt;script&gt;&lt;/script&gt;    
   &lt;/body&gt;
-&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  highcharts  ' id='iframe-chart3b9f7124d335'> </iframe>
+&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  highcharts  ' id='iframe-chart21ad5556706d'> </iframe>
  <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 **plotly**
@@ -1610,9 +1599,6 @@ line.rcharts$show('iframesrc', cdn=TRUE)
 # This works, but is not evaluated now. Instead the iframe is embedded manually.
 py$ggplotly(line.ggplot, session="knitr")
 {% endhighlight %}
-
-<iframe height="600" id="igraph" scrolling="no" seamless="seamless"
-				src="https://plot.ly/~ouzor/39" width="600" frameBorder="0"></iframe>
 
 <iframe height="400" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ouzor/35/mpg-mean-vs-cyl/" width="450" frameBorder="0"></iframe>
 
@@ -1633,7 +1619,7 @@ print(line.gvis)
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>LineChartID3b9f48b4cef6</title>
+<title>LineChartID21ad42302a7a</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <style type="text/css">
 body {
@@ -1649,14 +1635,14 @@ body {
 </head>
 <body>
  <!-- LineChart generated in R 3.1.1 by googleVis 0.5.6 package -->
-<!-- Fri Nov 21 09:52:50 2014 -->
+<!-- Fri Nov 21 18:58:31 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataLineChartID3b9f48b4cef6 () {
+function gvisDataLineChartID21ad42302a7a () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1684,8 +1670,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartLineChartID3b9f48b4cef6() {
-var data = gvisDataLineChartID3b9f48b4cef6();
+function drawChartLineChartID21ad42302a7a() {
+var data = gvisDataLineChartID21ad42302a7a();
 var options = {};
 options["allowHtml"] = true;
 options["hAxis"] = {title:'cyl'};
@@ -1694,7 +1680,7 @@ options["width"] =    450;
 options["height"] =    300;
 
     var chart = new google.visualization.LineChart(
-    document.getElementById('LineChartID3b9f48b4cef6')
+    document.getElementById('LineChartID21ad42302a7a')
     );
     chart.draw(data,options);
     
@@ -1718,9 +1704,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartLineChartID3b9f48b4cef6);
+callbacks.push(drawChartLineChartID21ad42302a7a);
 })();
-function displayChartLineChartID3b9f48b4cef6() {
+function displayChartLineChartID21ad42302a7a() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1744,14 +1730,14 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID3b9f48b4cef6"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID21ad42302a7a"></script>
  
 <!-- divChart -->
   
-<div id="LineChartID3b9f48b4cef6" 
+<div id="LineChartID21ad42302a7a" 
   style="width: 450; height: 300;">
 </div>
- <div><span>Data: data &#8226; Chart ID: <a href="Chart_LineChartID3b9f48b4cef6.html">LineChartID3b9f48b4cef6</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.6</a></span><br /> 
+ <div><span>Data: data &#8226; Chart ID: <a href="Chart_LineChartID21ad42302a7a.html">LineChartID21ad42302a7a</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.6</a></span><br /> 
 <!-- htmlFooter -->
 <span> 
   R version 3.1.1 (2014-07-10) 
@@ -1780,18 +1766,18 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] tidyr_0.1       dplyr_0.3.0.2   plotly_0.5.9    ggplot2_1.0.0  
-##  [5] RJSONIO_1.3-0   RCurl_1.95-4.3  bitops_1.0-6    rCharts_0.4.5  
-##  [9] googleVis_0.5.6 ggvis_0.4       knitr_1.7      
+##  [1] tidyr_0.1        dplyr_0.3.0.2    plotly_0.5.10    ggplot2_1.0.0   
+##  [5] RJSONIO_1.3-0    RCurl_1.95-4.3   bitops_1.0-6     rCharts_0.4.5   
+##  [9] googleVis_0.5.6  ggvis_0.4.0.9000 knitr_1.8       
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] assertthat_0.1   colorspace_1.2-4 DBI_0.3.1        digest_0.6.4    
 ##  [5] evaluate_0.5.5   formatR_1.0      grid_3.1.1       gtable_0.1.2    
 ##  [9] htmltools_0.2.6  httpuv_1.3.2     jsonlite_0.9.13  labeling_0.3    
-## [13] lattice_0.20-29  lazyeval_0.1.9   magrittr_1.0.1   MASS_7.3-33     
+## [13] lattice_0.20-29  lazyeval_0.1.9   magrittr_1.0.1   MASS_7.3-35     
 ## [17] mime_0.2         munsell_0.4.2    parallel_3.1.1   plyr_1.8.1      
-## [21] proto_0.3-10     R6_2.0.1         Rcpp_0.11.3      reshape2_1.4    
-## [25] rmarkdown_0.3.10 scales_0.2.4     shiny_0.10.2.1   stringr_0.6.2   
-## [29] tools_3.1.1      whisker_0.3-2    xtable_1.7-4     yaml_2.1.13
+## [21] proto_0.3-10     R6_2.0           Rcpp_0.11.3      reshape2_1.4    
+## [25] scales_0.2.4     shiny_0.10.2.1   stringr_0.6.2    tools_3.1.1     
+## [29] whisker_0.3-2    xtable_1.7-4     yaml_2.1.13
 {% endhighlight %}
 
