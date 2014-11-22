@@ -9,7 +9,7 @@ Thoughts on Open Data Science
 
 This is my personal blog on data science and open knowledge. You can find more information about me [here](../info).
 
-Topics of the blog include data science, open data, machine learning, statistics, information visualization, mydata and open science. 
+Topics of the blog include data science, open data, R, machine learning, statistics, information visualization, mydata and open science. 
 
 <!--
 More [information](info.html) about this blog and a complete archive of [past](past.html) posts, are available via links at the top of the page.
@@ -38,8 +38,10 @@ Recent Posts
 
 You can also subscribe to an [RSS feed][] of the most recent posts.
 
-[RSS feed]: /blog/atom.xml
+Check out [R-bloggers] for interesting blogs related to the R language. I will add a list of other interesting blogs later.
 
+[RSS feed]: /blog/atom.xml
+[R-bloggers]: http://www.r-bloggers.com/
 
 
 <!-- Add DISQUS stuff from mark/iem/index.markdown -->
