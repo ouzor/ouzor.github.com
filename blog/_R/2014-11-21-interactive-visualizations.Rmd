@@ -38,7 +38,7 @@ Also other libraries for creating interactive visualizations from R do exist, su
 [gg2v]: https://github.com/hadley/gg2v
 [rVega]: https://github.com/metagraf/rVega
 [d3Network]: http://christophergandrud.github.io/d3Network/
-[source]: https://github.com/ouzor/ouzor.github.com/blob/site-dev/_layouts/blog-post.html
+[source]: https://github.com/ouzor/ouzor.github.com/blob/master/blog/_R/2014-11-21-interactive-visualizations.Rmd
 
 ## Technical features
 
