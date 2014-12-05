@@ -21,7 +21,7 @@ In this post I have reviewed some of the most common interactive visualization p
 
 You can either jump straight to the [example visualization](#examplevisus) or read my comments first. The R markdown source code for this blog post with embedded visualizations can be found in [Github][source]. I have probably missed some important features and documentation, and also clear mistakes are possible. Please point those out in the comments, and I'll fix them. It is also important to note that I am a heavy ggplot2 user, and hence my comments may also be biased!
 
-Also other libraries for creating interactive visualizations from R do exist, such as [clickme], [RIGHT], [ggobi], [iplots], [gg2v], and [rVega]. Some of these are not under active development anymore. I might include some of those into the comparison here in the future. The [d3Network] package is also worth checking if you need cool interactive network visualizations.
+Also other libraries for creating interactive visualizations from R do exist, such as [clickme], [RIGHT], [ggobi], [iplots], [gg2v], [rVega], [cranvas] and [r2d3]. Some of these are not under active development anymore. I might include some of those into the comparison here in the future. The [d3Network] package is also worth checking if you need cool interactive network visualizations.
 
 [d3]: http://d3js.org/
 [ggplot2]: http://ggplot2.org/
@@ -37,6 +37,8 @@ Also other libraries for creating interactive visualizations from R do exist, su
 [iplots]: http://cran.r-project.org/web/packages/iplots/index.html
 [gg2v]: https://github.com/hadley/gg2v
 [rVega]: https://github.com/metagraf/rVega
+[cranvas]: http://cranvas.org/
+[r2d3]: http://www.coppelia.io/introducing-r2d3/
 [d3Network]: http://christophergandrud.github.io/d3Network/
 [source]: https://github.com/ouzor/ouzor.github.com/blob/master/blog/_R/2014-11-21-interactive-visualizations.Rmd
 
