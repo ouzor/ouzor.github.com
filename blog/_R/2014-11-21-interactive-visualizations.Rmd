@@ -196,7 +196,7 @@ py$ggplotly(hist.ggplot, session="knitr")
 gvis.options <- list(hAxis="{title:'mpg'}",
                      width=img.width, height=img.height)
 hist.gvis <- gvisHistogram(data=mtcars["mpg"], option=gvis.options)
-print(hist.gvis)
+print(hist.gvis, tag="chart")
 ```
 
 ## Scatter plots {#scatter}
@@ -246,7 +246,7 @@ mtcars.temp <- tidyr::spread(mtcars[c("wt", "mpg", "cyl", "id")], key=cyl, value
 gvis.options <- list(hAxis="{title:'wt'}", vAxis="{title:'mpg'}",
                      width=img.width, height=img.height)
 scatter.gvis <- gvisScatterChart(select(mtcars.temp, -id), options=gvis.options)
-print(scatter.gvis)
+print(scatter.gvis, tag="chart")
 ```
 
 
@@ -298,7 +298,7 @@ gvis.options <- list(hAxis="{title:'cyl'}", vAxis="{title:'mpg_mean'}",
                      width=img.width, height=img.height)
 line.gvis <- gvisLineChart(xvar="cyl", yvar=c("0", "1"), data=mtcars.mean.temp, 
                            options=gvis.options)
-print(line.gvis)
+print(line.gvis, tag="chart")
 ```
 
 ## Session info
