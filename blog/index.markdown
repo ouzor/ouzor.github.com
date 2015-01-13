@@ -9,7 +9,7 @@ Thoughts on Open Data Science
 
 This is my personal blog on data science and open knowledge. You can find more information about me [here](../info).
 
-Topics of the blog include data science, open data, R, machine learning, statistics, information visualization, mydata and open science. 
+Topics of the blog include data science, open data, R, machine learning, statistics, information visualization, my data and open science. 
 
 <!--
 More [information](info.html) about this blog and a complete archive of [past](past.html) posts, are available via links at the top of the page.
