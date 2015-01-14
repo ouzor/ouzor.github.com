@@ -77,7 +77,7 @@ I encountered several problems when preparing this blog post. Specifically, I ha
 
 * **ggvis** showed up nicely with `Knit HTML`, as it creates a standalone file with the necessary javascript libraries included. However, this was not the case with my blog setup. My solution was to inlude the set of scripts (taken from the [source of this page][ggvis-scripts]) into the header of all my blog posts (see [here][blog-scripts]). Not sure if this is an optimal solution.
 * **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`.
-* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I embedded existing plotly charts manually.
+* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knitr"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I embedded existing plotly charts manually.
 * There are still two charts that do now show up in this post. I have quite limited understanding of how knitr, jekyll and the javascript tools work together, and could not get these to work. Perhaps the scripts somehow conflict with each other?
 
 I also noticed some minor issues:

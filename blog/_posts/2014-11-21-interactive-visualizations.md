@@ -77,7 +77,7 @@ I encountered several problems when preparing this blog post. Specifically, I ha
 
 * **ggvis** showed up nicely with `Knit HTML`, as it creates a standalone file with the necessary javascript libraries included. However, this was not the case with my blog setup. My solution was to inlude the set of scripts (taken from the [source of this page][ggvis-scripts]) into the header of all my blog posts (see [here][blog-scripts]). Not sure if this is an optimal solution.
 * **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`.
-* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knit"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I embedded existing plotly charts manually.
+* **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knitr"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I embedded existing plotly charts manually.
 * There are still two charts that do now show up in this post. I have quite limited understanding of how knitr, jekyll and the javascript tools work together, and could not get these to work. Perhaps the scripts somehow conflict with each other?
 
 I also noticed some minor issues:
@@ -175,27 +175,27 @@ hist.ggvis <- mtcars %>% ggvis(x = ~mpg) %>% layer_histograms(width=1) %>%
 hist.ggvis
 {% endhighlight %}
 
-<!--html_preserve--><div id="plot_id917655956-container" class="ggvis-output-container">
-<div id="plot_id917655956" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id527406125-container" class="ggvis-output-container">
+<div id="plot_id527406125" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id917655956_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id917655956" data-renderer="svg">SVG</a>
+<a id="plot_id527406125_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id527406125" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id917655956_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id917655956" data-renderer="canvas">Canvas</a>
+<a id="plot_id527406125_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id527406125" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id917655956_download" class="ggvis-download" data-plot-id="plot_id917655956">Download</a>
+<a id="plot_id527406125_download" class="ggvis-download" data-plot-id="plot_id527406125">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id917655956_spec = {
+var plot_id527406125_spec = {
     "data": [
         {
             "name": "mtcars0/bin1/stack2",
@@ -333,7 +333,7 @@ var plot_id917655956_spec = {
     "handlers": null
 }
 ;
-ggvis.getPlot("plot_id917655956").parseSpec(plot_id917655956_spec);
+ggvis.getPlot("plot_id527406125").parseSpec(plot_id527406125_spec);
 </script><!--/html_preserve-->
 
 **rCharts**
@@ -368,10 +368,10 @@ hist.rcharts$show('iframesrc', cdn=TRUE)
   &lt;/head&gt;
   &lt;body &gt;
     
-    &lt;div id = &#039;chart12cca38045832&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
+    &lt;div id = &#039;chart156f562ef83e5&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
     &lt;script type=&#039;text/javascript&#039;&gt;
     var chartParams = {
- &quot;dom&quot;: &quot;chart12cca38045832&quot;,
+ &quot;dom&quot;: &quot;chart156f562ef83e5&quot;,
 &quot;width&quot;:    450,
 &quot;height&quot;:    300,
 &quot;layers&quot;: [
@@ -398,17 +398,17 @@ hist.rcharts$show('iframesrc', cdn=TRUE)
 &quot;facet&quot;: [],
 &quot;guides&quot;: [],
 &quot;coord&quot;: [],
-&quot;id&quot;: &quot;chart12cca38045832&quot; 
+&quot;id&quot;: &quot;chart156f562ef83e5&quot; 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart12cca38045832 = polyjs.chart(chartParams);
+    var graph_chart156f562ef83e5 = polyjs.chart(chartParams);
 &lt;/script&gt;
     
     &lt;script&gt;&lt;/script&gt;    
   &lt;/body&gt;
-&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart12cca38045832'> </iframe>
+&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart156f562ef83e5'> </iframe>
  <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 Does not show up...
@@ -435,14 +435,14 @@ print(hist.gvis, tag="chart")
 {% endhighlight %}
 
 <!-- Histogram generated in R 3.1.2 by googleVis 0.5.6 package -->
-<!-- Sun Jan 11 18:24:06 2015 -->
+<!-- Wed Jan 14 17:22:44 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataHistogramID12cca193ca727 () {
+function gvisDataHistogramID156f55ce9311 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -549,8 +549,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartHistogramID12cca193ca727() {
-var data = gvisDataHistogramID12cca193ca727();
+function drawChartHistogramID156f55ce9311() {
+var data = gvisDataHistogramID156f55ce9311();
 var options = {};
 options["allowHtml"] = true;
 options["hAxis"] = {title:'mpg'};
@@ -558,7 +558,7 @@ options["width"] =    450;
 options["height"] =    300;
 
     var chart = new google.visualization.Histogram(
-    document.getElementById('HistogramID12cca193ca727')
+    document.getElementById('HistogramID156f55ce9311')
     );
     chart.draw(data,options);
     
@@ -582,9 +582,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartHistogramID12cca193ca727);
+callbacks.push(drawChartHistogramID156f55ce9311);
 })();
-function displayChartHistogramID12cca193ca727() {
+function displayChartHistogramID156f55ce9311() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -608,11 +608,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID12cca193ca727"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID156f55ce9311"></script>
  
 <!-- divChart -->
   
-<div id="HistogramID12cca193ca727" 
+<div id="HistogramID156f55ce9311" 
   style="width: 450; height: 300;">
 </div>
 
@@ -637,27 +637,27 @@ scatter.ggvis <- mtcars %>% ggvis(x = ~wt, y = ~mpg, fill = ~cyl) %>%
 scatter.ggvis
 {% endhighlight %}
 
-<!--html_preserve--><div id="plot_id377107076-container" class="ggvis-output-container">
-<div id="plot_id377107076" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id762864843-container" class="ggvis-output-container">
+<div id="plot_id762864843" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id377107076_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id377107076" data-renderer="svg">SVG</a>
+<a id="plot_id762864843_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id762864843" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id377107076_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id377107076" data-renderer="canvas">Canvas</a>
+<a id="plot_id762864843_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id762864843" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id377107076_download" class="ggvis-download" data-plot-id="plot_id377107076">Download</a>
+<a id="plot_id762864843_download" class="ggvis-download" data-plot-id="plot_id762864843">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id377107076_spec = {
+var plot_id762864843_spec = {
     "data": [
         {
             "name": "mtcars0",
@@ -811,7 +811,7 @@ var plot_id377107076_spec = {
     "handlers": null
 }
 ;
-ggvis.getPlot("plot_id377107076").parseSpec(plot_id377107076_spec);
+ggvis.getPlot("plot_id762864843").parseSpec(plot_id762864843_spec);
 </script><!--/html_preserve-->
 
 **rCharts**
@@ -847,10 +847,10 @@ scatter.rcharts$show('iframesrc', cdn=TRUE)
   &lt;/head&gt;
   &lt;body &gt;
     
-    &lt;div id = &#039;chart12ccabef6e4e&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
+    &lt;div id = &#039;chart156f57a77be16&#039; class = &#039;rChart polycharts&#039;&gt;&lt;/div&gt;    
     &lt;script type=&#039;text/javascript&#039;&gt;
     var chartParams = {
- &quot;dom&quot;: &quot;chart12ccabef6e4e&quot;,
+ &quot;dom&quot;: &quot;chart156f57a77be16&quot;,
 &quot;width&quot;:    450,
 &quot;height&quot;:    300,
 &quot;layers&quot;: [
@@ -878,17 +878,17 @@ scatter.rcharts$show('iframesrc', cdn=TRUE)
 &quot;facet&quot;: [],
 &quot;guides&quot;: [],
 &quot;coord&quot;: [],
-&quot;id&quot;: &quot;chart12ccabef6e4e&quot; 
+&quot;id&quot;: &quot;chart156f57a77be16&quot; 
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
-    var graph_chart12ccabef6e4e = polyjs.chart(chartParams);
+    var graph_chart156f57a77be16 = polyjs.chart(chartParams);
 &lt;/script&gt;
     
     &lt;script&gt;&lt;/script&gt;    
   &lt;/body&gt;
-&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart12ccabef6e4e'> </iframe>
+&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-chart156f57a77be16'> </iframe>
  <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 **plotly**
@@ -915,14 +915,14 @@ print(scatter.gvis, tag="chart")
 {% endhighlight %}
 
 <!-- ScatterChart generated in R 3.1.2 by googleVis 0.5.6 package -->
-<!-- Sun Jan 11 18:24:07 2015 -->
+<!-- Wed Jan 14 17:22:44 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataScatterChartID12cca122a6b03 () {
+function gvisDataScatterChartID156f5424adf0f () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1128,8 +1128,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartScatterChartID12cca122a6b03() {
-var data = gvisDataScatterChartID12cca122a6b03();
+function drawChartScatterChartID156f5424adf0f() {
+var data = gvisDataScatterChartID156f5424adf0f();
 var options = {};
 options["allowHtml"] = true;
 options["hAxis"] = {title:'wt'};
@@ -1138,7 +1138,7 @@ options["width"] =    450;
 options["height"] =    300;
 
     var chart = new google.visualization.ScatterChart(
-    document.getElementById('ScatterChartID12cca122a6b03')
+    document.getElementById('ScatterChartID156f5424adf0f')
     );
     chart.draw(data,options);
     
@@ -1162,9 +1162,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartScatterChartID12cca122a6b03);
+callbacks.push(drawChartScatterChartID156f5424adf0f);
 })();
-function displayChartScatterChartID12cca122a6b03() {
+function displayChartScatterChartID156f5424adf0f() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1188,11 +1188,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID12cca122a6b03"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartScatterChartID156f5424adf0f"></script>
  
 <!-- divChart -->
   
-<div id="ScatterChartID12cca122a6b03" 
+<div id="ScatterChartID156f5424adf0f" 
   style="width: 450; height: 300;">
 </div>
 
@@ -1219,27 +1219,27 @@ line.ggvis <- mtcars.mean %>% ggvis(x = ~cyl, y = ~mpg_mean, stroke = ~am) %>%
 line.ggvis
 {% endhighlight %}
 
-<!--html_preserve--><div id="plot_id400784246-container" class="ggvis-output-container">
-<div id="plot_id400784246" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id338069126-container" class="ggvis-output-container">
+<div id="plot_id338069126" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id400784246_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id400784246" data-renderer="svg">SVG</a>
+<a id="plot_id338069126_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id338069126" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id400784246_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id400784246" data-renderer="canvas">Canvas</a>
+<a id="plot_id338069126_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id338069126" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id400784246_download" class="ggvis-download" data-plot-id="plot_id400784246">Download</a>
+<a id="plot_id338069126_download" class="ggvis-download" data-plot-id="plot_id338069126">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id400784246_spec = {
+var plot_id338069126_spec = {
     "data": [
         {
             "name": "mtcars.mean0/group_by1/arrange2_flat",
@@ -1407,7 +1407,7 @@ var plot_id400784246_spec = {
     "handlers": null
 }
 ;
-ggvis.getPlot("plot_id400784246").parseSpec(plot_id400784246_spec);
+ggvis.getPlot("plot_id338069126").parseSpec(plot_id338069126_spec);
 </script><!--/html_preserve-->
 
 Does not show up...
@@ -1446,12 +1446,12 @@ line.rcharts$show('iframesrc', cdn=TRUE)
   &lt;/head&gt;
   &lt;body &gt;
     
-    &lt;div id = &#039;chart12cca576d9cb0&#039; class = &#039;rChart highcharts&#039;&gt;&lt;/div&gt;    
+    &lt;div id = &#039;chart156f51cbffdb5&#039; class = &#039;rChart highcharts&#039;&gt;&lt;/div&gt;    
     &lt;script type=&#039;text/javascript&#039;&gt;
     (function($){
         $(function () {
             var chart = new Highcharts.Chart({
- &quot;dom&quot;: &quot;chart12cca576d9cb0&quot;,
+ &quot;dom&quot;: &quot;chart156f51cbffdb5&quot;,
 &quot;width&quot;:            450,
 &quot;height&quot;:            300,
 &quot;credits&quot;: {
@@ -1526,9 +1526,9 @@ line.rcharts$show('iframesrc', cdn=TRUE)
 &quot;subtitle&quot;: {
  &quot;text&quot;: null 
 },
-&quot;id&quot;: &quot;chart12cca576d9cb0&quot;,
+&quot;id&quot;: &quot;chart156f51cbffdb5&quot;,
 &quot;chart&quot;: {
- &quot;renderTo&quot;: &quot;chart12cca576d9cb0&quot; 
+ &quot;renderTo&quot;: &quot;chart156f51cbffdb5&quot; 
 } 
 });
         });
@@ -1537,7 +1537,7 @@ line.rcharts$show('iframesrc', cdn=TRUE)
     
     &lt;script&gt;&lt;/script&gt;    
   &lt;/body&gt;
-&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  highcharts  ' id='iframe-chart12cca576d9cb0'> </iframe>
+&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  highcharts  ' id='iframe-chart156f51cbffdb5'> </iframe>
  <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 **plotly**
@@ -1564,14 +1564,14 @@ print(line.gvis, tag="chart")
 {% endhighlight %}
 
 <!-- LineChart generated in R 3.1.2 by googleVis 0.5.6 package -->
-<!-- Sun Jan 11 18:24:08 2015 -->
+<!-- Wed Jan 14 17:22:45 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataLineChartID12cca2a5068ca () {
+function gvisDataLineChartID156f5794ef754 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1599,8 +1599,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartLineChartID12cca2a5068ca() {
-var data = gvisDataLineChartID12cca2a5068ca();
+function drawChartLineChartID156f5794ef754() {
+var data = gvisDataLineChartID156f5794ef754();
 var options = {};
 options["allowHtml"] = true;
 options["hAxis"] = {title:'cyl'};
@@ -1609,7 +1609,7 @@ options["width"] =    450;
 options["height"] =    300;
 
     var chart = new google.visualization.LineChart(
-    document.getElementById('LineChartID12cca2a5068ca')
+    document.getElementById('LineChartID156f5794ef754')
     );
     chart.draw(data,options);
     
@@ -1633,9 +1633,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartLineChartID12cca2a5068ca);
+callbacks.push(drawChartLineChartID156f5794ef754);
 })();
-function displayChartLineChartID12cca2a5068ca() {
+function displayChartLineChartID156f5794ef754() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1659,11 +1659,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID12cca2a5068ca"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID156f5794ef754"></script>
  
 <!-- divChart -->
   
-<div id="LineChartID12cca2a5068ca" 
+<div id="LineChartID156f5794ef754" 
   style="width: 450; height: 300;">
 </div>
 
@@ -1687,9 +1687,9 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] knitr_1.8        tidyr_0.1        dplyr_0.3.0.2    plotly_0.5.10   
-##  [5] ggplot2_1.0.0    RJSONIO_1.3-0    RCurl_1.95-4.3   bitops_1.0-6    
-##  [9] rCharts_0.4.5    ggvis_0.4.0.9000 googleVis_0.5.6 
+##  [1] tidyr_0.1        dplyr_0.3.0.2    plotly_0.5.10    ggplot2_1.0.0   
+##  [5] RJSONIO_1.3-0    RCurl_1.95-4.3   bitops_1.0-6     rCharts_0.4.5   
+##  [9] googleVis_0.5.6  ggvis_0.4.0.9000 knitr_1.8       
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] assertthat_0.1   colorspace_1.2-4 DBI_0.3.1        digest_0.6.4    
