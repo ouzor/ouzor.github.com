@@ -25,7 +25,7 @@ One could argue that this combination is nothing new, as data analysts and stati
 
 In my opinion there’s one important skillset missing in the Venn Diagram, which is communication. Without proper communication skills even the greatest of results will not be taken into use. An essential part of communication is information visualization, which is used to illustrate complex statistical phenomena in understandable terms. A data scientist is also a consultant with a [need for some soft skills as well][ds-soft].
 
-Recently I came up with the [definition of a modern data scientist][ds-modern], which indeed adds the communication piece in the puzzle. This new defition is neatly summarized in the following figure:
+Recently I bumped into the [definition of a modern data scientist][ds-modern], which indeed adds the communication piece in the puzzle. This new defition is neatly summarized in the following figure:
 
 <center>
 <a href="http://www.marketingdistillery.com/2014/11/29/is-data-science-a-buzzword-modern-data-scientist-defined/">
