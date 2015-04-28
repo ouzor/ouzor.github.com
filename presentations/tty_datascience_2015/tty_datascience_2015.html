@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thoughts on Data Science</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" media="all" href="tty_datascience_2015_files/ioslides-13.5.1/fonts/fonts.css">
+
+  <link rel="stylesheet" media="all" href="tty_datascience_2015_files/ioslides-13.5.1/theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="tty_datascience_2015_files/ioslides-13.5.1/theme/css/phone.css">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Thoughts on Data Science',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+              },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Juuso Parkkinen, <span class="citation">@ouzor</span>, data scientist at #reaktor' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+
+
+</head>
+
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">Programmatic Content Management course <span class="citation">@TampereUniTech</span>, 28 Apr 2015, #ohsiha</p>
+          </hgroup>
+  </slide>
+
+<slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Part 1: What is data science?</h2></hgroup><article  id="part-1-what-is-data-science">
+
+</article></slide><slide class=''><hgroup><h2>What do you think?</h2></hgroup><article  id="what-do-you-think">
+
+<!--
+<center>
+<img src="./figures/wordcloud1.png" alt="use cases" style="height: 500px;"/>
+</center>
+-->
+
+<p><img src="tty_datascience_2015_files/figure-html/wordcloud-1.png" title="" alt="" width="768" /></p>
+
+</article></slide><slide class=''><hgroup><h2>What do others think?</h2></hgroup><article  id="what-do-others-think">
+
+<p>&quot;Data Science is statistics on a Mac&quot; <a href='https://twitter.com/bigdataborat/status/372350993255518208' title=''>-Big Data Borat on Twitter</a></p>
+
+<p>&quot;Big data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it&#8230;&quot; <a href='https://www.facebook.com/dan.ariely/posts/904383595868' title=''>-Dan Ariely on Facebook</a></p>
+
+<p>&quot;Data science is the process of formulating a quantitative question that can be answered with data, collecting and cleaning the data, analyzing the data, and communicating the answer to the question to a relevant audience.&quot; <a href='http://simplystatistics.org/2015/03/17/data-science-done-well-looks-easy-and-that-is-a-big-problem-for-data-scientists/' title=''>-simply stats</a></p>
+
+</article></slide><slide class=''><hgroup><h2>What do I think?</h2></hgroup><article  id="what-do-i-think">
+
+<p>There are multiple definitions from various points of views, all at least partially relevant pieces of the whole.</p>
+
+<p>Important questions:</p>
+
+<ul>
+<li>Where can data science be applied?</li>
+<li>What is doing data science in practice?</li>
+<li>What does it mean to be data-driven?</li>
+<li>What data science can NOT do?</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Why should you care?</h2></hgroup><article  id="why-should-you-care">
+
+<p>It is important to understand at least the basics of data science, statistics &amp; algorithms, because</p>
+
+<ul>
+<li>almost everything can (and will) be quantified and the data will increasingly affect our everyday lives.</li>
+<li>working with data offers a wide range of interesting opportunities.</li>
+<li>more and more data science services will be used, good to know what they are about.</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Where can data be applied?</h2></hgroup><article  id="where-can-data-be-applied">
+
+<ul>
+<li>Business
+
+<ul>
+<li>Improved (personalised) services</li>
+<li>Optimised operations</li>
+</ul></li>
+<li>Quantitative research
+
+<ul>
+<li>Natural sciences</li>
+<li>Also social sciences</li>
+</ul></li>
+<li>Social good</li>
+<li>Journalism</li>
+<li>Software development (lean / agile)</li>
+<li>Quantified self</li>
+<li>&#8230;</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section">
+
+<center>
+
+<img src="http://stanford2009.wikispaces.com/file/view/recommender.JPG/71899791/815x365/recommender.JPG" alt="use cases" style="width: 500px;"/> <img src="http://cdn.cantechletter.com/wp-content/uploads/2013/01/netflix-recommendations-400x280.jpg" alt="use cases" style="width: 300px;"/>
+
+</center>
+
+<p>Improved personalised services</p>
+
+<article class="smaller">
+
+<ul>
+<li>Sources: <a href='http://stanford2009.wikispaces.com/5_Facebook+5.04' title=''>stanford2009</a> and <a href='http://www.cantechletter.com/2013/01/will-predictive-analytics-in-education-widen-the-gap-between-the-arts-and-sciences0128/' title=''>cantech letter</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-1">
+
+<center>
+
+<img src="http://datapsych.weebly.com/uploads/2/5/7/8/25783390/5460484_orig.jpg" alt="use cases" style="width: 100%;"/>
+
+</center>
+
+<p>Nate Silver predicting the Presidential election results in 2012</p>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://datapsych.weebly.com/blog/mining-silvers-gold-the-basics-behind-nate-silvers-election-prediction-strategies' title=''>DataPsych</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-2">
+
+<center>
+
+<img src="http://www.datakind.org/static/media/uploads/blog/.thumbnails/GiveDirectly-600x340.jpg" alt="use cases" style="width: 100%;"/>
+
+</center>
+
+<p>Using Satellite Images to Understand Poverty</p>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://www.datakind.org/blog/using-satellite-images-to-understand-poverty/' title=''>DataKind</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-3">
+
+<center>
+
+<img src="http://static1.squarespace.com/static/50e4b513e4b0837383d619f3/t/52e67fbee4b063fbaac1e913/1390837705546/eviction+filings+to+homeless.jpg?format=1000w" alt="use cases" style="width: 100%;"/>
+
+</center>
+
+<p>Using big data to prevent homelessness in New York</p>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://www.sumall.org/homelessness/' title=''>Sumall.org</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-4">
+
+<iframe title="Yle nelikenttä" width="100%" src="http://svenska.yle.fi/dataviz/2015/fyrfalt/nelikentta.html" frameborder="1" allowfullscreen>
+
+</iframe>
+
+<!-- alternative static figure
+<center>
+<img src="./figures/yle_vaalit.png" alt="yle vaalit" style="height: 500px;"/>
+</center>
+-->
+
+<p>Factor analysis of election machine results</p>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://yle.fi/uutiset/kuka_on_oikeistolaisin_kuka_liberaalein__katso_miten_ehdokkaasi_asettuu_poliittiselle_nelikentalle/7919930' title=''>Yle 13.4.2015</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Part 2: Data science at Reaktor</h2></hgroup><article  id="part-2-data-science-at-reaktor">
+
+</article></slide><slide class=''><hgroup><h2>My journey towards data science</h2></hgroup><article  id="my-journey-towards-data-science">
+
+<p>Studies at Aalto (former Helsinki University of Technology)</p>
+
+<ul>
+<li>Statistical machine learning and bioinformatics</li>
+<li>Dissertation: <a href='https://aaltodoc.aalto.fi/handle/123456789/13631' title=''>Probabilistic components of molecular interactions and drug responses</a></li>
+</ul>
+
+<p>Data scientist at Reaktor</p>
+
+<p>Open tools for open data: <a href='http://louhos.github.io/' title=''>Louhos</a> &amp; <a href='http://ropengov.github.io/' title=''>rOpenGov</a></p>
+
+<p>Interests: probabilistic (Bayesian) modeling, information visualization, open source/data/science</p>
+
+<p>I like: solving hard problems in various fields, learning and sharing</p>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-5">
+
+<p><img src="figures/Reaktor_Logo_300px.jpg" alt="Reaktor" style="height: 50px;"/></p>
+
+<center>
+
+<img src="figures/reaktor_venndiagram.png" alt="Reaktor" style="height: 500px;"/>
+
+</center>
+
+</article></slide><slide class=''><hgroup><h2>Biking in Helsinki</h2></hgroup><article  id="biking-in-helsinki">
+
+<p><img src="tty_datascience_2015_files/figure-html/bike1-1.png" title="" alt="" width="720" /><img src="tty_datascience_2015_files/figure-html/bike1-2.png" title="" alt="" width="720" /></p>
+
+</article></slide><slide class=''><hgroup><h2>Some results</h2></hgroup><article  id="some-results">
+
+<p><img src="tty_datascience_2015_files/figure-html/bike2-1.png" title="" alt="" width="720" /></p>
+
+<p>Read more at <a href='www.kaupunkifillari.fi/blog/2015/03/04/pyoraily-on-arkista-touhua/' title=''>Kaupunkifillari: Pyöräily on arkista touhua</a> and check the code at <a href='https://github.com/apoikola/fillarilaskennat/' title=''>GitHub</a>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Election data</h2></hgroup><article  id="election-data">
+
+<p><img src="tty_datascience_2015_files/figure-html/elections1-1.png" title="" alt="" width="720" /></p>
+
+</article></slide><slide class=''><hgroup><h2>Personal level</h2></hgroup><article  id="personal-level">
+
+<p><img src="tty_datascience_2015_files/figure-html/elections2-1.png" title="" alt="" width="768" /></p>
+
+<p>Done by <a href='https://twitter.com/ingaskrap' title=''>Johan Himberg</a>, read more from <a href='http://louhos.github.io/news/2015/04/17/vaalit2015-luokittelu/' title=''>Louhos blog!</a></p>
+
+</article></slide><slide class=''><hgroup><h2>Data science vs. data journalism?</h2></hgroup><article  id="data-science-vs.-data-journalism">
+
+<div class="columns-2">
+<iframe title="HS asuntohinnat" height="250" src="http://dynamic.hs.fi/2015/asuntohinnat_postinumero/" frameborder="1" allowfullscreen>
+
+</iframe>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://www.hs.fi/talous/a1428643622153' title=''>HS 11.4.2015</a></li>
+</ul>
+
+</article>
+
+<center>
+
+<img src="figures/kannattaakokauppa.png" alt="Kannattaako kauppa" style="height: 400px;"/>
+
+</center>
+
+<article class="smaller">
+
+<ul>
+<li>Source: Coming soon by Reaktor!</li>
+</ul>
+
+</article></div>
+
+<!-- alternative screenshot
+<center>
+<img src="./figures/hs_asunnot.png" alt="HS asunnot" style="height: 500px;"/>
+</center>
+-->
+
+</article></slide><slide class=''><hgroup><h2>Reaktor data science</h2></hgroup><article  id="reaktor-data-science">
+
+<p>Data-driven solutions for any business problems</p>
+
+<p>Focus on statistical modeling</p>
+
+<p>Tough, non-standard problems</p>
+
+<p>Open source tools</p>
+
+<p>Consulting!</p>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Part 3: Data science in practice</h2></hgroup><article  id="part-3-data-science-in-practice">
+
+</article></slide><slide class=''><hgroup><h2>Data science use cases</h2></hgroup><article  id="data-science-use-cases">
+
+<center>
+
+<img src="figures/ds_use_cases.png" alt="use cases" style="width: 100%;"/>
+
+</center>
+
+</article></slide><slide class=''><hgroup><h2>Data science skills</h2></hgroup><article  id="data-science-skills">
+
+<div class="columns-2">
+<center>
+
+<img src="http://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png" alt="DSS venn" style="width: 100%;"/>
+
+</center>
+
+<center>
+
+<img src="http://policyviz.com/wp-content/uploads/2015/04/unicornvenndiagram-300x225.png" alt="Policyviz Venn" style="width: 100%;"/>
+
+</center></div>
+
+<article class="smaller">
+
+<ul>
+<li>Sources: <a href='drewconway.com/zia/2013/3/26/the-data-science-venn-diagram' title=''>Drew Conway</a> and <a href='http://policyviz.com/communicating-research-build-a-unicorn-dont-look-for-one/' title=''>Policyviz</a></li>
+</ul>
+
+</article>
+
+<p>Individual or team?!</p>
+
+</article></slide><slide class=''><hgroup><h2></h2></hgroup><article  id="section-6">
+
+<center>
+
+<img src="http://www.marketingdistillery.com/wp-content/uploads/2014/11/mds_f.png" alt="skill set" style="height: 550px"/>
+
+</center>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://www.marketingdistillery.com/2014/11/29/is-data-science-a-buzzword-modern-data-scientist-defined/' title=''>Marketingdistillery</a></li>
+</ul>
+
+</article>
+
+<p></slide></p>
+
+</article></slide><slide class=''><hgroup><h2>Data science process</h2></hgroup><article  id="data-science-process">
+
+<article class="smaller">
+
+<ol>
+<li>Define the question of interest</li>
+<li>Get the data</li>
+<li>Clean the data</li>
+<li>Explore the data</li>
+<li>Fit statistical models</li>
+<li>Communicate the results</li>
+<li>Make your analysis reproducible</li>
+<li>(Iterate!)</li>
+</ol>
+
+</article>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://simplystatistics.org/2015/03/17/data-science-done-well-looks-easy-and-that-is-a-big-problem-for-data-scientists/' title=''>simply stats: Data science done well looks easy</a></li>
+</ul>
+
+</article>
+
+<p>According to interviews and expert estimates, 50-80 % of data scientists&#39; time is spent on handcrafted work (data &quot;wrangling/munging&quot;). <a href='http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html' title=''>-New York Times 18.8.2014</a></p>
+
+</article></slide><slide class=''><hgroup><h2>Key steps in data analysis</h2></hgroup><article  id="key-steps-in-data-analysis">
+
+<p>Exploratory data analysis</p>
+
+<article class="smaller">
+
+<ul>
+<li>goal: find out whether the data fits the question of interest</li>
+<li>visualise data</li>
+<li>identify missing values</li>
+</ul>
+
+</article>
+
+<p>Probabilistic modeling</p>
+
+<article class="smaller">
+
+<ul>
+<li>goal: make reliable inference based on data</li>
+<li>principled way to include prior assumptions</li>
+<li>dealing with noisy and missing data</li>
+<li>taking uncertainty into account</li>
+<li>combining multiple data sources</li>
+<li>understanding relationships between variables</li>
+<li>uncover hidden structure</li>
+<li>predict missing data and future events</li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2>Data science in action!</h2></hgroup><article  id="data-science-in-action">
+
+<div class="columns-2">
+<center>
+
+<img src="figures/kahvi_mac.png" alt="Kahvi" style="height: 450px;"/>
+
+</center>
+
+<center>
+
+<img src="figures/taulu.png" alt="Kahvi" style="height: 450px;"/>
+
+</center></div>
+
+<article class="smaller">
+
+<ul>
+<li>Photos: Juuso Parkkinen</li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2>Some basic tools</h2></hgroup><article  id="some-basic-tools">
+
+<ul>
+<li>Statistics &amp; computation: R, Python</li>
+<li>Databases: SQL, noSQL (e.g. MongoDB)</li>
+<li>Big data: Hadoop, Spark</li>
+<li>Visualization: ggplot2 (R), matplotlib (Python), d3, Leaflet</li>
+</ul>
+
+<article class="smaller">
+
+<ul>
+<li>See more open source tools in the Extra section in the end</li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2>It&#39;s not always complicated!</h2></hgroup><article  id="its-not-always-complicated">
+
+<center>
+
+<img src="http://everythingisnaked.com/wp-content/uploads/2011/08/gap-minder.jpg" alt="use cases" style="height: 500px;"/>
+
+</center>
+
+<p>Hans Rosling communicating facts about the world</p>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://everythingisnaked.com/gap-minder-the-beauty-of-visualized-statistics/' title=''>Everything is Naked</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Part 4: Data-driven culture</h2></hgroup><article  id="part-4-data-driven-culture">
+
+</article></slide><slide class=''><hgroup><h2>What is important in the data science process?</h2></hgroup><article  id="what-is-important-in-the-data-science-process">
+
+<p>data science tools &amp; products<br/>&lt; statistical methods<br/>&lt; data access &amp; munging<br/>&lt; business case<br/>&lt; getting to production</p>
+
+<article class="smaller">
+
+<ul>
+<li>Modified from <a href='http://www.louhia.fi/2015/01/25/ja-maailman-paras-analytiikkasofta/' title=''>Louhia&#39;s blog post</a></li>
+</ul>
+
+</article>
+
+<p>But! None of these matter unless you have a data-driven mindset&#8230;</p>
+
+</article></slide><slide class=''><hgroup><h2>Ideals of being data-driven</h2></hgroup><article  id="ideals-of-being-data-driven">
+
+<article class="smaller">
+
+<ul>
+<li>be <strong>curious</strong> (seek for evidence)</li>
+<li>be <strong>active</strong> (test, don’t just observe and analyse)</li>
+<li>be <strong>Bayesian</strong> (understand uncertainties)</li>
+<li>be <strong>courageous</strong> (act on the evidence)</li>
+<li>be <strong>agile</strong> (learn, fail fast… but not too fast: collect enough evidence)</li>
+<li>be <strong>transparent</strong> and <strong>helpful</strong> (show and share information, co-operate)</li>
+<li>be <strong>truthful</strong> and <strong>non-political</strong> (don’t abuse data, work across silos)</li>
+<li>be <strong>wise</strong> (there is a time to be data-driven and a time to be intuitive)</li>
+</ul>
+
+</article>
+
+<p>&quot;Culture eats strategy for breakfast&quot;</p>
+
+<article class="smaller">
+
+<ul>
+<li>(attributed to P. Drucker, popularised by M. Fields)</li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2>Experimentation</h2></hgroup><article  id="experimentation">
+
+<ul>
+<li>Evidence-based decision making</li>
+<li>Empirism</li>
+<li>A/B testing</li>
+<li>Lean startup</li>
+<li>Agile development</li>
+<li>&quot;One experiment is worth a thousand meetings.&quot; <a href='http://www.samihonkonen.com/tv-interview-on-leadership/' title=''>-@samihonkonen</a></li>
+</ul>
+
+<center>
+
+<img src="http://www.samihonkonen.com/wp-content/uploads/2015/03/huomenta-suomi.png" alt="use cases" style="height: 200px;"/>
+
+</center>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Part 5: Is data almighty?</h2></hgroup><article  id="part-5-is-data-almighty">
+
+</article></slide><slide class=''><hgroup><h2>Hype</h2></hgroup><article  id="hype">
+
+<center>
+
+<img src="http://na2.www.gartner.com/imagesrv/newsroom/images/HC_ET_2014.jpg" alt="Gartner hype curve" style="width: 100%;"/>
+
+</center>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://www.gartner.com/newsroom/id/2819918' title=''>Gartner</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class=''><hgroup><h2>Problems with Big Data?</h2></hgroup><article  id="problems-with-big-data">
+
+<p>Big data is (OCCAM)</p>
+
+<article class="smaller">
+
+<ul>
+<li><strong>Observational</strong>: much of the new data come from sensors or tracking devices that monitor continuously and indiscriminately without design, as opposed to questionnaires, interviews, or experiments with purposeful design</li>
+<li><strong>Lacking Controls</strong>: controls are typically unavailable, making valid comparisons and analysis more difficult</li>
+<li><strong>Seemingly Complete</strong>: the availability of data for most measurable units and the sheer volume of data generated is unprecedented, but more data creates more false leads and blind alleys, complicating the search for meaningful, predictable structure</li>
+<li><strong>Adapted</strong>: third parties collect the data, often for a purposes unrelated to the data scientists’, presenting challenges of interpretation</li>
+<li><strong>Merged</strong>: different datasets are combined, exacerbating the problems relating to lack of definition and misaligned objectives</li>
+</ul>
+
+</article>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='https://hbr.org/2014/03/google-flu-trends-failure-shows-good-data-big-data/' title=''>Kaiser Fung on HBR</a></li>
+</ul>
+
+</article>
+
+<p>Conclusion: Amount of data does not matter, but how it was collected!</p>
+
+</article></slide><slide class=''><hgroup><h2>What can go wrong?</h2></hgroup><article  id="what-can-go-wrong">
+
+<ul>
+<li>Misunderstanding p-values, <a href='http://www.americanscientist.org/issues/pub/2014/6/the-statistical-crisis-in-science/1' title=''>The Statistical Crisis in Science -Andrew Gelman</a></li>
+<li>Understanding uncertainty &amp; probabilities, cognitive biases: <a href='http://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow' title=''>Thinking, Fast and Slow</a></li>
+<li>What can be predicted and what not: <a href='http://en.wikipedia.org/wiki/The_Black_Swan_%282007_book%29' title=''>Black Swan</a></li>
+<li><a href='http://www.statisticsdonewrong.com/' title=''>Statistics done wrong</a></li>
+<li><a href='http://www.louhia.fi/2013/11/29/analytiikan-top-6-sudenkuopat/' title=''>Pitfalls in Analytics (in Finnish, by Louhia)</a></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Causality vs. correlation</h2></hgroup><article  id="causality-vs.-correlation">
+
+<p><img src="http://i.imgur.com/xqOt9mP.png" alt="Cor1" style="width: 80%;"/> <img src="http://tylervigen.com/correlation_project/correlation_images/per-capita-consumption-of-cheese-us_number-of-people-who-died-by-becoming-tangled-in-their-bedsheets.png" alt="Cor2" style="width: 80%;"/></p>
+
+<article class="smaller">
+
+<ul>
+<li>Source: <a href='http://tylervigen.com/' title=''>Tylergive</a></li>
+</ul>
+
+</article>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Concluding&#8230;</h2></hgroup><article  id="concluding...">
+
+</article></slide><slide class=''><hgroup><h2>Some interesting trends</h2></hgroup><article  id="some-interesting-trends">
+
+<ul>
+<li>Openness</li>
+<li>Mydata</li>
+<li>Quantified self</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Conclusions</h2></hgroup><article  id="conclusions">
+
+<p>Recap: Understand statistics, because</p>
+
+<article class="smaller">
+
+<ul>
+<li>almost everything can (and will) be quantified and the data will increasingly affect our everyday lives.</li>
+<li>working with data offers a wide range of interesting opportunities.</li>
+<li>more and more data science services will be used, good to know what they are about.</li>
+</ul>
+
+</article>
+
+<p>Also</p>
+
+<article class="smaller">
+
+<ul>
+<li>Data can provide value in numerous ways.</li>
+<li>Type and quality of data matters more than its amount.</li>
+<li>Data-driven culture: make decisions based on experiments!</li>
+</ul>
+
+</article>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Extra</h2></hgroup><article  id="extra">
+
+</article></slide><slide class=''><hgroup><h2>Extra</h2></hgroup><article  id="extra-1">
+
+<ul>
+<li>Open data science (analyses, tools, data)</li>
+<li>Data science communities in Finland</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Extra: Open data science analyses</h2></hgroup><article  id="extra-open-data-science-analyses">
+
+<p>Make your analyses transparent and reproducible! PDF report is not that!</p>
+
+<ul>
+<li><a href='http://www.washingtonpost.com/blogs/wonkblog/wp/2014/05/08/the-solutions-to-all-our-problems-may-be-buried-in-pdfs-that-nobody-reads/' title=''>No one reads PDF reports!</a></li>
+<li><a href='http://www.taloussanomat.fi/energia/2014/02/14/taloussanomilta-kho-valitus-energia-excel-paatoksesta/20142233/12' title=''>Case &#39;energia-excel&#39;</a></li>
+<li><a href='http://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up' title=''>Reinhart &amp; Rogoff &amp; austerity</a></li>
+</ul>
+
+<p>Reproducible R scripts</p>
+
+<ul>
+<li>rmarkdown</li>
+<li>knitr</li>
+<li>See the <a href='./tty_datascience_2015.Rmd' title=''>rmarkdown source</a> for this slide set!</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Extra: Open data science tools</h2></hgroup><article  id="extra-open-data-science-tools">
+
+<p>Open source tools are replacing commercial ones in many DS tasks</p>
+
+<ul>
+<li>Statistics &amp; computation: R, Python</li>
+<li>Databases: SQL, noSQL (e.g. MongoDB)</li>
+<li>Big data: Hadoop, Spark</li>
+<li>Visualization: ggplot2 (R), matplotlib (Python), d3, Leaflet</li>
+<li>Web stuff: shiny (R)</li>
+<li>Version control: git</li>
+<li>(Open Office)</li>
+<li>More: <a href='http://deanmalmgren.github.io/open-source-data-science/' title=''>landscape of open source tools for data science</a></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Extra: Open data</h2></hgroup><article  id="extra-open-data">
+
+<p>Open data sets offer excellent playground for learning new stuff!</p>
+
+<ul>
+<li>Scientific data: <a href='https://ropensci.org/' title=''>rOpenSci</a></li>
+<li>Government data: <a href='http://ropengov.github.io/' title=''>rOpenGov</a></li>
+<li>More: <a href='http://www.kdnuggets.com/datasets/index.html' title=''>Datasets for Data Mining and Data Science</a></li>
+</ul>
+
+<p>Check also iPython notebooks!</p>
+
+</article></slide><slide class=''><hgroup><h2>Extra: Data science communities in Finland</h2></hgroup><article  id="extra-data-science-communities-in-finland">
+
+<p>Helsinki</p>
+
+<ul>
+<li><a href='www.meetup.com/Helsinki-Data-Analytics-Science-Meetup/' title=''>Helsinki Data Analytics &amp; Science Meetup</a></li>
+<li>Linkedin group: &quot;Helsinki Data Science&quot;</li>
+</ul>
+
+<p>Tampere?</p>
+
+<p>Other</p>
+
+<ul>
+<li>#r-project &amp; #louhos <span class="cite">@IRCnet</span></li>
+<li>Open Knowledge Finland</li>
+<li>Finnish Open Data Ecosystem</li>
+</ul></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script src="tty_datascience_2015_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+<script src="tty_datascience_2015_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+<script src="tty_datascience_2015_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+<script src="tty_datascience_2015_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+<script src="tty_datascience_2015_files/ioslides-13.5.1/js/hammer.js"></script>
+<script src="tty_datascience_2015_files/ioslides-13.5.1/js/slide-controller.js"></script>
+<script src="tty_datascience_2015_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

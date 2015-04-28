@@ -1,0 +1,716 @@
+---
+title: "Thoughts on Data Science"
+author:
+  name: 'Juuso Parkkinen, @ouzor, data scientist at #reaktor'
+date: 'Programmatic Content Management course @TampereUniTech, 28 Apr 2015, #ohsiha'
+output:
+  ioslides_presentation:
+    self_contained: no
+---
+
+```{r setup, echo=FALSE, results='hide', message=FALSE}
+# Load packages
+library("dplyr")
+library("tidyr")
+library("reshape2")
+library("ggplot2")
+theme_set(theme_bw(base_size = 16))
+library("gridExtra")
+library("lubridate")
+library("gdata")
+library("wordcloud")
+library("tm")
+library("RColorBrewer")
+library("corrplot")
+library("RCurl")
+library("scales")
+```
+
+
+
+# Part 1: What is data science?
+
+## What do you think?
+
+<!--
+<center>
+<img src="./figures/wordcloud1.png" alt="use cases" style="height: 500px;"/>
+</center>
+-->
+
+```{r wordcloud, echo=FALSE, message=FALSE, fig.width=8}
+if (T) {
+# Read survey data
+source("read_google_spreadsheet.R")
+gdoc.url <- "https://docs.google.com/spreadsheets/d/19DWN0n1GBOLRpttgt9oXhObs58XxlXVW7FO72t-82TQ/pubhtml"
+temp <- readGoogleSheet(gdoc.url)
+survey.res <- cleanGoogleTable(temp, table=1)
+# Process
+keywords <- survey.res[,3] %>%
+  tolower %>%
+  gsub(";", ",", x=.) %>%
+  strsplit(split=",") %>%
+  unlist %>%
+  trim %>%
+  table
+# Make wordcloud
+set.seed(123)
+wordcloud(words=names(keywords), freq=keywords, scale=c(4,0.7), min.freq = 1,
+          random.order=FALSE, random.color=FALSE, rot.per=0.0, 
+          use.r.layout=FALSE, colors=brewer.pal(6, "Dark2"), fixed.asp=FALSE)
+}
+```
+
+
+## What do others think?
+
+"Data Science is statistics on a Mac" [-Big Data Borat on Twitter][borat]
+
+"Big data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it..." [-Dan Ariely on Facebook][donairely]
+
+"Data science is the process of formulating a quantitative question that can be answered with data, collecting and cleaning the data, analyzing the data, and communicating the answer to the question to a relevant audience."  [-simply stats][simplystats-ds]
+
+[borat]: https://twitter.com/bigdataborat/status/372350993255518208
+[donairely]: https://www.facebook.com/dan.ariely/posts/904383595868
+[simplystats-ds]: http://simplystatistics.org/2015/03/17/data-science-done-well-looks-easy-and-that-is-a-big-problem-for-data-scientists/
+
+## What do I think?
+
+There are multiple definitions from various points of views, all at least partially relevant pieces of the whole.
+
+Important questions:
+
+* Where can data science be applied?
+* What is doing data science in practice?
+* What does it mean to be data-driven?
+* What data science can NOT do?
+
+
+## Why should you care?
+
+It is important to understand at least the basics of data science, statistics & algorithms, because
+
+* almost everything can (and will) be quantified and the data will increasingly affect our everyday lives.
+* working with data offers a wide range of interesting opportunities.
+* more and more data science services will be used, good to know what they are about.
+
+## Where can data be applied?
+
+* Business
+    * Improved (personalised) services
+    * Optimised operations
+* Quantitative research
+    * Natural sciences
+    * Also social sciences
+* Social good
+* Journalism
+* Software development (lean / agile)
+* Quantified self
+* ...
+
+##  
+
+<center>
+<img src="http://stanford2009.wikispaces.com/file/view/recommender.JPG/71899791/815x365/recommender.JPG" alt="use cases" style="width: 500px;"/>
+<img src="http://cdn.cantechletter.com/wp-content/uploads/2013/01/netflix-recommendations-400x280.jpg" alt="use cases" style="width: 300px;"/>
+</center>
+
+Improved personalised services
+
+<article class="smaller">
+* Sources: [stanford2009](http://stanford2009.wikispaces.com/5_Facebook+5.04) and [cantech letter](http://www.cantechletter.com/2013/01/will-predictive-analytics-in-education-widen-the-gap-between-the-arts-and-sciences0128/)
+</article>
+
+
+##
+
+<center>
+<img src="http://datapsych.weebly.com/uploads/2/5/7/8/25783390/5460484_orig.jpg" alt="use cases" style="width: 100%;"/>
+</center>
+
+Nate Silver predicting the Presidential election results in 2012
+
+<article class="smaller">
+* Source: [DataPsych](http://datapsych.weebly.com/blog/mining-silvers-gold-the-basics-behind-nate-silvers-election-prediction-strategies)
+</article>
+
+##
+
+<center>
+<img src="http://www.datakind.org/static/media/uploads/blog/.thumbnails/GiveDirectly-600x340.jpg" alt="use cases" style="width: 100%;"/>
+</center>
+
+Using Satellite Images to Understand Poverty
+
+<article class="smaller">
+* Source: [DataKind](http://www.datakind.org/blog/using-satellite-images-to-understand-poverty/)
+</article>
+
+## 
+
+<center>
+<img src="http://static1.squarespace.com/static/50e4b513e4b0837383d619f3/t/52e67fbee4b063fbaac1e913/1390837705546/eviction+filings+to+homeless.jpg?format=1000w" alt="use cases" style="width: 100%;"/>
+</center>
+
+Using big data to prevent homelessness in New York
+
+<article class="smaller">
+* Source: [Sumall.org](http://www.sumall.org/homelessness/)
+</article>
+
+## 
+
+<iframe title="Yle nelikenttä" width="100%" src="http://svenska.yle.fi/dataviz/2015/fyrfalt/nelikentta.html" frameborder="1" allowfullscreen></iframe>
+
+<!-- alternative static figure
+<center>
+<img src="./figures/yle_vaalit.png" alt="yle vaalit" style="height: 500px;"/>
+</center>
+-->
+
+Factor analysis of election machine results
+ 
+<article class="smaller">
+* Source: [Yle 13.4.2015](http://yle.fi/uutiset/kuka_on_oikeistolaisin_kuka_liberaalein__katso_miten_ehdokkaasi_asettuu_poliittiselle_nelikentalle/7919930)
+</article>
+
+
+
+
+# Part 2: Data science at Reaktor
+
+## My journey towards data science
+
+Studies at Aalto (former Helsinki University of Technology)
+
+* Statistical machine learning and bioinformatics
+* Dissertation: [Probabilistic components of molecular interactions and drug responses][dissertation]
+
+Data scientist at Reaktor
+
+Open tools for open data: [Louhos] & [rOpenGov]
+
+Interests: probabilistic (Bayesian) modeling, information visualization, open source/data/science
+
+I like: solving hard problems in various fields, learning and sharing
+
+[dissertation]: https://aaltodoc.aalto.fi/handle/123456789/13631
+[Louhos]: http://louhos.github.io/
+[rOpenGov]: http://ropengov.github.io/
+
+##
+
+<img src="./figures/Reaktor_Logo_300px.jpg" alt="Reaktor" style="height: 50px;"/>
+
+<center>
+<img src="./figures/reaktor_venndiagram.png" alt="Reaktor" style="height: 500px;"/>
+</center>
+
+
+## Biking in Helsinki
+
+```{r bike1, echo=FALSE, message=FALSE, warning=FALSE, results='hide', fig.height=2.5}
+load("data/bikemodel_plots.RData")
+p1 <- bike.dat %>%
+  filter(LocationName == "Eläintarhanlahti" & Year == 2007) %>%
+  ggplot(data =., aes(x=Day, y=Count, colour=WeekEnd)) + 
+  geom_point(size=1) + facet_grid(Year ~ LocationName) + 
+  labs(y="Count", x="Day", colour="Weekend") +
+  scale_y_log10() + 
+  theme(legend.position="none")
+
+## 3 sample of weather data
+p2 <- weather.df %>%
+  mutate(date=ymd(date), Year = year(date), Day=yday(date)) %>%
+  gather(Measurement, Value, tday:tmin) %>%
+  mutate(Measurement = factor(Measurement, levels=c("tmax", "tday", "tmin"))) %>%
+  filter(name == "Helsinki Kaisaniemi" & Year==2007) %>%
+  ggplot(data =., aes(x=Day, y=Value, colour=Measurement)) + 
+  geom_path() + facet_grid(Year ~ name) +
+  theme(legend.position="none") + labs(x="Day", y="Temperature")
+
+## 4 model + data example
+d2.subset <- droplevels(subset(d2, main.site.named=="1070\nEläintarhanlahti" & year %in% 2007))
+levels(d2.subset$variable) <- c("raw data", "fitted model")
+p3 <- ggplot(d2.subset, aes(x=yday(date), y=Count, colour=variable)) + 
+  geom_line(alpha=0.8) + 
+  scale_y_log10() + theme(legend.position="bottom") +
+  ggtitle("Model") +
+  labs(x="Day", y="Count", colour="Data")
+print(grid.arrange(p1, p2, nrow=1))
+print(p3)
+```
+
+## Some results
+
+```{r bike2, echo=FALSE, message=FALSE, warning=FALSE, results='hide', fig.height=4}
+tday.df <- droplevels(subset(smooths, x.var == "tday\n(mean temperature for day)"))
+p1 <- ggplot(data = tday.df, aes(x=x.val, y=value, colour=x.val)) + 
+  geom_line(size=1.5) + 
+  geom_line(aes(y=value + 2*se)) + #, linetype="dashed") + 
+  geom_line(aes(y=value - 2*se)) +#, linetype="dashed") +
+  scale_colour_gradient2(low=muted("blue"), mid="gray", high=muted("red")) + 
+  scale_y_continuous(breaks=y.vals, labels=percent.vals-100, limits=range(smooths$value)) +
+  geom_hline(y=0, linetype="dashed") + 
+  labs(x="Temperature", y="Effect (%) ± sd") +
+  theme(legend.position="none")
+
+# Discrete vars
+percent.vals4 <- c(67, 80, 90, 100, 110, 125)
+y.vals4 <- log(percent.vals4/100)
+factors.discrete <- c("julyTRUE", "AnySnow", "holidayTRUE", "AnyRain")
+main.discrete.df <- droplevels(subset(cm.df, Factor %in% factors.discrete))
+# levels(main.discrete.df$Factor) <- c("heinäkuu", "lunta maassa", "juhlapyhä", "sataa")
+main.discrete.df$Group <- c("Time", "Time", "Weather", "Weather")
+# levels(main.discrete.df$Factor) <- gsub(" \\(kyllä/ei\\)", "", levels(main.discrete.df$Factor))
+main.discrete.df$Factor <- factor(main.discrete.df$Factor, levels=rev(main.discrete.df$Factor[order(main.discrete.df$Coefficient)]))
+main.discrete.df$Group <- factor(main.discrete.df$Group, levels=c("Weather", "Time"))
+p2 <- ggplot(main.discrete.df, aes(y=Factor, x=Coefficient, xmin=Coefficient-SE, xmax=Coefficient+SE)) + 
+  geom_point(size=3) + 
+  geom_errorbarh(height=0) + 
+  ggtitle("Effect of weather and time") + 
+  labs(y=NULL, x="Effect (%)") +
+  scale_x_continuous(breaks=y.vals4, labels=percent.vals4-100) +
+  geom_vline(x=0, linetype="dashed") +
+  facet_grid(Group ~ ., scales="free_y", space="free_y") +
+  theme(strip.text.y=element_text(angle=0))
+print(grid.arrange(p1, p2, nrow=1))
+```
+
+Read more at [Kaupunkifillari: Pyöräily on arkista touhua](www.kaupunkifillari.fi/blog/2015/03/04/pyoraily-on-arkista-touhua/) and check the code at [GitHub](https://github.com/apoikola/fillarilaskennat/).
+
+## Election data
+
+
+```{r elections1, echo=FALSE, message=FALSE, warning=FALSE, results='hide', fig.height=5.5}
+# Download data first from https://github.com/louhos/takomo/tree/master/vaalit2015/luokittelu
+load("data/yledata.RData")
+load("data/yle.RData")
+
+# Setup party colouring
+puolue<-c("IP","KD","KESK","KOK","KTP","M11","PIR","PS","PSYL","RKP","SDP","SKP","STP","VAS","VIHR")
+puolue.vari=c(brewer.pal(name="Paired",n=12),"black","gray40","brown")[
+  c(1,10,3,2,5,14,13,9,12,11,6,15,7,8,4)]
+names(puolue.vari)<-puolue
+
+p<-table(posterior$puolue,posterior$puolue.e)
+p.miss<-setdiff(rownames(p),toupper(colnames(p)))
+d.p<-dim(p)
+p<-cbind(p,matrix(0,d.p[1],length(p.miss))); colnames(p)[(d.p[2]+1):d.p[1]]<-tolower(p.miss)
+
+p<-p[order(rownames(p)),]
+p<-p[match(colnames(p),tolower(rownames(p))),]
+
+corrplot(prop.table(p,1),method="shade",is.corr=FALSE,addCoef.col=2,
+         addCoefasPercent=TRUE,col=colorRampPalette(c("white","white","black"),1)(80))
+
+```
+
+## Personal level
+
+```{r elections2, echo=FALSE, message=FALSE, warning=FALSE, results='hide', fig.width=8}
+yle %>%
+  select(nimi,id) %>%
+  filter(nimi %in% c("Antti Pesonen","Tapani Karvinen","Antti Rinne","Carl Haglund","Juha Sipilä","Timo Soini","Ville Niinistö","Päivi Räsänen","Alexander Stubb","Paavo Arhinmäki")) %>%
+  select(id,nimi) %>%
+  left_join(.,posterior,by="id") %>%
+  select(id,nimi,puolue,puolue.e,IP,KD,KESK,KOK,PIR,PS,RKP,SDP,VAS,VIHR) %>%
+  mutate_each(funs(round(100*.,digits=0)),-id,-nimi,-puolue,-puolue.e) %>% 
+  mutate(puolue=as.character(puolue)) %>% 
+  select(-id) %>% 
+  arrange(puolue) %>% 
+  grid.table
+```
+
+Done by [Johan Himberg](https://twitter.com/ingaskrap), read more from [Louhos blog!](http://louhos.github.io/news/2015/04/17/vaalit2015-luokittelu/)
+
+## Data science vs. data journalism?
+
+<div class="columns-2">
+
+<iframe title="HS asuntohinnat" height="250" src="http://dynamic.hs.fi/2015/asuntohinnat_postinumero/" frameborder="1" allowfullscreen></iframe>
+
+<article class="smaller">
+* Source: [HS 11.4.2015](http://www.hs.fi/talous/a1428643622153)
+</article>
+
+<center>
+<img src="./figures/kannattaakokauppa.png" alt="Kannattaako kauppa" style="height: 400px;"/>
+</center>
+
+<article class="smaller">
+* Source: Coming soon by Reaktor!
+</article>
+
+</div>
+
+<!-- alternative screenshot
+<center>
+<img src="./figures/hs_asunnot.png" alt="HS asunnot" style="height: 500px;"/>
+</center>
+-->
+
+
+
+## Reaktor data science
+
+Data-driven solutions for any business problems
+
+Focus on statistical modeling
+
+Tough, non-standard problems
+
+Open source tools
+
+Consulting!
+
+
+# Part 3: Data science in practice
+
+## Data science use cases
+
+<center>
+<img src="./figures/ds_use_cases.png" alt="use cases" style="width: 100%;"/>
+</center>
+
+## Data science skills
+
+<div class="columns-2">
+
+<center>
+<img src="http://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png" alt="DSS venn" style="width: 100%;"/>
+</center>
+
+<center>
+<img src="http://policyviz.com/wp-content/uploads/2015/04/unicornvenndiagram-300x225.png" alt="Policyviz Venn" style="width: 100%;"/>
+</center>
+
+</div>
+
+<article class="smaller">
+* Sources: [Drew Conway](drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) and [Policyviz](http://policyviz.com/communicating-research-build-a-unicorn-dont-look-for-one/)
+</article>
+
+Individual or team?!
+
+
+##
+
+<center>
+<img src="http://www.marketingdistillery.com/wp-content/uploads/2014/11/mds_f.png" alt="skill set" style="height: 550px"/>
+</center>
+
+<article class="smaller">
+* Source: [Marketingdistillery][marketingdistillery]
+</article>
+
+[marketingdistillery]: http://www.marketingdistillery.com/2014/11/29/is-data-science-a-buzzword-modern-data-scientist-defined/
+
+</slide>
+
+## Data science process
+
+
+<article class="smaller">
+1. Define the question of interest
+1. Get the data
+1. Clean the data
+1. Explore the data
+1. Fit statistical models
+1. Communicate the results
+1. Make your analysis reproducible
+1. (Iterate!)
+</article>
+
+<article class="smaller">
+* Source: [simply stats: Data science done well looks easy][simplystats-easy]
+</article>
+
+According to interviews and expert estimates, 50-80 % of data scientists' time is spent on handcrafted work (data "wrangling/munging"). [-New York Times 18.8.2014][nyt-ds80]
+
+
+[nyt-ds80]: http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html
+[simplystats-easy]: http://simplystatistics.org/2015/03/17/data-science-done-well-looks-easy-and-that-is-a-big-problem-for-data-scientists/
+
+## Key steps in data analysis
+
+Exploratory data analysis
+
+<article class="smaller">
+* goal: find out whether the data fits the question of interest
+* visualise data
+* identify missing values
+</article>
+
+Probabilistic modeling
+
+<article class="smaller">
+* goal: make reliable inference based on data
+* principled way to include prior assumptions
+* dealing with noisy and missing data
+* taking uncertainty into account
+* combining multiple data sources
+* understanding relationships between variables
+* uncover hidden structure
+* predict missing data and future events
+</article>
+
+## Data science in action!
+
+<div class="columns-2">
+
+<center>
+<img src="./figures/kahvi_mac.png" alt="Kahvi" style="height: 450px;"/>
+</center>
+
+<center>
+<img src="./figures/taulu.png" alt="Kahvi" style="height: 450px;"/>
+</center>
+
+</div>
+
+<article class="smaller">
+* Photos: Juuso Parkkinen
+</article>
+
+## Some basic tools
+
+* Statistics & computation: R, Python
+* Databases: SQL, noSQL (e.g. MongoDB)
+* Big data: Hadoop, Spark
+* Visualization: ggplot2 (R), matplotlib (Python), d3, Leaflet
+
+<article class="smaller">
+* See more open source tools in the Extra section in the end
+</article>
+
+## It's not always complicated!
+
+<center>
+<img src="http://everythingisnaked.com/wp-content/uploads/2011/08/gap-minder.jpg" alt="use cases" style="height: 500px;"/>
+</center>
+
+Hans Rosling communicating facts about the world
+
+<article class="smaller">
+* Source: [Everything is Naked](http://everythingisnaked.com/gap-minder-the-beauty-of-visualized-statistics/)
+</article>
+
+
+
+
+
+
+# Part 4: Data-driven culture
+
+## What is important in the data science process?
+
+data science tools & products  
+< statistical methods  
+< data access & munging  
+< business case  
+< getting to production  
+
+<article class="smaller">
+* Modified from [Louhia's blog post][louhia-analytics]
+</article>
+
+[louhia-analytics]: http://www.louhia.fi/2015/01/25/ja-maailman-paras-analytiikkasofta/
+
+But! None of these matter unless you have a data-driven mindset...
+
+
+## Ideals of being data-driven
+
+<article class="smaller">
+* be **curious** (seek for evidence)
+* be **active** (test, don’t just observe and analyse)
+* be **Bayesian** (understand uncertainties)
+* be **courageous** (act on the evidence)
+* be **agile** (learn, fail fast… but not too fast: collect enough evidence)
+* be **transparent** and **helpful** (show and share information, co-operate)
+* be **truthful** and **non-political** (don’t abuse data, work across silos)
+* be **wise** (there is a time to be data-driven and a time to be intuitive)
+</article>
+
+"Culture eats strategy for breakfast"
+
+<article class="smaller">
+* (attributed to P. Drucker, popularised by M. Fields)
+</article>
+
+
+## Experimentation
+
+* Evidence-based decision making
+* Empirism
+* A/B testing
+* Lean startup
+* Agile development
+* "One experiment is worth a thousand meetings." [-\@samihonkonen](http://www.samihonkonen.com/tv-interview-on-leadership/)
+
+<center>
+<img src="http://www.samihonkonen.com/wp-content/uploads/2015/03/huomenta-suomi.png" alt="use cases" style="height: 200px;"/>
+</center>
+
+
+
+
+
+
+
+
+# Part 5: Is data almighty?
+
+## Hype
+
+<center>
+<img src="http://na2.www.gartner.com/imagesrv/newsroom/images/HC_ET_2014.jpg" alt="Gartner hype curve" style="width: 100%;"/>
+</center>
+
+<article class="smaller">
+* Source: [Gartner][gartner-hypecurve]
+</article>
+
+[gartner-hypecurve]: http://www.gartner.com/newsroom/id/2819918
+
+## Problems with Big Data?
+
+Big data is (OCCAM)
+
+<article class="smaller">
+* **Observational**: much of the new data come from sensors or tracking devices that monitor continuously and indiscriminately without design, as opposed to questionnaires, interviews, or experiments with purposeful design
+* **Lacking Controls**: controls are typically unavailable, making valid comparisons and analysis more difficult
+* **Seemingly Complete**: the availability of data for most measurable units and the sheer volume of data generated is unprecedented, but more data creates more false leads and blind alleys, complicating the search for meaningful, predictable structure
+* **Adapted**: third parties collect the data, often for a purposes unrelated to the data scientists’, presenting challenges of interpretation
+* **Merged**: different datasets are combined, exacerbating the problems relating to lack of definition and misaligned objectives
+</article>
+
+<article class="smaller">
+* Source: [Kaiser Fung on HBR][occam]
+</article>
+
+[occam]: https://hbr.org/2014/03/google-flu-trends-failure-shows-good-data-big-data/
+
+Conclusion: Amount of data does not matter, but how it was collected!
+
+
+
+
+## What can go wrong?
+
+* Misunderstanding p-values, [The Statistical Crisis in Science -Andrew Gelman](http://www.americanscientist.org/issues/pub/2014/6/the-statistical-crisis-in-science/1)
+* Understanding uncertainty & probabilities, cognitive biases: [Thinking, Fast and Slow](http://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow)
+* What can be predicted and what not: [Black Swan](http://en.wikipedia.org/wiki/The_Black_Swan_%282007_book%29)
+* [Statistics done wrong](http://www.statisticsdonewrong.com/)
+* [Pitfalls in Analytics (in Finnish, by Louhia)](http://www.louhia.fi/2013/11/29/analytiikan-top-6-sudenkuopat/)
+
+## Causality vs. correlation
+
+<img src="http://i.imgur.com/xqOt9mP.png" alt="Cor1" style="width: 80%;"/>
+<img src="http://tylervigen.com/correlation_project/correlation_images/per-capita-consumption-of-cheese-us_number-of-people-who-died-by-becoming-tangled-in-their-bedsheets.png" alt="Cor2" style="width: 80%;"/>
+
+<article class="smaller">
+* Source: [Tylergive](http://tylervigen.com/)
+</article>
+
+
+
+
+# Concluding...
+
+## Some interesting trends
+
+* Openness
+* Mydata
+* Quantified self
+
+## Conclusions
+
+Recap: Understand statistics, because
+
+<article class="smaller">
+* almost everything can (and will) be quantified and the data will increasingly affect our everyday lives.
+* working with data offers a wide range of interesting opportunities.
+* more and more data science services will be used, good to know what they are about.
+</article>
+
+Also 
+
+<article class="smaller">
+* Data can provide value in numerous ways.
+* Type and quality of data matters more than its amount.
+* Data-driven culture: make decisions based on experiments!
+</article>
+
+
+# Extra
+
+## Extra
+
+* Open data science (analyses, tools, data)
+* Data science communities in Finland
+
+## Extra: Open data science analyses
+
+Make your analyses transparent and reproducible! PDF report is not that!
+
+* [No one reads PDF reports!][wordlbank-pdf]
+* [Case 'energia-excel'][ts-energiaexcel]
+* [Reinhart & Rogoff & austerity][rr-austerity]
+
+Reproducible R scripts
+
+* rmarkdown
+* knitr
+* See the [rmarkdown source](./tty_datascience_2015.Rmd) for this slide set!
+
+[ts-energiaexcel]: http://www.taloussanomat.fi/energia/2014/02/14/taloussanomilta-kho-valitus-energia-excel-paatoksesta/20142233/12
+[rr-austerity]: http://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up
+[wordlbank-pdf]: http://www.washingtonpost.com/blogs/wonkblog/wp/2014/05/08/the-solutions-to-all-our-problems-may-be-buried-in-pdfs-that-nobody-reads/
+
+
+## Extra: Open data science tools
+
+Open source tools are replacing commercial ones in many DS tasks
+
+* Statistics & computation: R, Python
+* Databases: SQL, noSQL (e.g. MongoDB)
+* Big data: Hadoop, Spark
+* Visualization: ggplot2 (R), matplotlib (Python), d3, Leaflet
+* Web stuff: shiny (R)
+* Version control: git
+* (Open Office)
+* More: [landscape of open source tools for data science][ds-oss-tools]
+
+[ds-oss-tools]: http://deanmalmgren.github.io/open-source-data-science/
+
+## Extra: Open data
+
+Open data sets offer excellent playground for learning new stuff!
+
+* Scientific data: [rOpenSci](https://ropensci.org/)
+* Government data: [rOpenGov](http://ropengov.github.io/)
+* More: [Datasets for Data Mining and Data Science][kdnug-datasets]
+
+[kdnug-datasets]: http://www.kdnuggets.com/datasets/index.html
+
+
+Check also iPython notebooks!
+
+
+
+## Extra: Data science communities in Finland
+
+Helsinki
+
+* [Helsinki Data Analytics & Science Meetup](www.meetup.com/Helsinki-Data-Analytics-Science-Meetup/)
+* Linkedin group: "Helsinki Data Science"
+
+Tampere?
+
+Other 
+
+* \#r-project & #louhos @IRCnet
+* Open Knowledge Finland
+* Finnish Open Data Ecosystem
