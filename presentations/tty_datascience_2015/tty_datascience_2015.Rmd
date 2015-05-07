@@ -324,6 +324,33 @@ yle %>%
 
 Done by [Johan Himberg](https://twitter.com/ingaskrap), read more from [Louhos blog!](http://louhos.github.io/news/2015/04/17/vaalit2015-luokittelu/)
 
+## Data science vs. data journalism?
+
+<div class="columns-2">
+
+<iframe title="HS asuntohinnat" height="250" src="http://dynamic.hs.fi/2015/asuntohinnat_postinumero/" frameborder="1" allowfullscreen></iframe>
+
+<article class="smaller">
+* Source: [HS 11.4.2015](http://www.hs.fi/talous/a1428643622153)
+</article>
+
+<center>
+<img src="./figures/kannattaakokauppa.png" alt="Kannattaako kauppa" style="height: 400px;"/>
+</center>
+
+<article class="smaller">
+* Source: [Kannattaako Kauppa](http://kannattaakokauppa.fi/#/)
+</article>
+
+</div>
+
+<!-- alternative screenshot
+<center>
+<img src="./figures/hs_asunnot.png" alt="HS asunnot" style="height: 500px;"/>
+</center>
+-->
+
+
 
 ## Reaktor data science
 
