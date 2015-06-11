@@ -86,7 +86,7 @@ See more at
 * [Kannattaakokauppa.fi](http://kannattaakokauppa.fi/#/en/) with  
 [technical description](http://ropengov.github.io/r/2015/06/11/apartment-prices/) and  
 [source code](https://github.com/reaktor/Neliohinnat)
-* [Slides online](ouzor.github.io/presentations/iccss_2015/iccss_reaktor_2015.html) and [rmarkdown source](http://ouzor.github.io/presentations/iccss_2015/iccss_reaktor_2015.Rmd)
+* [Slides online](ouzor.github.io/presentations/iccss_2015/iccss_reaktor_2015.html) and [rmarkdown source](https://raw.githubusercontent.com/ouzor/ouzor.github.com/master/presentations/iccss_2015/iccss_reaktor_2015.Rmd)
 
 </article>
 
