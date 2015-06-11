@@ -22,7 +22,7 @@ Data is noisy and partly missing.
 **Conclusions based on raw data are often misleading.**
 
 <center>
-<img src="https://raw.githubusercontent.com/reaktor/Neliohinnat/master/figs/raw-only-en.png" alt="raw data" style="height: 500px;"/>
+<img src="https://raw.githubusercontent.com/reaktor/Neliohinnat/master/figs/raw-only-en2.png" alt="raw data" style="height: 500px;"/>
 </center>
 
 </div>
@@ -35,7 +35,7 @@ Helps in handling missing data, uncertainty and dependencies.
 Example: Model of regional apartment prices in Finland
 
 <center>
-<img src="https://raw.githubusercontent.com/reaktor/Neliohinnat/master/figs/raw-vs-model-en.png" alt="raw data" style="height: 400px;"/>
+<img src="https://raw.githubusercontent.com/reaktor/Neliohinnat/master/figs/raw-vs-model-en2.png" alt="raw data" style="height: 400px;"/>
 </center>
 
 
