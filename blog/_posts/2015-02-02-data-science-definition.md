@@ -4,7 +4,7 @@ excerpt: "My personal attempt to define a data scientist"
 layout: blog-post
 location: Espoo, Finland
 tags:
-- data science
+- datascience
 comments: yes
 ---
 
