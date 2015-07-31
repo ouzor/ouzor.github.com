@@ -1,0 +1,109 @@
+# --- Serving options --- #
+
+# url is the full website URL
+# baseurl is the website's URL without the hostname
+
+# If you are building a simple GitHub user page (username.github.io) then use these settings:
+url: "http://ouzor.github.io"
+baseurl: ""
+
+# If you are building a GitHub project page then use these settings:
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
+
+# Of course don't forget to change the username and projectname to YOUR username and project
+
+# Name of website
+title: Juuso Parkkinen
+
+# Short description of your site
+description: Juuso's personal web page
+
+# --- Navigation bar options --- #
+
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/images/juuso_200.png"
+
+# List of links in the navigation bar
+navbar-links:
+  Home: ""
+  About Me: "aboutme"
+  Contact: "contact"
+  
+# --- Footer options --- #
+
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: Juuso Parkkinen
+  email: "ouzor@iki.fi"
+#  facebook: yourname  # eg. daattali
+  github: ouzor    # eg. daattali
+  twitter: ouzor   # eg. daattali
+#  linkedin: yourlink  # eg. "pub/dean-attali/8/946/143"
+#  stackoverflow: yourlink  # eg. "users/3943160/daattali"
+ 
+# Select which links to show in the footer
+footer-links-active:
+  rss: true
+  facebook: true
+  email: true
+  twitter: true
+  github: true
+  linkedin: false
+  stackoverflow: false
+
+# How to display the link to the website in the footer
+# Remove this if you don't want a link in the footer
+url-pretty: "ouzor.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+
+# --- Misc --- #
+
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+disqus: "juusosblog"
+
+# Fill in your Google Analytics ID to track your website using GA
+google_analytics: "UA-10655517-6"
+
+# --- Don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "Finland/Helsinki"
+markdown: kramdown
+highlighter: pygments
+permalink: /blog/:year/:month/:day/:title.html  #/:year-:month-:day-:title
+paginate: 5
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true  # add comments to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "default"
+
+# Exclude these files from production site
+exclude:
+  - CNAME
+  - LICENSE
+  - README.md
+
+# prose.io options
+prose:
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - /_includes
+    - /_layouts
+    - /css
+    - /img
+    - /js
+    

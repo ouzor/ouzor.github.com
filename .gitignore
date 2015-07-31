@@ -5,3 +5,5 @@ site/*
 ouzor.github.com.Rproj
 .Rhistory
 blog/keys/
+
+_site/
