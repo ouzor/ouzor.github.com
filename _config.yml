@@ -1,6 +1,0 @@
----
-destination : ./site/
-lsi         : false
-highlighter : pygments
-permalink   : /:categories/:year/:month/:day/:title.html
-markdown    : kramdown
