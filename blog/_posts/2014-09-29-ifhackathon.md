@@ -1,10 +1,8 @@
 ---
-layout:   blog-post
-title:    Open car accident claims data from IF?
-location: Espoo, Finland
-tags :    [opendata, hackathon]
-excerpt:  Thoughts and experiences from the Aaltoes Open Data Hackathon with IF
-comments: true
+title: "Open car accident claims data from IF?"
+subtitle: "Thoughts and experiences from the Aaltoes Open Data Hackathon with IF"
+layout: post
+tags : [opendata, hackathon]
 ---
 
 I got really excited last week when I noticed that [IF](https://www.if.fi/), a Finnish insurance company, will open some of their car accident claims data in a [hackathon](http://aaltoes.com/event/open-data-hackathon-with-if). The topic was also interesting regarding some of our clients at Avaus, so I participated the event and among other things made a [shinyapp for visualizing some of the claims data](https://ouzor.shinyapps.io/ifhackathon/).

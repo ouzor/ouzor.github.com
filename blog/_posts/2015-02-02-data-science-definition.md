@@ -1,11 +1,8 @@
 ---
 title: "Data scientist - statistician, programmer, consultant and visualizer?"
-excerpt: "My personal attempt to define a data scientist"
-layout: blog-post
-location: Espoo, Finland
-tags:
-- datascience
-comments: yes
+subtitle: "My personal attempt to define a data scientist"
+layout: post
+tags: [datascience]
 ---
 
 Data science has recently emerged as an interdisciplinary field with a fair amount of hype around it. It has been declared as the [sexiest job of the 21st century][hbr-ds] and the salaries of data scientists have skyrocketed. However, there still is not a good overall definition for data science, so here I’ll try to open it from my own perspective.

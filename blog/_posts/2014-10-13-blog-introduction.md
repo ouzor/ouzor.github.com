@@ -1,10 +1,8 @@
 ---
-layout:   blog-post
-title:    Out in the open
-location: Espoo, Finland
-tags :    [datascience, opendata]
-excerpt:  Introducing the blog
-comments: true
+title: "Out in the open"
+subtitle: "Introducing the blog"
+layout: post
+tags : [datascience, opendata]
 ---
 
 Now that I've managed to kick the blog off with two events posts, I’d like also to introduce the ideas and hopes I have for the blog. As indicated by the name, the main themes will be open knowledge and data science (defining these is a topic for another post). Naturally these stem from my interests and things I have done, of which you can read more at my [homepage]. 

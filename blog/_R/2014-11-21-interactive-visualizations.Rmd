@@ -1,12 +1,8 @@
 ---
 title: "Interactive visualizations with R - a minireview"
-excerpt: "A minireview of R packages ggvis, rCharts, plotly and googleVis for interactive visualizations"
-layout: blog-post
-location: Espoo, Finland
-tags:
-- R
-- visualization
-comments: yes
+subtitle: "A minireview of R packages ggvis, rCharts, plotly and googleVis for interactive visualizations"
+layout: post
+tags: [R, visualization]
 ---
 
 Interactive visualization allows deeper exploration of data than static plots. Javascript libraries such as [d3] have made possible wonderful new ways to show data. Luckily the R community has been active in developing R interfaces to some popular javascript libraries to enable R users to create interactive visualizations without knowing any javascript. 

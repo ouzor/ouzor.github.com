@@ -1,12 +1,8 @@
 ---
 title: "Learning and sharing - my first data science lecture"
-excerpt: "Recap of my guest lecture on data science at Tampere University of Technology "
-layout: blog-post
-location: Espoo, Finland
-tags:
-- datascience
-- lecture
-comments: yes
+subtitle: "Recap of my guest lecture on data science at Tampere University of Technology "
+layout: post
+tags: [datascience, lecture]
 ---
 
 I had the pleasure to give a guest lecture on data science at Tampere University of Technology yesterday. I was invidited by my friend [Jukka Huhtamäki] to give a lecture on Programmatic Content Management course ([description in Finnish][pcm]). This was my first full-scale lecture, so it was a very exciting opportunity to share my experiences and views of the topic.
