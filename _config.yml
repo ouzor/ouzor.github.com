@@ -28,8 +28,9 @@ avatar: "/images/juuso_200.png"
 # List of links in the navigation bar
 navbar-links:
   Home: ""
-  About Me: "aboutme"
-  Contact: "contact"
+  Projects: "projects.html"
+  About Me: "aboutme.html"
+#  Contact: "contact.html"
   
 # --- Footer options --- #
 
