@@ -1,11 +1,8 @@
 ---
 title: "Faceless algorithms or responsible data scientists?"
-excerpt: "On responsibility of data scientists over the algorithms they create"
-layout: blog-post
-location: Espoo, Finland
-tags:
-- datascience
-comments: yes
+subtitle: "On responsibility of data scientists over the algorithms they create"
+layout: post
+tags: [data science]
 ---
 
 With big data comes big responsibility! But can the data scientists step up and take responsibility of the algorithms they have released?
