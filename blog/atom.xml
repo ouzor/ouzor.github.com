@@ -1,10 +1,10 @@
 ---
-layout: nil
+layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Open Data Science</title>
+ <title>Juuso's blog on Open Data Science</title>
  <link href="http://ouzor.github.io/blog/atom.xml" rel="self"/>
  <link href="http://ouzor.github.io/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
