@@ -102,7 +102,7 @@ Open knowledges cover a wide set of topics from open data and science to democra
 
 **[My Data]** has emerged as an important topic on the side of open data. The working group recently produced a [My data survey][mydata-survey] that clarifies the related concepts nicely. An English version is coming in the future. I have also developed some [code] for analyzing personal data from various sources.
 
-**[Open science]** - the oppenness of research publications, data and code - is a really hot topic now. Problems in research reproducibility have raised the need for better and more open ways to conduct science. 
+**[Open science]** - the openness of research publications, data and code - is a really hot topic now. Problems in research reproducibility have raised the need for better and more open ways to conduct science. 
 
 [okfi]: http://fi.okfn.org/
 [My Data]: http://fi.okfn.org/wg/my-data/
@@ -113,7 +113,7 @@ Open knowledges cover a wide set of topics from open data and science to democra
 
 ## Research on machine learning and bioinformatics {#research}
 
-I finished my PhD studies in Aalto University in 2014. In my [thesis](#theses) I developed machine learning methods for molecular biology and medicine applications. Below you can find selected publications and other related material.
+I finished my PhD studies in Aalto University in 2014. In my [thesis](#theses) I developed machine learning methods for molecular biology and medicine applications. 
 
 ### Software
 
@@ -125,6 +125,8 @@ I finished my PhD studies in Aalto University in 2014. In my [thesis](#theses) I
 
 
 ### Publications
+
+Here some selected publications. See all of my publications in [Google Scholar](http://scholar.google.com/citations?user=4d5VBfkAAAAJ).
 
 <!-- Doesn't look good...
 ## Impact story profile
@@ -166,7 +168,6 @@ Juuso A Parkkinen and Samuel Kaski
 BMC Systems Biology 2010, 4:4  
 [DOI](http://dx.doi.org/10.1186/1752-0509-4-4) | [code](http://www.cis.hut.fi/projects/mi/software/ICMg)
 
-See all of my publications in [Google Scholar](http://scholar.google.com/citations?user=4d5VBfkAAAAJ).
 
 ### Theses
 
