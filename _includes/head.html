@@ -8,8 +8,23 @@
   <meta name="author" content="{{ site.author.name }}" />
   
   {% if page.subtitle %}
-  <meta name="description" content="{{ page.subtitle }}">
+  <meta name="description" content="{{ page.subtitle }}"/>
   {% endif %}
+
+    <!-- Scripts for ggvis from http://ggvis.rstudio.com/0.1/interactivity.html-->
+  <!-- ggvis stuff -->
+  <script src="http://ggvis.rstudio.com/0.1/libs/ggvis/lib/jquery-1.11.0.min.js"></script>
+  <script src="http://ggvis.rstudio.com/0.1/libs/ggvis/lib/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+  <script charset="utf-8" src="http://ggvis.rstudio.com/0.1/libs/ggvis/lib/d3.min.js"></script>
+  <script src="http://ggvis.rstudio.com/0.1/libs/ggvis/lib/vega.min.js"></script>
+  <script src="http://ggvis.rstudio.com/0.1/libs/ggvis/lib/QuadTree.js"></script>
+  <script src="http://ggvis.rstudio.com/0.1/libs/ggvis/lib/lodash.min.js"></script>
+  <script>var lodash = _.noConflict();</script>
+  <script src="http://ggvis.rstudio.com/0.1/libs/ggvis/js/ggvis.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://ggvis.rstudio.com/0.1/libs/ggvis/lib/jquery-ui/css/smoothness/jquery-ui-1.10.4.custom.min.css"/>
+  <link rel="stylesheet" type="text/css" href="http://ggvis.rstudio.com/0.1/libs/ggvis/css/ggvis.css"/>
+  <!-- end of ggvis scripts-->
+
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
@@ -66,5 +81,6 @@
   {% else %}
   <meta property="og:image" content="" />
   {% endif %}
+  
   
 </head>
