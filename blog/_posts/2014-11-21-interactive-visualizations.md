@@ -71,8 +71,8 @@ R markdown documents are a very nice way of sharing reproducible analyses, using
 
 I encountered several problems when preparing this blog post. Specifically, I had issues in embedding the plots into R markdown documents. This is made more complicated with the various available ways of turning .Rmd files into html: manual `knit()` and `knit2html()` functions, the `Knit HTML` button in RStudio, and a Jekyll-powered blog with its own requirements. Here I have listed the most important issues, with solutions when found. Some things are still unsolved, hope someone can help me with those! 
 
-* UPDATE 8.8.2015: none of ggvis plots show up after I updated my blog theme. I'm working on this.
 * **ggvis** showed up nicely with `Knit HTML`, as it creates a standalone file with the necessary javascript libraries included. However, this was not the case with my blog setup. My solution was to inlude the set of scripts (taken from the [source of this page][ggvis-scripts]) into the header of all my blog posts (see [here][blog-scripts]). Not sure if this is an optimal solution.
+* **UPDATE 8.8.2015**: After [updating] the blog theme, the ggvis only show up with Chrome, not with Firefox or Safari. There's some black magic beyond my understanding going on, so I would really appreciate some help with this!
 * **rCharts:** Embedding rCharts to R markdown did not quite work either as shown e.g. [here][rcharts-rmd]. With `Knit HTML` button the line that worked was `rchars.object$print(include_assets=TRUE)`, whereas with the blog the line was `rchars.object$show('iframesrc', cdn=TRUE)`.
 * **plotly:** Embedding plotly charts into R markdown documents did not work as shown [here][plotly-rmd], but adding `session="knitr"` to the `ggplotly()` call [solved the issue][plotly-issue] (thanks to Scott Chamberlain and Marianne Corvellec for help!). Note that in this post I embedded existing plotly charts manually.
 * There are still two charts that do now show up in this post. I have quite limited understanding of how knitr, jekyll and the javascript tools work together, and could not get these to work. Perhaps the scripts somehow conflict with each other?
@@ -86,7 +86,8 @@ I also noticed some minor issues:
 [plotly-issue]: https://github.com/ropensci/plotly/issues/12#issuecomment-63134893
 [rcharts-rmd]: http://bl.ocks.org/ramnathv/raw/8084330/
 [ggvis-scripts]: http://ggvis.rstudio.com/0.1/interactivity.html
-[blog-scripts]: https://github.com/ouzor/ouzor.github.com/blob/master/_layouts/blog-post.html
+[blog-scripts]: https://github.com/ouzor/ouzor.github.com/blob/master/_includes/head.html
+[updating]: http://ouzor.github.io/blog/2015/08/07/website-update.html
 
 ## Summary
 
