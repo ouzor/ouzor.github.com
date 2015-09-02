@@ -17,7 +17,7 @@ layout: null
  {% for post in site.tags["R"] limit:10 %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://ouzor.github.io{ post.url }}"/>
+   <link href="http://ouzor.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>id:{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
