@@ -1,6 +1,6 @@
 ---
 title: "Congratulations to Demos Helsinki!"
-subtitle: "More Twitter streamgraphs for the 10-year-old think tank"
+subtitle: "Twitter streamgraphs for the 10-year-old think tank"
 layout: post
 tags: [visualization, twitter]
 ---
