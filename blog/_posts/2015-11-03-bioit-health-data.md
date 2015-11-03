@@ -37,7 +37,7 @@ Perhaps the most interesting service is called [My Kanta](http://www.kanta.fi/en
 Mikko introduced the recently established Health Innovation Village, located in Vallila, Helsinki. Mikko painted a vision of a flourishing ecosystem with startups, companies and public sector orgnisations working together to create new healthcare services, which sounds cool. I was however disappointed to find out that the Village's startups are not listed anywhere online. Anyway, data analysis and sensor technology were among their focus areas, so the Village is definitely worth following.
 
 
-Mikael talked about the challenges in accessing relevant medical data from the point of view of a Type 1 diabetic. Currently the patients have to measure their blood glucose levels ten times per day, and in addition estimate both the carbs in their food and the rate of consumption based on their activities and exercises. Although many kinds of glucose level sensors are available, many of them still do not provide the data for the patients themselves. This has lead the active [hacker community](http://www.nightscout.info/) to develop their own solutions and even crack into some devices to get their own measurement data out, in order to learn from the data. 
+Mikael talked about the challenges in accessing relevant medical data from the point of view of a Type 1 diabetic. Currently the patients have to measure their blood glucose levels up to ten times per day, and in addition estimate both the carbs in their food and the rate of consumption based on their activities and exercises. Although many kinds of glucose level sensors are available, many of them still do not provide real-time data for the patients themselves. This has lead the active [hacker community](http://www.nightscout.info/) to develop their own solutions and even crack into some devices to get their own measurement data out, in order to learn from the data. 
 
 Here's an example visualisation of Mikaels' data, visualised with tools developed in the open source [Nightscout](http://www.nightscout.info/) project:
 
@@ -49,7 +49,7 @@ Here's an example visualisation of Mikaels' data, visualised with tools develope
 </center>
 
 
-Mikael's dream is to develop an "artificial pancreas" for automatic monitoring and pumping of insuline, which would change the lives of diabetics dramatically. Sensotrend focuses on providing services for diabetics who are keen on sports and hard exercises, and have to be even more careful in controlling their insuline intake. Sensotrend's service combines relevant data for diabetics from over 60 sensors and trackers, and visualises it in informative ways for the patient and healthcare professionals to use and make conclusions from.
+Mikael's dream and a hobby project is to develop an "artificial pancreas" for automatic monitoring and pumping of insuline, which would change the lives of diabetics dramatically. Sensotrend focuses on providing services for diabetics who are keen on sports or exercise, and have to be even more careful in controlling their insuline intake. Sensotrend's service combines relevant data for diabetics from over 60 sensors and trackers, and visualises it in informative ways for the patient and healthcare professionals to use and make conclusions from.
 
 
 
