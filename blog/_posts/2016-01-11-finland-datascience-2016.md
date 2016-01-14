@@ -1,6 +1,6 @@
 ---
 title: "Meetups and Hackathons - Data Science on the Rise in Finland"
-subtitle: "Recap of the data science scene in Finland in 2016"
+subtitle: "Recap of the data science scene in Finland in 2015"
 layout: post
 tags: [datascience]
 ---
