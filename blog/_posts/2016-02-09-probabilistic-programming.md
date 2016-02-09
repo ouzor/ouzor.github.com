@@ -43,7 +43,14 @@ Models written in Stan language are compiled to C++, which makes the inference f
 
 Aki, who recently joined the [Stan Development Team](http://mc-stan.org/team/), covered Stan's features extensively in his presentation. More information on many of these can be found in the [Stan documentation](http://mc-stan.org/documentation/), and for example [these slides by Bob Carpenter](http://andrewgelman.com/wp-content/uploads/2015/07/darpa-ppaml-2015.pdf). The [developer mailing list](https://groups.google.com/forum/#!forum/stan-dev) is also a good source for information on recent developments. Aki also gave hints of interesting future developments, including Gaussian Processes, better adaptations and diagnostics, Riemannian HMC, and distributed computing. 
 
-Several research examples were mentioned that use Stan, including [hierarchical survival analysis by Peltola *et al.*](http://becs.aalto.fi/en/research/bayes/diabcvd/) and [nonlinear pharmacometric models by Weber *et al.*](http://arxiv.org/abs/1602.02055) - Stan can handle ordinary differential equations as well! One example where we have used Stan at Reaktor is the apartment price modelling and visualisation called [Kannattaakokauppa.fi](http://kannattaakokauppa.fi/#/en/), which is described more thoroughly [here](http://ropengov.github.io/r/2015/06/11/apartment-prices/). 
+Several research examples were mentioned that use Stan, including [hierarchical survival analysis by Peltola *et al.*](http://becs.aalto.fi/en/research/bayes/diabcvd/) and [nonlinear pharmacometric models by Weber *et al.*](http://arxiv.org/abs/1602.02055) - Stan can handle ordinary differential equations as well! We have also used Stan at [Reaktor](http://reaktor.com/) in the apartment price modelling and visualisation  [Kannattaakokauppa.fi](http://kannattaakokauppa.fi/#/en/): 
+
+<center>
+<img src="/blog/figs/2016-02-09-probabilistic-programming/kannattaakokauppa_screenshot.png" alt="None" width="600">
+
+<br>
+<em>Screenshot of <a href="http://kannattaakokauppa.fi/#/en/">Kannattaakokauppa.fi</a>, showing regional trends in apartment prices in Finland. For a thorough description of the model and data used, see <a href="http://ropengov.github.io/r/2015/06/11/apartment-prices/">here</a>.</em>
+</center>
 
 One practical issue that has been challenging researchers and practitioners is how to assess predictive performance for instance to compare different models. For this, Aki and [Andrew Gelman](http://andrewgelman.com/) have recently developed the [Pareto smoothed importance sampling leave-one-out cross-validation](http://arxiv.org/abs/1507.04544) procedure. It is implemented in the [R package loo](https://cran.r-project.org/web/packages/loo/index.html), which is great and I'm sure I will find use for this.
 
