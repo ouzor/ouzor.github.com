@@ -72,7 +72,7 @@ google_analytics: "UA-10655517-6"
 # Output options (more information on Jekyll's site)
 timezone: "Finland/Helsinki"
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /blog/:year/:month/:day/:title.html  #/:year-:month-:day-:title
 paginate: 5
 
