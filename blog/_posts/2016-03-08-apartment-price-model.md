@@ -6,7 +6,7 @@ tags: [R, visualisation]
 fb-img: http://ouzor.github.io/blog/figs/2016-03-08-apartment-price-model/model_vs_raw_log.gif
 ---
 
-With all the data science and big data hype going on it's always nice to see real case examples. At Reaktor we have created [Kannattaakokauppa.fi](http://kannattaakokauppa.fi/#/en/), a probabilistic modeling-based interactive visualisation of regional apartment price trends in Finland. The service shows the predicted price levels and trends for year 2017, and by zooming in to a chosen zip code the price development since 2005 is shown. 
+With all the data science and big data hype going on it's always nice to see real case examples. At [Reaktor](https://reaktor.com/) we have created [Kannattaakokauppa.fi](http://kannattaakokauppa.fi/#/en/), a probabilistic modeling-based interactive visualisation of regional apartment price trends in Finland. The service shows the predicted price levels and trends for year 2017, and by zooming in to a chosen zip code the price development since 2005 is shown. 
 
 <center>
 <img src="/blog/figs/2016-03-08-apartment-price-model/kk_2017.png" alt="None" width="600">
