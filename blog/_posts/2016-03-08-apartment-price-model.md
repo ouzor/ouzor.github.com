@@ -30,9 +30,6 @@ To illustrate the advantages of the modelling approach, I created the following 
 
 <center>
 <img src="/blog/figs/2016-03-08-apartment-price-model/model_vs_raw_log.gif" alt="None" width="600">
-
-<br>
-<em>Insert caption</em>
 </center>
 
 The animation is made using the [gganimate](https://github.com/dgrtwo/gganimate) R package ([source code]([here](https://github.com/reaktor/Neliohinnat/blob/master/source_2016/model_visualisations.R)
