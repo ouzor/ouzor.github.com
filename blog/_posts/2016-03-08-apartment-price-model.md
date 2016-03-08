@@ -2,7 +2,7 @@
 title: "Urbanisation Continues - Modeling Regional Apartment Prices in Finland"
 subtitle: "Modelling and visualising open apartment price data with R"
 layout: post
-tags: [rstats, visualisation]
+tags: [R, visualisation]
 fb-img: http://ouzor.github.io/blog/figs/2016-03-08-apartment-price-model/model_vs_raw_log.gif
 ---
 
