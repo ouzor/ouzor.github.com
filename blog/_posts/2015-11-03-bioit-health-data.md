@@ -6,7 +6,7 @@ tags: [healthcare, mydata]
 ---
 
 
-Healthcare sector is underoing dramatic changes enabled by new digital technologies. One key question for the future of healthcare is how personal health data, including existing health records and also data from modern wellbeing sensors and activity trackers, can be taken into more effective use. There is for example increasing [demand for patients to get more control of their own medical data](http://www.nature.com/nbt/journal/v33/n9/abs/nbt.3340.html).
+Healthcare sector is undergoing dramatic changes enabled by new digital technologies. One key question for the future of healthcare is how personal health data, including existing health records and also data from modern wellbeing sensors and activity trackers, can be taken into more effective use. There is for example increasing [demand for patients to get more control of their own medical data](http://www.nature.com/nbt/journal/v33/n9/abs/nbt.3340.html).
 
 In many ways this question comes close to the concept of MyData, about which I [blogged recently](/blog/2015-10-20-mydata-bigdata-human-side.html). This was also a common theme in the BioIT Alumniweekend that I attended at Aalto University (see [program and slides](http://elec.aalto.fi/fi/current/events/2015-09-22-011/), in Finnish only).
 
