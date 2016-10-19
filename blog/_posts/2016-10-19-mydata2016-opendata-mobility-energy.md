@@ -82,7 +82,7 @@ This became evident when Lilli Linkola led us through some intriguing results fr
 <img src="/blog/figs/2016-10-19-mydata2016-opendata-mobility-energy/energy_patterns.png" alt="None" width="400">
 
 <br>
-<em>Image adapted from Lilli Linkola's slides</a>.</em>
+<em>Image adapted from Lilli Linkola's slides.</em>
 </center>
 
 		
