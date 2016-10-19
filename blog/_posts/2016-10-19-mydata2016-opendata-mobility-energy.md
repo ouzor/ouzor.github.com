@@ -3,7 +3,7 @@ title: "Openness Empowers Individuals and Societies"
 subtitle: "Recap From MyData2016 Conference"
 layout: post
 tags: [mydata, opendata]
-fb-img: https://ouzor.github.io/blog/figs/2016-10-19-mydata2016-opendata-mobility-energy/ID-100160876.jpg
+fb-img: http://ouzor.github.io/blog/figs/2016-10-19-mydata2016-opendata-mobility-energy/ID-100160876.jpg
 ---
 
 We are living in the Information Age, where things that we make and consume are mostly information, and more information is available to everyone than ever before. Modern information technology brings the relevant information to our reach at the right time. For example, moving around in a city has become easier with public transportation routing and car navigation applications.
