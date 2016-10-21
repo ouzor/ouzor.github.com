@@ -58,7 +58,7 @@ An interesting new development from HSL is the [Mobility Profile](https://play.g
 
 Also a more holistic vision for the future of the whole mobility sector has been created in Finland. [Mobility as a Service (MaaS)](http://maas.global/), presented by [Sami Pippuri](https://twitter.com/pippuri), is a solution for the growing urbanisation and transportation problems. MaaS provides a single app for managing everyday travel needs by giving access to all transportation in one place, empowering consumers with the power of choice.
 
-Underhood, MaaS is an ecosystem of APIs for combining all necessary pieces from different service providers from both public (including Citybikes!) and private sector together, and providing a common intelligent routing algorithm. The concept, featured recently in [The Economist](http://www.economist.com/news/international/21707952-combining-old-and-new-ways-getting-around-will-transform-transportand-cities-too-it?fsrc=scn/tw/te/pe/ed/itstartswithasingleapp) has been implement in the [Whim](http://joinwhim.com/) app:
+Underhood, MaaS is an ecosystem of APIs for combining all necessary pieces from different service providers from both public (including Citybikes!) and private sector together, and providing a common intelligent routing algorithm. The concept, featured recently in [The Economist](http://www.economist.com/news/international/21707952-combining-old-and-new-ways-getting-around-will-transform-transportand-cities-too-it?fsrc=scn/tw/te/pe/ed/itstartswithasingleapp), has been implement in the [Whim](http://joinwhim.com/) app:
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8eAn14KQpp4" frameborder="0" allowfullscreen></iframe>
