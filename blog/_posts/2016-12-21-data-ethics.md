@@ -2,7 +2,7 @@
 title: "Data Needs Ethics!"
 subtitle: "A Discussion on Problems and Solutions for Ethical Use of Data"
 layout: post
-tags: [dataethics, mydata]
+tags: [ethics, ai, mydata, datascience]
 fb-img: http://ouzor.github.io/blog/figs/2016-12-21-data-ethics/ID-100279802.jpg
 ---
 
