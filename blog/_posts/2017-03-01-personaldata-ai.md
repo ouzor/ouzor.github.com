@@ -34,7 +34,7 @@ The core issue here that I want to emphasize is the access to massive loads of p
 > “The danger of not having regulation around the sort of data you can get from Facebook and elsewhere is clear. With this, a computer can actually do psychology, it can predict and potentially control human behaviour. It’s what the scientologists try to do but much more powerful. It’s how you brainwash someone. It’s incredibly dangerous. <br><br>
 “It’s no exaggeration to say that minds can be changed. Behaviour can be predicted and controlled. I find it incredibly scary. I really do. Because nobody has really followed through on the possible consequences of all this. People don’t know it’s happening to them. Their attitudes are being changed behind their backs.”
 
-**In other words, AI systems that feed on personal data have made it possible to influence people's behavior**.
+**In other words, AI systems that feed on personal data have made it possible to influence people's behaviour**.
 
 It's important to note that the algorithms need not be able to affect *everyone's* decision. Influencing a large enough fraction of undecided people can be enough to improve profits notably - or swing elections. 
 
