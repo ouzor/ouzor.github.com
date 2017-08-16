@@ -26,4 +26,7 @@ The research project leading to this publication was a long journey that taught 
 The paper has been covered in a [blog post](https://chem-bla-ics.blogspot.fi/2017/07/new-paper-transcriptomics-data-driven.html) by Egon Willighagen, and in news pieces
 by [MedicalXpress](https://medicalxpress.com/news/2017-08-statistical-component-associations-chemicals-toxicological.html), [Aalto University](http://www.aalto.fi/en/current/news/2017-08-10/) and [Karolinska Institute](http://ki.se/imm/genrymd-for-toxiska-reaktioner-forutsager-risk-for-leverskada). Here's also the [Altmetric tracking](https://www.altmetric.com/details/21486207) page for the paper. 
 
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js">
+</script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="21486207" />
+
 
