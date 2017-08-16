@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-subtitle: Spare time stuff, research, etc.
+subtitle: Blogs, presentations, open knowledege, research.
 ---
 
 <!--
@@ -33,32 +33,65 @@ subtitle: Spare time stuff, research, etc.
 [documentation]: https://github.com/avaus/opendata/blob/master/trafi.md
 -->
 
+## Blogs
 
-## Open source tools for open data {#opentools}
+In addition to my [personal blog](http://ouzor.github.io/), I've been contributing to these other blogs (some pieces published in multiple blogs):
 
-<!--
-<a href='http://louhos.github.io/'><img class='inset2 right' src='https://avatars3.githubusercontent.com/u/1228310?v=2&s=200' title='Louhos' alt='Louhos' width='100px' />
--->
+**[Reaktor's blog](https://www.reaktor.com/blog/author/juuso_parkkinen/)**
 
-**[Louhos][]:** Since 2011 I have been developing open source tools for processing, analyzing and visualizing open data with a few Finnish friends in the [Louhos][] project. It all started with our [sorvi][] R package winning the Apps4Finland 2011 data opening category. Since then, our [blog][] (in Finnish; migrated from [Wordpress][] in June 2014) has received more than 30000 views and we've won also other prices in Apps4Finland.
+* [What did we learn from using Fitbits for a year?](https://www.reaktor.com/blog/what-did-we-learn-from-using-fitbits-for-a-year/)
+* [Using visualizations to communicate data science – Case cancer risk analysis](https://www.reaktor.com/blog/using-visualizations-to-communicate-data-science-case-cancer-risk-analysis/)
+* [More privacy and better personalization – a mission impossible?](https://www.reaktor.com/blog/more-privacy-better-personalization/)
+* [Exploring the future of occupational healthcare](https://www.reaktor.com/blog/exploring-the-future-of-occupational-healthcare/)
 
-<!--
-<a href='http://ropengov.github.io/'><img class='inset2 right' src='http://ropengov.github.io/images/logo.png' title='rOpenGov' alt='rOpenGov' width='130px' />
--->
+**[Medium](https://medium.com/me/stories/public)**
 
-**[rOpenGov][]:** Currently we are actively developing the rOpenGov R ecosystem for open goverment data. We already have a lot of [packages][] involved all around Europe and the US, and even more are being [developed][]. In Finland, the original [sorvi] package has been [split][] to several more focused packages. Personally I am most actively developing the [helsinki][] and [gisfin][] packages.
+* [Ethics and MyData — from theory to practice](https://medium.com/mydata/ethics-and-mydata-from-theory-to-practice-52a93f643ed8)
+* [Is Your Personal Data Used to Influence Your Actions?](https://medium.com/mydata/is-your-personal-data-used-to-influence-your-actions-541e1bc23ec6)
+* [Openness Empowers Individuals and Societies](https://medium.com/mydata/openness-empowers-individuals-and-societies-44ee5678fe47)
 
-### R packages for open data
+*Check out [R-bloggers](http://www.r-bloggers.com/) for interesting blogs related to the R language!*
+
+## Public presentations
+
+* Learnings from a company-wide Fitbit experiment in Quantified Employee seminar, 28.3.2017 ([slideshare](https://www.slideshare.net/ouzor/learnings-from-a-companywide-fitbit-experiment))
+* Data-driven leadership culture in DataBusiness challenge event, 20.1.2017 ([slideshare](https://www.slideshare.net/ouzor/datadriven-leadership-culture))
+* Hosting the Challenges in Big / Small Personal Data Analytics -session in the Mydata2016 conference, 2.10.2016.
+* Probabilistic programming for understanding regional trends in apartment prices in ICCSS2015, 11.5.2015. ([slides](http://ouzor.github.io/presentations/iccss_2015/iccss_reaktor_2015.html#1))
+* Lecture on data science in Tampere Technical University, 28.4.2015 ([slides](http://ouzor.github.io/presentations/tty_datascience_2015/tty_datascience_2015.html#1), [blog](http://ouzor.github.io/blog/2015/04/29/tty-datascience-lecture.html))
+* Kohti älykkäämpää fillarikaupunkia HSY:n paikkatietoseminaarissa, 11.3.2015 ([slides](https://www.slideshare.net/ouzor/hsy-2015-fillaridata))
+
+## Open knowledge
+
+I am a big fan of all things open, including open data, open source, and open science. Recently I've also been active in the [MyData](https://mydata.org/) community. Below I have listed some open stuff that I've been involved in.
+
+**Open data science at Reaktor**
+
+* GIST cancer risk calculator: [web service](http://gistrisk.com/), [blog post](https://www.reaktor.com/blog/using-visualizations-to-communicate-data-science-case-cancer-risk-analysis/)
+* Kannattaakokauppa.fi (apartment price modeling and visualisation): [web service](http://kannattaakokauppa.fi/#/en/), [blog post](http://ouzor.github.io/blog/2016/03/08/apartment-price-model.html), interviews in Finnish: [HS](http://www.hs.fi/kaupunki/art-2000002890113.html), [Iltasanomat](http://www.is.fi/asuminen/art-2000001133912.html)
+
+**Open source projects and tools for open data**
 
 * [helsinki](https://github.com/ropengov/helsinki) - Helsinki open data R tools
 * [gisfin](https://github.com/ropengov/gisfin) - Finland GIS R tools
 * [sorvi](https://github.com/ropengov/sorvi) - Finnish open government data R tools 
 
-*Check out [R-bloggers] for interesting blogs related to the R language!*
+Since 2011 I have been developing open source tools for processing, analyzing and visualizing open data with a few Finnish friends in the [Louhos][] project. It all started with our [sorvi][] R package winning the Apps4Finland 2011 data opening category. Since then, our [blog][] (in Finnish; migrated from [Wordpress][] in June 2014) has received more than 30000 views and we've won also other prices in Apps4Finland. Currently we are  developing the [rOpenGov][] R ecosystem for open goverment data. We already have a lot of [packages][] involved all around Europe and the US, and even more are being [developed][]. 
 
-[R-bloggers]: http://www.r-bloggers.com/
+<!-- In Finland, the original [sorvi] package has been [split][] to several more focused packages. Personally I am most actively developing the [helsinki][] and [gisfin][] packages.-->
 
-### Achievements
+<!--
+<a href='http://louhos.github.io/'><img class='inset2 right' src='https://avatars3.githubusercontent.com/u/1228310?v=2&s=200' title='Louhos' alt='Louhos' width='100px' />
+-->
+
+
+<!--
+<a href='http://ropengov.github.io/'><img class='inset2 right' src='http://ropengov.github.io/images/logo.png' title='rOpenGov' alt='rOpenGov' width='130px' />
+-->
+
+
+
+**Achievements related to open data**
 
 * [Datademo] funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here][ddres1] and [here][ddres2]. I was also interviewed in [Citiscope] and in a [video][ddvideo].
 * Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization][sotkanet-shiny] that was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank. [Details (in Finnish)][a4f-sotkanet].
@@ -93,9 +126,7 @@ subtitle: Spare time stuff, research, etc.
 [Datavaalit]: http://www.datavaalit.fi/
 [data wiki]: http://louhos.github.io/datawiki/
 
-
-
-
+<!--
 ## Open knowledge {#openknow}
 
 Open knowledges cover a wide set of topics from open data and science to democracy. [Open Knowledge Finland][okfi] (OKFFI) was founded few years ago to represent the emerging Finnish openness community. It works through working groups, and I'm also actively involved in some of these as listed below.
@@ -109,7 +140,7 @@ Open knowledges cover a wide set of topics from open data and science to democra
 [mydata-survey]: http://www.lvm.fi/julkaisu/4420389/my-data-johdatus-ihmiskeskeiseen-henkilotiedon-hyodyntamiseen
 [code]: https://github.com/ouzor/mydata
 [Open Science]: http://fi.okfn.org/wg/openscience/
-
+-->
 
 ## Research on machine learning and bioinformatics {#research}
 
@@ -137,7 +168,10 @@ Here some selected publications. See all of my publications in [Google Scholar](
 **Probabilistic models for molecular biology and medicine**
 -->
 
-<!-- ADD toxgen -->
+**A transcriptomics data-driven gene space accurately predicts liver cytopathology and drug-induced liver injury**  
+Pekka Kohonen, Juuso A. Parkkinen, Egon L. Willighagen, Rebecca Ceder, Krister Wennerberg, Samuel Kaski & Roland C. Grafström  
+Nature Communications 8, 15932 (2017)  
+[DOI](doi:10.1038/ncomms15932) | [code](https://zenodo.org/record/570115) | [blog](https://ouzor.github.io/blog/2017/08/14/predictive-toxicogenomics-paper.html)
 
 **Cross-organism toxicogenomics with group factor analysis**  
 Tommi Suvitaival, Juuso A Parkkinen, Seppo Virtanen, and Samuel Kaski  
