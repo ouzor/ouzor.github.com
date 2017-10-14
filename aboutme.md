@@ -13,7 +13,7 @@ subtitle: The essentials
 **Hobbies**: Ultimate frisbee, freeskiing, kiteskiing, photography, cycling. 
 
 
-
+[Nightingale Health]: https://nightingalehealth.com/
 [Reaktor]: http://reaktor.fi/
 [smlb]: http://research.ics.aalto.fi/mi/
 [Projects]: /projects.html
