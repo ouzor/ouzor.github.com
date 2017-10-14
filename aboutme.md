@@ -4,7 +4,7 @@ title: About me
 subtitle: The essentials
 ---
 
-**Work**: Since 2014, I have been working as a data scientist at [Reaktor]. Prior to that, I worked in Aalto Universty and its predecessor, the Helsinki University of Technology.
+**Work**: Since October 2017, I have been working as a data scientist at [Nightingale Health]. Prior to that, I have worked as a data scientist at [Reaktor] (2014-2017), and as a researcher in Aalto Universty and its predecessor, the Helsinki University of Technology.
 
 **Education**: I finished my PhD in the [Statistical Machine Learning and Bioinformatics][smlb] group at Aalto University in 2014. In my thesis I developed and applied probabilistic machine learning methods to biomedical applications. See more about my research in the [Projects][proj-research] page.
 
