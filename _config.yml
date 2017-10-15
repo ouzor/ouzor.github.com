@@ -107,4 +107,6 @@ prose:
     - /css
     - /img
     - /js
-    
+
+# plugins    
+plugins: [jekyll-paginate]
