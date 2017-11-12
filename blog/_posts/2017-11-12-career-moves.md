@@ -5,7 +5,7 @@ layout: post
 tags: [datascience, work]
 ---
 
-I recently switched jobs from Reaktor to [Nightingale Health](https://nightingalehealth.com/), a young Finnish company dedicated to [solving chronic diseases](https://solve.mit.edu/challenges/chronic-diseases/solutions/23) with the help of a novel blood screening technology. Leaving Reaktor's [exceptional working culture](https://www.reaktor.com/blog/category/company-culture/) wasn’t easy, but the chance to tackle some of the biggest problems in healthcare with data was simply too tempting.
+I recently switched jobs from Reaktor to [Nightingale Health](https://nightingalehealth.com/), a young Finnish company dedicated to [solving chronic diseases](https://solve.mit.edu/challenges/chronic-diseases/solutions/23) with the help of a novel blood screening technology. Leaving Reaktor's [exceptional working culture](https://www.reaktor.com/blog/dear-future-colleague-josh/) wasn’t easy, but the chance to tackle some of the biggest problems in healthcare with data was simply too tempting.
 
 <center>
 <img src="https://nightingalehealth.com/images/technology.svg" alt="Nightingale">
@@ -16,12 +16,12 @@ I recently switched jobs from Reaktor to [Nightingale Health](https://nightingal
 
 This is also a good point to reflect my career development so far a bit. Starting from a high-schooler all but hating statistics and knowing nothing about programming, it’s been an interesting journey to develop as a data scientist.
 
-First of all I think I have been extremely lucky, having chosen a path leading to this [super-sexy job](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century) called data science. I have also been lucky with getting the chance to work with and get support from very experienced people both during my studies and at Reaktor.
+First of all I think I have been extremely lucky, having chosen a path leading to this [super-sexy job](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century) called data science. I have also been lucky with getting the chance to work with and get support from highly experienced professionals both during my studies and at Reaktor.
 
 
 ## Career after PhD studies
 
-In addition to luck, I believe I have made a few things that have helped my career development and especially the transition from away from academia. This transition was also the topic of a talk was invited to give this week for a bunch of [PhD students in life sciences](http://www.helsinki.fi/health/PhD_Day2017/) at Helsinki University.
+In addition to luck, I believe a few things have notably helped my career development and especially the transition from away from academia. This transition was also the topic for a talk was invited to give this week for a bunch of [PhD students in life sciences](http://www.helsinki.fi/health/PhD_Day2017/) at Helsinki University.
 
 The talk turned out to be really interesting personal learning experience, and judging from great discussions afterwards, I think the audience also enjoyed it. Here’s a short recap of the talk, and the slides are available in <a href="//www.slideshare.net/ouzor/opportunities-for-life-after-phd" title="Opportunities for Life After PhD" target="_blank">SlideShare</a>:
 
@@ -37,7 +37,7 @@ I also want to emphasise that having experience in research, where they face inh
 
 In order to find good opportunities, the students have to also reach out to the world outside their own field of study. First step in getting exposed to new opportunities is to make one’s work visible. Anyone can do this by writing or otherwise showing their research results in a blog so that the wider audience can understand it. Showing one’s hobby projects is also a good way to gain visibility, regardless of what they are about. Naturally it’s also very important to meet and exchange ideas with people from diverse backgrounds.
 
-Personally, the activities around open data and open knowledge have for sure helped me when applying for jobs, and in meeting a great deal of awesome new people. For people willing to find luck in their career, this list provides invaluable advice:
+Personally, the activities around open data and open knowledge have for sure helped me when applying for jobs, and in meeting a great deal of awesome new people. For anyone searching for luck in their career, this list provides invaluable advice:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">12 habits of lucky people:<br><br>1 hard working<br>2 highly optimistic<br>3 passionately teach others<br>4 consistently generous<br>5 show up on time<br>6 love to volunteer<br>7 stay teachable<br>8 show gratitude<br>9 unselfishly promote others<br>10 seek random collisions<br>11 welcoming and kind <br>12 trustworthy</p>&mdash; Vala Afshar (@ValaAfshar) <a href="https://twitter.com/ValaAfshar/status/929392784808792064?ref_src=twsrc%5Etfw">November 11, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
