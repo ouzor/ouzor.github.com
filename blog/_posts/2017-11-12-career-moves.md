@@ -1,5 +1,5 @@
 ---
-title: "Career Moves"
+title: "Career Moves and Life After PhD"
 subtitle: "Reflections on my career path and development as a data scientist"
 layout: post
 tags: [datascience, work]
