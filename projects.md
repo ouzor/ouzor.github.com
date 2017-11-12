@@ -50,7 +50,13 @@ In addition to my [personal blog](http://ouzor.github.io/), I've been contributi
 * [Is Your Personal Data Used to Influence Your Actions?](https://medium.com/mydata/is-your-personal-data-used-to-influence-your-actions-541e1bc23ec6)
 * [Openness Empowers Individuals and Societies](https://medium.com/mydata/openness-empowers-individuals-and-societies-44ee5678fe47)
 
+**Other writings**
+
+* [BioDI: Mitä yliopisto ei opettaut minulle?](https://www.inkubio.fi/snapsi2015/biodi.php) - Kirjoitus Aalto-yliopiston Bioinformaatioteknologian kilta Inkubion lehdessä S'napsissa 3/2015.  
+
 *Check out [R-bloggers](http://www.r-bloggers.com/) for interesting blogs related to the R language!*
+
+
 
 ## Public presentations
 
