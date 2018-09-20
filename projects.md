@@ -52,7 +52,7 @@ In addition to my [personal blog](http://ouzor.github.io/), I've been contributi
 
 **Other writings**
 
-* [BioDI: Mitä yliopisto ei opettaut minulle?](https://www.inkubio.fi/snapsi2015/biodi.php) - Kirjoitus Aalto-yliopiston Bioinformaatioteknologian kilta Inkubion lehdessä S'napsissa 3/2015.  
+* [BioDI: Mitä yliopisto ei opettanut minulle?](https://www.inkubio.fi/snapsi2015/biodi.php) - Kirjoitus Aalto-yliopiston Bioinformaatioteknologian kilta Inkubion lehdessä S'napsissa 3/2015.  
 
 *Check out [R-bloggers](http://www.r-bloggers.com/) for interesting blogs related to the R language!*
 
@@ -60,11 +60,14 @@ In addition to my [personal blog](http://ouzor.github.io/), I've been contributi
 
 ## Public presentations
 
+* Avoimen datan ja omadatan mahdollisuudet terveysalalla, SOSTE Järjestöjohdon tammifoorumi, 31.1.2018 ([slides](http://okf.fi/omadata-terveys))
+* Opportunities for Life After PhD in Helsinki Life Science Day, 9.11.2017 ([slideshare](https://www.slideshare.net/ouzor/opportunities-for-life-after-phd), [blog](blog/2017/11/12/career-moves.html))
+* Hosting the [Ethics of MyData and AI](https://mydata2017.org/session/data-algorithm-ethics/) session in MyData 2017 conference, 30.8.2017
 * Learnings from a company-wide Fitbit experiment in Quantified Employee seminar, 28.3.2017 ([slideshare](https://www.slideshare.net/ouzor/learnings-from-a-companywide-fitbit-experiment))
 * Data-driven leadership culture in DataBusiness challenge event, 20.1.2017 ([slideshare](https://www.slideshare.net/ouzor/datadriven-leadership-culture))
-* Hosting the Challenges in Big / Small Personal Data Analytics -session in the Mydata2016 conference, 2.10.2016.
-* Probabilistic programming for understanding regional trends in apartment prices in ICCSS2015, 11.5.2015. ([slides](http://ouzor.github.io/presentations/iccss_2015/iccss_reaktor_2015.html#1))
-* Lecture on data science in Tampere Technical University, 28.4.2015 ([slides](http://ouzor.github.io/presentations/tty_datascience_2015/tty_datascience_2015.html#1), [blog](http://ouzor.github.io/blog/2015/04/29/tty-datascience-lecture.html))
+* Hosting the Challenges in Big / Small Personal Data Analytics -session in the Mydata2016 conference, 2.10.2016
+* Probabilistic programming for understanding regional trends in apartment prices in ICCSS2015, 11.5.2015 ([slides](http://ouzor.github.io/presentations/iccss_2015/iccss_reaktor_2015.html#1))
+* Lecture on data science in Tampere Technical University, 28.4.2015 ([slides](http://ouzor.github.io/presentations/tty_datascience_2015/tty_datascience_2015.html#1), [blog](blog/2015/04/29/tty-datascience-lecture.html))
 * Kohti älykkäämpää fillarikaupunkia HSY:n paikkatietoseminaarissa, 11.3.2015 ([slides](https://www.slideshare.net/ouzor/hsy-2015-fillaridata))
 
 ## Open knowledge
@@ -97,8 +100,9 @@ Since 2011 I have been developing open source tools for processing, analyzing an
 
 
 
-**Achievements related to open data**
+**More open data stuff**
 
+* [Pyöräily on arkista touhua](http://www.kaupunkifillari.fi/blog/2015/03/04/pyoraily-on-arkista-touhua/) data journalism piece (in Finnish) about statistical modelling of bicycle traffic in Helsinki. See also [code](https://github.com/apoikola/fillarilaskennat).
 * [Datademo] funding for the [helsinki][] and [gisfin][] packages. Details (in Finnish) [here][ddres1] and [here][ddres2]. I was also interviewed in [Citiscope] and in a [video][ddvideo].
 * Apps4Finland 2013: Third place in the visualization category with the [Alueellinen hyvinvointi-visualization][sotkanet-shiny] that was developed together with Juha Leppänen and Satu Korhonen from [Demos Helsinki][demos-sotkanet] think tank. [Details (in Finnish)][a4f-sotkanet].
 * Apps4Finland 2012: Victory in the data opening category (official and audience votes): Data elections ([Datavaalit][]). [Details (in Finnish)][a4f-datavaalit].
