@@ -60,6 +60,11 @@ In addition to my [personal blog](http://ouzor.github.io/), I've been contributi
 
 ## Public presentations
 
+<!--- FIMM Retreat in June 2019 --->
+
+* How can we make personalised medicine a reality while ensuring data protection? in [MyData 2019](https://mydata2019.org/), Helsinki, 27.9.2019 ([slides](https://airtable.com/embed/shrLMUDQW1qoLC9tb/tblanBmSaLCIJFM9u/viwKJtFvazBGJnEad/recAzF6RSmge04IXi?blocks=hide))
+* From academia to industry, reflections on a career in data science in [HICT S5](https://www.hict.fi/hicts5), Aalto University, 25.4.2019 ([slideshare](https://pt.slideshare.net/ouzor/data-science-career-reflections-142009498))
+* Modern, citizen-centred data stewardship for the common good: why do we have to go beyond the GDPR? in [BeyondRCT](https://www.beyondrct.net), Amsterdam, 25.9.2018 ([slides](http://www.beyondrct.net/wp-content/uploads/2018/10/Parkkinen-J-5-BeyondRCT_2018_MyData_v7_20180925.pdf))
 * Avoimen datan ja omadatan mahdollisuudet terveysalalla, SOSTE Järjestöjohdon tammifoorumi, 31.1.2018 ([slides](http://okf.fi/omadata-terveys))
 * Opportunities for Life After PhD in Helsinki Life Science Day, 9.11.2017 ([slideshare](https://www.slideshare.net/ouzor/opportunities-for-life-after-phd), [blog](blog/2017/11/12/career-moves.html))
 * Hosting the [Ethics of MyData and AI](https://mydata2017.org/session/data-algorithm-ethics/) session in MyData 2017 conference, 30.8.2017
